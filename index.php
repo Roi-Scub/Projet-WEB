@@ -1,3 +1,15 @@
+
+<?php
+  // Initialiser la session
+  session_start();
+  // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+  if(!isset($_SESSION["login"])){
+    header("Location: page_authentification.php");
+    exit(); 
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -55,7 +67,7 @@
         </div>
 
         <div id="arrow">
-          
+        <a href="logout.php">Déconnexion</a>
             <a href="#titre2" id="arrowdown"><i class='fas fa-chevron-down' style='color: black'></i></a>
         </div>
 
