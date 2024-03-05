@@ -1,5 +1,8 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 
     <meta charset="UTF-8">
@@ -13,24 +16,171 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 </head>
-<body>
-    <header id="header_principal">
-        <a href="index.html"><img src="photos/logo_petit.png" alt="Petit logo" id="logo_petit" ></a>
-        <div id="stroke">
-            <nav>
-                <ul>
-                    <li class="list-item-container"><a href="page_offres.html" id="test">Offres</a></li>
-                    <li class="list-item-container"><a href="page_entreprises.html">Entreprises</a></li>
-                    <li class="list-item-container"><a href="#FAQ">FAQ</a></li>
- 
-                </ul>
-            </nav>
-        </div>
 
-        <input type="button" action="page_etudiant" value="PARAMETRES" id="button_2">
+<body>
+   
+    <header id="header_principal">
+
+        <a href="index.html"><img src="photos/logo_petit.png" alt="Petit logo" id="logo_petit" ></a>
+
+            <div id="stroke">
+                <nav>
+                    <ul>
+                        <li class="list-item-container"><a href="page_offres.html" id="test">Offres</a></li>
+                        <li class="list-item-container"><a href="page_entreprises.html">Entreprises</a></li>
+                        <li class="list-item-container"><a href="#FAQ">FAQ</a></li>
+    
+                    </ul>
+                </nav>
+            </div>
+
+            <button onclick="window.location.href='page_etudiant.html';"  id="button_2">PARAMETRES</button>
         
     </header>
+
+    <hr id="barre">
+
+
+        <form id="search_form" role="search">
+
+            <input type="search" id="query_input" name="q" placeholder="Rechercher . . ." aria-label="Search through site content">
+
+            <button id="search_input"><img src="photos/loupe.png" alt="Icone recherche" id="search_icon"></button>
+
+        </form>
+
+
+    <main>
+
+        <div id="offers_main_page">
+
+            <fieldset id="filters_fieldset">
+
+                <legend id="filters">Filtres</legend>
+
+                    <form>  
+                       
+                            <h2 id="filters_name">Spécialité</h2>
+                            <hr id="filters_bar">
+                            
+                                                        <!-- CHECKUP -->
+
+                                <form>
+
+                                    <input type="radio" id="btp" name="speciality" value="BTP"  required>
+                                        <label for="btp" class="radio">BTP</label><br>
+                            
+                                    <input type="radio" id="informatic" name="speciality" value="Informatique" >
+                                        <label for="informatic" class="radio">Informatique</label><br>
+                            
+                                    <input type="radio" id="generalist" name="speciality" value="Généraliste" >
+                                        <label for="generalist" class="radio">Généraliste</label><br>
+
+                                    <input type="radio" id="s3e" name="speciality" value="S3E" >
+                                        <label for="s3e" class="radio">S3E</label><br>
+
+                                </form>
+        
+                            <h2 id="filters_name">Dates</h2>
+                            <hr id="filters_bar">
+                            
+                                <form>
+
+                                    <input type="radio" id="stage" name="speciality" value="Stage" required >
+                                        <label for="stage" class="radio">Stage</label><br>
+
+                                    <input type="radio" id="alternance" name="speciality" value="Alternance" >
+                                        <label for="alternance" class="radio">Alternance</label><br>
+                                      
+
+                                    <h3 id="filter_title">Date du début : </h3>
+
+                                        <input type="date" id="start" name="trip-start" value="datetime" min="datetime" max="2025-12-31"  required/>
+
+                                    <h3 id="filter_title">Durée en semaine : </h3>
+
+                                        <input type="number" id="week_input" name="week_inpu" min="10" max="45"  /> <h3 id="week_title">Semaines</h3>
+
+                                </form>
+
+                            <h2 id="filters_name">Rémunération</h2>
+                            <hr id="filters_bar">
+
+                                <form>
+
+                                    <h3 id="filter_title">Salaire minimum : <span id="demo"></span> €</h3>
+
+                                        <div class="slidecontainer">
+
+                                            <input type="range" min="640" max="1250" value="640" class="slider" id="myRange">
+
+                                            <input type="number" id="tentacles" class="tentacles" min="640" max="1250" /> <h3 id="salary_title">Saisie manuelle</h3>
+
+                                        </div>
+
+                                            <script src="Js.js"></script>
+
+                                </form>
+
+                            <h2 id="filters_name">Entreprise</h2>
+                            <hr id="filters_bar">
+
+                                <form>
+
+                                    <select id="select_box" name="Entreprise" required>
+
+                                        <option value="">Choisir</option>
+                                        <option value="Orange">Orange</option>
+                                        <option value="Thales">Thalès</option>
+                                        <option value="Amadeus">Amadeus</option>
+
+                                    </select>
+
+                                </form>
+
+                    </form>
+              
+            </fieldset>
+
+
+
+        </div>
+
+
+
+
+
+    </main>
+
+    <footer id="footer">
+
+
+        <div id="réseaux">
+
+            <img src="photos/twitter.png" alt="Twitter" class="logo_reseaux">
+            <img src="photos/instagram.png" alt="Instagram" class="logo_reseaux">
+            <img src="photos/facebook.png" alt="facebook" class="logo_reseaux">
+
+        </div>
+
+        <div id="logo_bottom">
+
+            <img src="photos/logo_petit.png" alt="Petit logo" id="logo_petit1">
+
+        </div>
+
+        <div id="right_div">
+
+            <h5 id="rights">© Stage's cove 2024</h5>
+
+        </div>
+
+
+
+        
+    </footer>
 
 </body>

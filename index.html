@@ -13,14 +13,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 </head>
 <body>
+   
     <header id="header_principal">
         <img src="photos/logo_petit.png" alt="Petit logo" id="logo_petit">
         <div id="stroke">
             <nav>
                 <ul>
+                    
                     <li class="list-item-container"><a href="page_offres.html">Offres</a></li>
                     <li class="list-item-container"><a href="page_entreprises.html">Entreprises</a></li>
                     <li class="list-item-container"><a href="#FAQ">FAQ</a></li>
@@ -34,21 +37,28 @@
     </header>
 
     <hr id="barre">
-    <div id="rectangle">
+        <div id="rectangle">
 
-        <div>
+            <div>
 
-            <h1 id="titre1"> Stage's cove : <br> La référence pour la recherche de stage !</h1>
+                <h1 id="titre1"> Stage's cove : <br> La référence pour la recherche de stage !</h1>
 
-            <p id="paragraphe1">Pour les étudiants, la recherche de stage n'a jamais été aussi simple !</p>
+                <p id="paragraphe1">Pour les étudiants, la recherche de stage n'a jamais été aussi simple !</p>
 
-            <button onclick="window.location.href='page_offres.html';"  id="button_3">COMMENCER À CHERCHER</button>
+                <button onclick="window.location.href='page_offres.html';"  id="button_3">COMMENCER À CHERCHER</button>
 
+            </div>
+
+            <img src="photos/logo_grand.png" alt="Grand logo" id="grand_logo">
+
+            
         </div>
 
-        <img src="photos/logo_grand.png" alt="Grand logo" id="grand_logo">
+        <div id="arrow">
+          
+            <a href="#titre2" id="arrowdown"><i class='fas fa-chevron-down' style='color: black'></i></a>
+        </div>
 
-    </div>
 
     <div id="main">
 
@@ -91,7 +101,8 @@
         </div>
 
         <hr id="barre_grise">
-<h2 id="titre2">Ils nous font confiance :</h2>
+<h2 id="titre25">Ils nous font confiance :</h2>
+
         <div id="affiliés">
 
             
@@ -133,10 +144,28 @@
 
 
     </div>
-    <div id="rectangle">
+    <div id="rectangleFAQ">
 
-        <h1 id="FAQ"> FAQ</h1>
+        <h2 id="FAQ"> FAQ</h2>
 
+        <div class="select"><img src="photos/plus.png" onmouseup="document.getElementById('div1').style.display='block'" ><h2 id="CV">Comment faire un bon cv ?</h2></div>
+        <div id="div1" class="desc">
+        <img src="photos/moins.png" onmouseup="document.getElementById('div1').style.display='none'"  >
+        <p id="descriptionCV">Nous disposons, dans l'enceinte de notre école, des étudiants et formateurs qui seraient ravis de pouvoir t'accompagner dans la création d'un bon cv !
+            <br><br>Des sites comme Canva ou cv.com t'accompagne dans la création d'un cv personnalisé avec un beau design.</p>
+        </div>
+        <div class="select"><img src="photos/plus.png" onmouseup="document.getElementById('div2').style.display='block'" ><h2 id="CV">Comment se préparer à un entretien ?</h2></div>
+        <div id="div2" class="desc">
+        <img src="photos/moins.png" onmouseup="document.getElementById('div2').style.display='none'"  >
+        <p id="descriptionCV">Nous disposons, dans l'enceinte de notre école, des étudiants et formateurs qui seraient ravis de pouvoir t'accompagner dans la création d'un bon cv !
+            <br><br>Des sites comme Canva ou cv.com t'accompagne dans la création d'un cv personnalisé avec un beau design.</p>
+        </div>
+        <div class="select"><img src="photos/plus.png" onmouseup="document.getElementById('div3').style.display='block'"  ><h2 id="CV">Les lettres de motivation sont-elles nécessaires ?</h2></div>
+        <div id="div3" class="desc">
+        <img src="photos/moins.png" onmouseup="document.getElementById('div3').style.display='none'"  >
+        <p id="descriptionCV">Nous disposons, dans l'enceinte de notre école, des étudiants et formateurs qui seraient ravis de pouvoir t'accompagner dans la création d'un bon cv !
+            <br><br>Des sites comme Canva ou cv.com t'accompagne dans la création d'un cv personnalisé avec un beau design.</p>
+        </div>
 
     </div>
 
