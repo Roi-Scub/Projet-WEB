@@ -1,13 +1,40 @@
-
 <?php
-  // Initialiser la session
-  session_start();
-  // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
-  if(!isset($_SESSION["login"])){
+  
+// Initialiser la session
+session_start();
+
+if (!isset($_SESSION["ID_utilisateur"])) {
     header("Location: page_authentification.php");
-    exit(); 
-  }
+    exit();
+}
+
+
+$profileId = $_SESSION['ID_utilisateur'];
+
+// Connexion à la base de données (assurez-vous que vous avez déjà inclus database.php)
+require('API/database.php');
+
+
+$query = "SELECT * FROM pilote WHERE ID_utilisateur = $profileId";
+$result = mysqli_query($conn, $query);
+
+if ($result) {
+    
+    if (mysqli_num_rows($result) > 0) {
+        echo "L'utilisateur a des droits d'administrateur.";
+    } else {
+        echo "L'utilisateur n'a pas de droits d'administrateur.";
+    }
+} else {
+    
+    echo "Erreur lors de la récupération des droits d'accès.";
+}
+
+// Fermez la connexion à la base de données
+mysqli_close($conn);
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -36,16 +63,32 @@
             <nav>
                 <ul>
                     
-                    <li class="list-item-container"><a href="page_offres.html">Offres</a></li>
+                    <li class="list-item-container"><a href="page_offres.php">Offres</a></li>
                     <li class="list-item-container"><a href="page_entreprises.html">Entreprises</a></li>
                     <li class="list-item-container"><a href="#FAQ">FAQ</a></li>
  
                 </ul>
             </nav>
         </div>
+            <div id="myaccount">
 
-        <button onclick="window.location.href='page_etudiant.html';"  id="button_2">PARAMETRES</button>
+                <div id="divaa1">
+                
+                <input id="btna1" type="button" value="Thème">
+                <input id="btna2" type="button" value="Compte" onclick="window.location.href='page_profil.php';">
+                <input id="btna3" type="button" value="Plus">
+                <img id="parametre" src="photos/parametre.png">
+                </div>
+
+
+                
+
+
+
+                <button onclick="window.location.href='loading.php';"  id="button_2">Deconnexion</button>
         
+        
+            </div>
     </header>
 
     <hr id="barre">
@@ -57,7 +100,7 @@
 
                 <p id="paragraphe1">Pour les étudiants, la recherche de stage n'a jamais été aussi simple !</p>
 
-                <button onclick="window.location.href='page_offres.html';"  id="button_3">COMMENCER À CHERCHER</button>
+                <button onclick="window.location.href='page_offres.php';"  id="button_3">COMMENCER À CHERCHER</button>
 
             </div>
 
@@ -67,7 +110,7 @@
         </div>
 
         <div id="arrow">
-        <a href="logout.php">Déconnexion</a>
+        
             <a href="#titre2" id="arrowdown"><i class='fas fa-chevron-down' style='color: black'></i></a>
         </div>
 
@@ -121,7 +164,7 @@
 
                 
                 <div class="container">
-
+                    
                     <input type="radio" name="slider" id="orange" checked>
                     <input type="radio" name="slider" id="amadeus">
                     <input type="radio" name="slider" id="thales">

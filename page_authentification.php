@@ -18,9 +18,16 @@
     
 </head>
 <body id="login_body">
+<video autoplay muted loop id="logo_stage_s_cove">
+  <source src="videos/Stage-s-cove.mp4" type="video/mp4">
+</video>
+
+<video autoplay muted loop id="myVideo">
+  <source src="videos/watervideo.mp4" type="video/mp4">
+</video>
 
 <?php
-require('database.php');
+require('API/database.php');
 session_start();
 if (isset($_POST['login'])){
   $login = stripslashes($_REQUEST['login']);
@@ -31,12 +38,15 @@ if (isset($_POST['login'])){
   $result = mysqli_query($conn,$query) or die(mysql_error());
   $rows = mysqli_num_rows($result);
   if($rows==1){
-      $_SESSION['login'] = $login;
+      $profileId = mysqli_fetch_assoc($result)['ID_utilisateur'];
+      $_SESSION['ID_utilisateur'] = $profileId;
+      echo '<script>alert("ID_utilisateur: ' . $_SESSION['ID_utilisateur'] . '");</script>';
       header("Location: index.php");
   }else{
-    $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
+    $errorMessage = "Le nom d'utilisateur ou le mot de passe est incorrect.";
   }
 }
+
 ?>
     <header>
 
@@ -51,38 +61,44 @@ if (isset($_POST['login'])){
     <main id="login_main">
 
         <div id="login_rectangle">
+            
 
             <fieldset id="login_fieldset">
 
-                <img src="photos/logo_petit.png" alt="Petit logo" id="logo_petit" name="auth">
+                
 
                 <form id="login_form" action="" method="post">
 
                     <label for="login">Identifiant</label><br>
-                    <input type="text" id="email" name="login" required>
+                    <input type="email" id="email" name="login" required>
                     <br>
                     <label for="password">Mot de passe</label><br>
                     <input type="password" id="password" name="password" required>
                     <br>
                     <input type="submit" value="Se connecter" name="submit" id="login_button">
 
-                        <?php if (! empty($message)) { ?>
-                        <p class="errorMessage"><?php echo $message; ?></p>
+                        <?php if (! empty($errorMessage)) { ?>
+                        <p class="errorMessage"><?php echo $errorMessage; ?></p>
                         <?php } ?>  
 
                 </form>
 
                 <p id="login_paragraph">Besoin d'aide ?<a href="page_inscription.html">Contactez-nous ici.</a></p>
-
+         
             </fieldset>
-           
+                          
+               
+              
 
         </div>
 
-        
 
     </main>
-
+ <div class="errorBox">
+                    <?php if (!empty($errorMessage)) { echo '<p>' . $errorMessage . '</p>'; } ?>
+                    
+                        </div>
+        
     <footer>
 
         <hr>
