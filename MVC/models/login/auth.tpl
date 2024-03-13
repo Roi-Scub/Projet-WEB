@@ -29,9 +29,9 @@
             <br>
             <input type="submit" value="Se connecter" name="submit" id="login_button">
 
-                <?php if (! empty($errorMessage)) { ?>
-                <p class="errorMessage"><?php echo $errorMessage; ?></p>
-                <?php } ?>  
+            <?php if (isset($errorMessage)) : ?>
+            <p style="color: red;"><?php echo $errorMessage; ?></p>
+            <?php endif; ?>
 
         </form>
 
