@@ -15,7 +15,7 @@
 
         <div class="offre">
             <div class="Enteprise">
-            <img class="logo_entreprise" src="{$offre.photo_entreprise}" alt="Logo de l'entreprise">
+            <img class="logo_entreprise" src="{$offre.photo_entreprise}" onerror="this.src='../photos/photo_profil.jpg'" alt="Logo de l'entreprise">
             <span class="nom_entreprise">{$offre.Entreprise}</span>
             </div>
             <div class="vertical_bar"></div>
@@ -24,13 +24,15 @@
             <span class="nom_offre">{$offre.nom_de_l_offre}</span> <span class="temps_offre">({$offre.duree_de_l_offre})   -   Date : {$offre.date_de_l_offre}</span><br></div>
             <div class="secteur_description"><span class="description_titre">Description : </span> <div class="description">{$offre.description_de_l_offre}</div></div>
             
-            <div class="salaires">
+            <div class="salaires"><a href="../../offerDetails.php?id={$offre.ID_offre}" class="test {if $value == "true"}visible{elseif $value =="false"}invisible{/if}">test</a>
             Salaire : {$offre.salaire} |  Nombre de places : {$offre.nombre_de_places} ({$offre.nombre_de_places_prises} prises)<br>
             </div>
-
+ 
             </div>
             <br>
             
+          
+            {debug_to_console($value)}
         </div>
 
         {/foreach}
@@ -38,6 +40,34 @@
 </body>
 
 <style>
+
+.test {
+            /* Ajoutez ici les styles communs pour le lien */
+            text-decoration: none;
+            color: #0074D9;
+            border:0.1vw solid #000;
+            border-radius: 0.5vw;
+            width:6vw;
+            height:2vw;
+            text-align: center;
+            margin-right:10vw;
+        }
+
+        /* Style pour le lien visible */
+        .test.visible {
+            /* Ajoutez ici les styles spécifiques pour le lien visible */
+            font-weight: bold;
+            display: block;
+        }
+
+        /* Style pour le lien invisible */
+        .test.invisible {
+            /* Ajoutez ici les styles spécifiques pour le lien invisible */
+            display: none;
+            
+            
+            
+        }
 
     .offre {
         
@@ -73,13 +103,15 @@
     .offre .intitule_offre {
         width:45vw;
         height:3vw;
+        display:flex;
+        
     }
     .offre .nom_offre {
         font-weight: 700;
         font-size: 1.5vw;
-        margin-right:1.5vw;
-        width:20vw;
-        height:5vw;
+        margin-right:0.5vw;
+        width:relative;
+        height:relative;
         font-family:"Open Sans";
     }
 
@@ -87,8 +119,8 @@
         font-weight: 600;
         font-size: 1.3vw;
         
-        width:20vw;
-        height:5vw;
+        width:relative;
+        height:relative;
         font-family:"Open Sans";
     }
 
@@ -96,13 +128,17 @@
         
        width:15vw;
        height:15vw;
-       margin-top:-1vw;
+       
+       display:flex;
+         flex-direction: column;
+         justify-content: center;
+            align-items: center;
     }
     .offre .logo_entreprise {
         height: 11vw;
         width: 11vw;
-        margin-top:1.5vw;
-        margin-left:1.5vw;
+      
+        border-radius: 1vw;
         
         
   
@@ -112,10 +148,10 @@
     .offre .nom_entreprise {
         font-weight: 600;
         font-size: 1.3vw;
-        margin-top: -1vw;
+      
         font-family:"Open Sans";
-        margin-left:0.5vw;
-        width:12vw;
+        margin-top:1vw;
+        width:relative;
         
     }
 
@@ -152,7 +188,9 @@
         position: 
         relative;
         text-align: right;
-        margin-top:-1vw
+        margin-top:-1vw;
+        display:flex;
+        justify-content: flex-end;
     }
 
 </style>

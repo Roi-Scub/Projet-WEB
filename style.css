@@ -809,7 +809,7 @@ a{
 #test {
 
 	text-decoration:none;
-	margin-left: -0.9vw;
+	
 	color:#3B4754;
 }
 nav li {
@@ -870,7 +870,11 @@ nav ul li a,
 #search_form {
 
 	width: 100%;
-	margin-left:35%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2vw;
+
 }
 
 #query_input {
@@ -911,6 +915,16 @@ nav ul li a,
 
 		display:flex;
 
+	}
+
+	#businnesses_main_page {
+
+		width:100%;
+		margin-top:1vw;
+		position: absolute;
+		display:flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 			#filters_fieldset {

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-07 19:25:04
+/* Smarty version 4.4.1, created on 2024-03-08 13:29:14
   from 'C:\xampp\apache\project\cesi\Projet WEB\API\Composants\offre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_65ea0680a6b8f5_09350175',
+  'unifunc' => 'content_65eb049ac14769_64668113',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'facc9463a8e9b6a2b0532c3318b57b1947cb1153' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\API\\Composants\\offre.tpl',
-      1 => 1709832575,
+      1 => 1709888291,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65ea0680a6b8f5_09350175 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65eb049ac14769_64668113 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -64,7 +64,7 @@ $_smarty_tpl->tpl_vars['offre']->do_else = false;
  (<?php echo $_smarty_tpl->tpl_vars['offre']->value['nombre_de_places_prises'];?>
  prises)<br>
             </div>
-
+ 
             </div>
             <br>
             
@@ -142,6 +142,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         width: 11vw;
         margin-top:1.5vw;
         margin-left:1.5vw;
+        border-radius: 1vw;
         
         
   

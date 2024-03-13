@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-07 18:29:37
+/* Smarty version 4.4.1, created on 2024-03-12 16:31:26
   from 'C:\xampp\apache\project\cesi\Projet WEB\API\Composants\offre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_65e9f9815d6f25_64007807',
+  'unifunc' => 'content_65f0754e5557e0_41959259',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '52ecc40840ca8e22d7cab66b0eca005ed942808e' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\API\\Composants\\offre.tpl',
-      1 => 1709832575,
+      1 => 1710257484,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65e9f9815d6f25_64007807 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65f0754e5557e0_41959259 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +44,7 @@ $_smarty_tpl->tpl_vars['offre']->do_else = false;
         <div class="offre">
             <div class="Enteprise">
             <img class="logo_entreprise" src="<?php echo $_smarty_tpl->tpl_vars['offre']->value['photo_entreprise'];?>
-" alt="Logo de l'entreprise">
+" onerror="this.src='../photos/photo_profil.jpg'" alt="Logo de l'entreprise">
             <span class="nom_entreprise"><?php echo $_smarty_tpl->tpl_vars['offre']->value['Entreprise'];?>
 </span>
             </div>
@@ -58,16 +58,20 @@ $_smarty_tpl->tpl_vars['offre']->do_else = false;
             <div class="secteur_description"><span class="description_titre">Description : </span> <div class="description"><?php echo $_smarty_tpl->tpl_vars['offre']->value['description_de_l_offre'];?>
 </div></div>
             
-            <div class="salaires">
+            <div class="salaires"><a href="../../offerDetails.php?id=<?php echo $_smarty_tpl->tpl_vars['offre']->value['ID_offre'];?>
+" class="test <?php if ($_smarty_tpl->tpl_vars['value']->value == "true") {?>visible<?php } elseif ($_smarty_tpl->tpl_vars['value']->value == "false") {?>invisible<?php }?>">test</a>
             Salaire : <?php echo $_smarty_tpl->tpl_vars['offre']->value['salaire'];?>
  |  Nombre de places : <?php echo $_smarty_tpl->tpl_vars['offre']->value['nombre_de_places'];?>
  (<?php echo $_smarty_tpl->tpl_vars['offre']->value['nombre_de_places_prises'];?>
  prises)<br>
             </div>
-
+ 
             </div>
             <br>
             
+          
+            <?php echo debug_to_console($_smarty_tpl->tpl_vars['value']->value);?>
+
         </div>
 
         <?php
@@ -77,6 +81,34 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </body>
 
 <style>
+
+.test {
+            /* Ajoutez ici les styles communs pour le lien */
+            text-decoration: none;
+            color: #0074D9;
+            border:0.1vw solid #000;
+            border-radius: 0.5vw;
+            width:6vw;
+            height:2vw;
+            text-align: center;
+            margin-right:10vw;
+        }
+
+        /* Style pour le lien visible */
+        .test.visible {
+            /* Ajoutez ici les styles spécifiques pour le lien visible */
+            font-weight: bold;
+            display: block;
+        }
+
+        /* Style pour le lien invisible */
+        .test.invisible {
+            /* Ajoutez ici les styles spécifiques pour le lien invisible */
+            display: none;
+            
+            
+            
+        }
 
     .offre {
         
@@ -112,13 +144,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     .offre .intitule_offre {
         width:45vw;
         height:3vw;
+        display:flex;
+        
     }
     .offre .nom_offre {
         font-weight: 700;
         font-size: 1.5vw;
-        margin-right:1.5vw;
-        width:20vw;
-        height:5vw;
+        margin-right:0.5vw;
+        width:relative;
+        height:relative;
         font-family:"Open Sans";
     }
 
@@ -126,8 +160,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         font-weight: 600;
         font-size: 1.3vw;
         
-        width:20vw;
-        height:5vw;
+        width:relative;
+        height:relative;
         font-family:"Open Sans";
     }
 
@@ -135,13 +169,17 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         
        width:15vw;
        height:15vw;
-       margin-top:-1vw;
+       
+       display:flex;
+         flex-direction: column;
+         justify-content: center;
+            align-items: center;
     }
     .offre .logo_entreprise {
         height: 11vw;
         width: 11vw;
-        margin-top:1.5vw;
-        margin-left:1.5vw;
+      
+        border-radius: 1vw;
         
         
   
@@ -151,10 +189,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     .offre .nom_entreprise {
         font-weight: 600;
         font-size: 1.3vw;
-        margin-top: -1vw;
+      
         font-family:"Open Sans";
-        margin-left:0.5vw;
-        width:12vw;
+        margin-top:1vw;
+        width:relative;
         
     }
 
@@ -191,7 +229,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         position: 
         relative;
         text-align: right;
-        margin-top:-1vw
+        margin-top:-1vw;
+        display:flex;
+        justify-content: flex-end;
     }
 
 </style>

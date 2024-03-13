@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.4.1, created on 2024-03-08 20:58:44
+  from 'C:\xampp\apache\project\cesi\Projet WEB\API\Composants\entreprise.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.4.1',
+  'unifunc' => 'content_65eb6df4810710_97619440',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '2dfe7ad1778b85462cf2aa7710dbbd2da4ca15ac' => 
+    array (
+      0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\API\\Composants\\entreprise.tpl',
+      1 => 1709903802,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_65eb6df4810710_97619440 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
 <head>
     <title>Liste des offres d'emploi</title>
@@ -11,20 +34,28 @@
 <body>
    
     <div>
-        {foreach $entreprise as $e}
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['entreprise']->value, 'e');
+$_smarty_tpl->tpl_vars['e']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['e']->value) {
+$_smarty_tpl->tpl_vars['e']->do_else = false;
+?>
 
         <div class="offre">
             <div class="Enteprise"> 
-                <img class="banniere_entreprise" src="{$e.banniere_entreprise}" onerror="this.src='../photos/banner_placeholder.jpg'" alt="Bannière de l'entreprise">
+                <img class="banniere_entreprise" src="<?php echo $_smarty_tpl->tpl_vars['e']->value['banniere_entreprise'];?>
+" alt="Bannière de l'entreprise">
                 <div class="entreprise_flex"> 
 
-                    <img class="logo_entreprise" src="{$e.photo_entreprise}" onerror="this.src='../photos/banner_placeholder.jpg'" alt="Logo de l'entreprise">
+                    <img class="logo_entreprise" src="<?php echo $_smarty_tpl->tpl_vars['e']->value['photo_entreprise'];?>
+" alt="Logo de l'entreprise">
 
                     <div class="nom_entreprise_">   
-        
-                    
-                        <span class="nom_entreprise">{$e.Entreprise}</span><br><br>
-                        <span class="temps_offre">{$e.Secteur_activite}</span>
+
+                        <span class="nom_entreprise"><?php echo $_smarty_tpl->tpl_vars['e']->value['Entreprise'];?>
+</span><br><br>
+                        <span class="temps_offre"><?php echo $_smarty_tpl->tpl_vars['e']->value['Secteur_activite'];?>
+</span>
 
                     </div>
                      
@@ -39,7 +70,8 @@
            
             <div class="description_offre">
             <div class="intitule_offre">
-            <span class="description_titre">Description : </span> <br><div class="description">{$e.Description}</div></div>
+            <span class="description_titre">Description : </span> <br><div class="description"><?php echo $_smarty_tpl->tpl_vars['e']->value['Description'];?>
+</div></div>
             <div class="secteur_description"> </div>
             
             <div class="Nombre d'offre">
@@ -51,7 +83,9 @@
             
         </div>
 
-        {/foreach}
+        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 
 
@@ -214,4 +248,5 @@
 }
 
 </style>
-</body>
+</body><?php }
+}

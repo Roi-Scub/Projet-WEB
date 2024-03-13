@@ -1,25 +1,18 @@
-<?php require_once('API/libs/Smarty.class.php'); // Inclure la bibliothèque Smarty
-
+<?php 
+require_once('API/libs/Smarty.class.php'); 
+session_start();
 // Connexion à la base de données (remplacez les détails par les vôtres)
 $smarty = new Smarty();
-
 require('API/database.php');
+require('API/check_auth.php');
+require('API/IsPilote.php');
 
-// Récupérer les offres d'emploi depuis la base de données (exemple)
-$itemsPerPage = 10; // Nombre d'éléments par page
-$page = isset($_GET['page']) ? intval($_GET['page']) : 1; // Récupérez le numéro de page depuis l'URL
+require('API/GetOfferInfo.php');
 
-// Calculez l'offset (décalage) en fonction du numéro de page
-$offset = ($page - 1) * $itemsPerPage;
 
-// Requête SQL avec LIMIT pour paginer les résultats
-$query = "SELECT o.nom_de_l_offre, o.duree_de_l_offre, o.date_de_l_offre, o.description_de_l_offre, o.salaire, o.nombre_de_places, o.nombre_de_places_prises, e.Entreprise, e.photo_entreprise FROM offre o JOIN entreprise e ON o.ID_entreprise = e.ID_entreprise LIMIT $offset, $itemsPerPage;";
-$result = $conn->query($query);
 
-// Assigner les données à Smarty
-$offres = $result->fetch_all(MYSQLI_ASSOC);
-$smarty->assign('offres', $offres);
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -49,9 +42,9 @@ $smarty->assign('offres', $offres);
             <div id="stroke">
                 <nav>
                     <ul>
-                        <li class="list-item-container"><a href="page_offres.html" id="test">Offres</a></li>
-                        <li class="list-item-container"><a href="page_entreprises.html">Entreprises</a></li>
-                        <li class="list-item-container"><a href="#FAQ">FAQ</a></li>
+                        <li class="list-item-container"><a href="page_offres.php" id="test">Offres</a></li>
+                        <li class="list-item-container"><a href="page_entreprises.php">Entreprises</a></li>
+                        <li class="list-item-container"><a href="index.php#FAQ">FAQ</a></li>
     
                     </ul>
                 </nav>
@@ -201,10 +194,12 @@ $smarty->assign('offres', $offres);
                 ?></div>
 
                             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                            <script><?php   echo " test"; ?>
+
+                            <script>
                                 // Écoutez l'événement de changement des filtres
                                 $('#filters_fieldset').change(function() {
-                                    var message = "Bonjour, monde !";
+
+                                    var message = "Changement détecté.";
                                       
                                     var specialite = $('#speciality').val(); // Récupérez la spécialité sélectionnée
                                     var dateDebut = $('#dateDebutInput').val(); // Récupérez la date de début sélectionnée
@@ -216,10 +211,12 @@ $smarty->assign('offres', $offres);
                                 
                                     // Envoie de la requête AJAX au serveur
                                     $.ajax({
+
                                         url: 'ajax_handler.php',
                                         method: 'POST',
                                         data: { specialite: specialite, dateDebut: dateDebut, duree: duree, salaire: salaire, entreprise: entreprise, type: type},
                                         dataType: 'json',
+
                                         success: function(data) {
                                             // Mettez à jour la div avec les résultats
                                             console.log(message); 

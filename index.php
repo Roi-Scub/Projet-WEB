@@ -3,11 +3,7 @@
 // Initialiser la session
 session_start();
 
-if (!isset($_SESSION["ID_utilisateur"])) {
-    header("Location: page_authentification.php");
-    exit();
-}
-
+require('API/check_auth.php');
 
 $profileId = $_SESSION['ID_utilisateur'];
 
@@ -15,20 +11,7 @@ $profileId = $_SESSION['ID_utilisateur'];
 require('API/database.php');
 
 
-$query = "SELECT * FROM pilote WHERE ID_utilisateur = $profileId";
-$result = mysqli_query($conn, $query);
-
-if ($result) {
-    
-    if (mysqli_num_rows($result) > 0) {
-        echo "L'utilisateur a des droits d'administrateur.";
-    } else {
-        echo "L'utilisateur n'a pas de droits d'administrateur.";
-    }
-} else {
-    
-    echo "Erreur lors de la récupération des droits d'accès.";
-}
+require('API/IsPilote.php');
 
 // Fermez la connexion à la base de données
 mysqli_close($conn);
@@ -64,7 +47,7 @@ mysqli_close($conn);
                 <ul>
                     
                     <li class="list-item-container"><a href="page_offres.php">Offres</a></li>
-                    <li class="list-item-container"><a href="page_entreprises.html">Entreprises</a></li>
+                    <li class="list-item-container"><a href="page_entreprises.php">Entreprises</a></li>
                     <li class="list-item-container"><a href="#FAQ">FAQ</a></li>
  
                 </ul>

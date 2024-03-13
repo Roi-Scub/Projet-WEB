@@ -1,12 +1,14 @@
-<?php
-
-require_once('API/libs/Smarty.class.php');
+<?php 
+require_once('API/libs/Smarty.class.php'); 
 session_start();
+// Connexion à la base de données (remplacez les détails par les vôtres)
+$smarty = new Smarty();
 require('API/database.php');
 require('API/check_auth.php');
+require('API/IsPilote.php');
 
+require_once('API/viewOffer.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,12 +27,10 @@ require('API/check_auth.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 </head>
-
-
 <body>
    
     <header id="header_principal">
-        <a href="index.php"><img src="photos/logo_petit.png" alt="Petit logo" id="logo_petit" ></a>
+        <img src="photos/logo_petit.png" alt="Petit logo" id="logo_petit">
         <div id="stroke">
             <nav>
                 <ul>
@@ -46,9 +46,9 @@ require('API/check_auth.php');
 
                 <div id="divaa1">
                 
-                <input id="btna1" type="button" value="Theme">
-                <input id="btna2" type="button" value="Profile">
-                <input id="btna3" type="button" value="More">
+                <input id="btna1" type="button" value="Thème">
+                <input id="btna2" type="button" value="Compte" onclick="window.location.href='page_profil.php';">
+                <input id="btna3" type="button" value="Plus">
                 <img id="parametre" src="photos/parametre.png">
                 </div>
 
@@ -63,10 +63,8 @@ require('API/check_auth.php');
             </div>
     </header>
 
-    <hr id="barre">
-
 <main>
 
- <?php include 'API/show_profile.php'; ?>
-   
+<?php   $smarty->display('API/Composants/offreDetails.tpl'); ?>
+
 </main>
