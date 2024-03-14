@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="../../global/styles/offers.css" />

@@ -1,6 +1,6 @@
 <?php //Authentification Controller 
 
-class AuthController
+class AuthController extends Controller
 {
     private $_userManager;
     private $_view;
@@ -8,69 +8,106 @@ class AuthController
     // Constructeur de la classe AuthController
     public function __construct($url)
     {
-        // Si l'url est introuvable on affiche une erreur
-        if(isset($url) && count($url) > 1)
-        {
-            throw new Exception('Page introuvable');
-        }
-        else
-        {
-            $this->isLogin();
-        }
+       $this->checkURL($url, 0);
+
+       switch ($url[0])
+       {
+           case 'login':
+               $this->isLogin();
+               break;
+           case 'logout':
+               $this->logout();
+               break;
+           default:
+               throw new Exception('Page introuvable');
+       }
     }
+
     // Fonction de Connexion 
     private function isLogin()
     {
 
+        if (isset($_SESSION['profileId'])) {
+            header('Location: index.php');
+        }
         
-        // On instancie la classe UserManager
-        $this->_userManager = new UserManager;
+        if (isset($_POST['login']) && isset($_POST['password'])) 
+        {
+            $login = $_POST['login'];
+            $password = $_POST['password'];
+        
+            this->_manager = new ProfileManager();
+            $profile = $this->_manager->verifyLogin($login, $password);
+            
+            if ($profile != null) 
+            {
+                $_SESSION['profileId'] = $profile->getId();
+                $_SESSION['profileType'] = $this->_manager->getProfileType($profile->getId());
+
+                header('Location: index.php');
+            } 
+            else 
+            {
+                $errorMsg = 'Login ou mot de passe incorrect';
+                $this->_view = new View('Error');
+                $this->_view->generate(array('errorMsg' => $errorMsg));
+
+            }
+        
+        
+        }
+    
+    $this->_view = new SmartyView('Login');
+    $this->_view->generate(array('error' => ^$error), null, null);
+       
 
         
         // Si l'utilisateur est déjà connecté, on le redirige vers la page d'accueil
-        if(isset($_POST['isLogin']))
-        {
-            $user = $this->_userManager->getUser($_POST['isLogin']);
-            if($user)
-            {
-                // On vérifie si le mot de passe est correct
-                if(password_verify($_POST['password'], $user->password()))
-                {
-                    $_SESSION['isLogin'] = $user->isLogin();
-                    $_SESSION['id'] = $user->id();
-                    $_SESSION['role'] = $user->role();
-                    header('Location: index.php');
-                }
-                // Si le mot de passe est incorrect, on affiche un message d'erreur
-                else
-                {
-                    $errorMsg = 'Mot de passe incorrect';
-                    $this->_view = new View('Error');
-                    $this->_view->generate(array('errorMsg' => $errorMsg));
-                }
-            }
-            // Si le login est incorrect, on affiche un message d'erreur
-            else
-            {
-                
-                $errorMsg = 'Login incorrect';
-                $this->_view = new View('Error');
-                $this->_view->generate(array('errorMsg' => $errorMsg));
-            }
-        }
-    
-        
-        else
-        {
-            $this->_view = new View('Login');
-            $this->_view->generate(array());
-        }
+        //if(isset($_POST['isLogin']))
+        //{
+        //    $user = $this->_userManager->getUser($_POST['isLogin']);
+        //    if($user)
+        //    {
+        //        // On vérifie si le mot de passe est correct
+        //        if(password_verify($_POST['password'], $user->password()))
+        //        {
+        //            $_SESSION['isLogin'] = $user->isLogin();
+        //            $_SESSION['id'] = $user->id();
+        //            $_SESSION['role'] = $user->role();
+        //            header('Location: index.php');
+        //        }
+        //        // Si le mot de passe est incorrect, on affiche un message d'erreur
+        //        else
+        //        {
+        //            $errorMsg = 'Mot de passe incorrect';
+        //            $this->_view = new View('Error');
+        //            $this->_view->generate(array('errorMsg' => $errorMsg));
+        //        }
+        //    }
+        //    // Si le login est incorrect, on affiche un message d'erreur
+        //    else
+        //    {
+        //        
+        //        $errorMsg = 'Login incorrect';
+        //        $this->_view = new View('Error');
+        //        $this->_view->generate(array('errorMsg' => $errorMsg));
+        //    }
+        //}
+    //
+        //
+        //else
+        //{
+        //    $this->_view = new View('Login');
+        //    $this->_view->generate(array());
+        //}
     }
 
     private function logout()
     {
-        session_destroy();
-        header('Location: index.php');
+        session_start();
+
+        if(session_destroy());
+        header('Location: login.php');
     }
 }
 
