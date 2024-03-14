@@ -142,7 +142,7 @@ require('API/GetOfferInfo.php');
 
                                         <div class="slidecontainer">
 
-                                            <input type="range" min="640" max="1250" value="640" class="slider" id="myRange">
+                                            <input type="range" step="10" min="640" max="1250" value="640" class="slider" id="myRange">
 
                                             <input type="number" id="tentacles" class="tentacles" min="640" max="1250" /> <h3 id="salary_title">Saisie manuelle</h3>
 
