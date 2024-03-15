@@ -2,8 +2,7 @@
 
 class AuthController extends Controller
 {
-    private $_userManager;
-    private $_view;
+   
 
     // Constructeur de la classe AuthController
     public function __construct($url)
@@ -13,7 +12,7 @@ class AuthController extends Controller
        switch ($url[0])
        {
            case 'login':
-               $this->isLogin();
+               $this->login();
                break;
            case 'logout':
                $this->logout();
@@ -24,41 +23,40 @@ class AuthController extends Controller
     }
 
     // Fonction de Connexion 
-    private function isLogin()
+    private function login()
     {
-
         if (isset($_SESSION['profileId'])) {
-            header('Location: index.php');
+            header('Location: http:/stages-cove.fr');
         }
         
-        if (isset($_POST['login']) && isset($_POST['password'])) 
+        $error = null;
+        if (isset($_POST['email']) && isset($_POST['password'])) 
         {
-            $login = $_POST['login'];
+            $email = $_POST['email'];
             $password = $_POST['password'];
         
-            this->_manager = new ProfileManager();
-            $profile = $this->_manager->verifyLogin($login, $password);
+            $this->_manager = new ProfileManager();
+            $profile = $this->_manager->verifyLogin($email, $password);
             
             if ($profile != null) 
             {
                 $_SESSION['profileId'] = $profile->getId();
                 $_SESSION['profileType'] = $this->_manager->getProfileType($profile->getId());
 
-                header('Location: index.php');
+                header('Location: http:/stages-cove.fr');
             } 
             else 
             {
                 $errorMsg = 'Login ou mot de passe incorrect';
-                $this->_view = new View('Error');
-                $this->_view->generate(array('errorMsg' => $errorMsg));
+              
 
             }
         
         
         }
     
-    $this->_view = new SmartyView('Login');
-    $this->_view->generate(array('error' => ^$error), null, null);
+        $this->_view = new SmartyView('login');
+        $this->_view->generate(array('error' => $error), null, null);
        
 
         
@@ -106,8 +104,10 @@ class AuthController extends Controller
     {
         session_start();
 
-        if(session_destroy());
-        header('Location: login.php');
+        if(session_destroy())
+        {
+            header('Location: http:/stages-cove.fr/login');
+        }
     }
 }
 
@@ -168,4 +168,3 @@ class AuthController extends Controller
 //}
 //?>
 
-?>

@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="../../global/styles/global.css" />
+{$componentFooter}

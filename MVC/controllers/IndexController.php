@@ -1,6 +1,6 @@
 <?php 
 
-class IndexController
+class IndexController extends Controller
 {
     public function __construct($url)
     {

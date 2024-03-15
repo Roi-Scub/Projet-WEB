@@ -6,13 +6,19 @@
 							 /_/   \_\  \___/    |_|   |_| |_|  	 |_|      \___/  |_| \_\ |_|  |_|
 */
 
+body{
+	overflow: hidden;
+}
+#login_rectangle 
+{
+	height:relative;
 
-
+}
 #login_body {
 	
 	display:flex;
 	width:100%;
-	height:100%;
+	height:100vh;
 	background-color: rgba(0, 0, 0, 1);
 	
 
@@ -30,50 +36,61 @@
 	justify-content: center;
 	align-items: center;
 	display:flex;
-	width:100%;
-	height:300%;
+	width:200vh;
+	height:500vw;
 	opacity:0.5;
-
+	position:relative;
 
 }
 
 #logo_stage_s_cove{
 	
 	position:absolute;
-	margin-left:0%;
-	margin-top:-35vw;
-	width: 45%;;
-	height:17.5%;
-
+	
+	margin-top:0;
+	left:32vw;
+	top:3vw;
+	
+	z-index: -1;
 
 
 
 }
 	#login_main {
 
-		display:block;
+		display:flex;
+		flex-grow:1;
 		align-items: center;
+		justify-content: center;
 		width:100%;
-		height: max(6vw, 600px);
+		height:100vh;
 		background-color: #EDF0F4;
+		margin: -1vw;
+		position:absolute;
 
 	}
 
 	
 
 		#login_fieldset {
-
+			position:absolute;
+			display:flex;
+			flex-direction: column;
+			justify-content:center;
+			align-items: center;
 			width: 50%;
 			height: 30vw;
 			background-color: rgba(0, 12, 14, 0.7); ;
 			
 			border-radius:1vw;
 			border-color:white;
-			position:absolute;
+
 			z-index: 4;
 			top:25%;
 			left:25%;
 			padding:0%;
+			
+					
 		}
 
 			#grand_logo_login {
@@ -103,15 +120,15 @@
 
 				#login_form {
 					position: absolute;
-					width: 100%;
-					height: 20vw;
+					width: relative;
+					height: relative;
 					color: #FFFFFF;
 					font-family: "Open Sans";
 					font-weight: 700;
 					font-size: 2vw;
 					line-height: 1.2;
 					text-align: center;
-					margin-top:2vw;
+					
 				}
 
 					#login_input {
@@ -197,10 +214,11 @@
 									font-size: 1vw;
 									line-height: 1.2;
 									text-align: center;
+									margin-top:2vw;
 									
 									
-									position:absolute;
-									top:80%;
+								
+									
 								}
 						
 								.errorBox {

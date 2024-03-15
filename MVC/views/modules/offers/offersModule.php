@@ -15,8 +15,9 @@ $this->_smarty->assign('componentOfferFilter', $offerFilterRender);
 $this->_smarty->assign('componentOfferPagination', $offerPaginationRender);
 
 // --- assignation des variables pour le rendu final ---
-$headerRender = $this->_smarty->fetch('modules/header/headerModule.php');
+
 $mainRender=$this->_smarty->fetch('models/offers/template.tpl');
-$footerRender = $this->_smarty->fetch('modules/footer/footerModule.php');
+$headerRender = $headerRenderGlobal;
+$footerRender = $footerRenderGlobal;
 
 ?>

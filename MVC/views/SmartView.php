@@ -16,7 +16,7 @@ class SmartyView
     public function __construct($module)
     {
        
-        $smartyFolderPath = '../models/tools/smarty/';
+        $smartyFolderPath = 'models/tools/smarty/';
         require_once($smartyFolderPath . 'libs/Smarty.class.php');
         $smarty = new Smarty();
 
@@ -34,9 +34,11 @@ class SmartyView
         $module = strtolower($module);
 
         $this->_smarty = $smarty;
-        $this->_file = '../models/' . $module . '/' . $module . 'Module.php'; 
-        $this->_styles = array("views/style.css");
+        $this->_file = 'views/modules/' . $module . '/' . $module . 'Module.php'; 
+        $this->_styles = array("../global/styles/global.css");
         $this->_scripts = array();
+
+        //var_dump($this);
 
     }
 
@@ -45,9 +47,9 @@ class SmartyView
     /**
      * Append a style file to the final render.
      */
-    private function appendStyle($element, $styleFile = "style.css")
+    private function appendStyle($element)
     {
-        array_push($this->_styles, "views/" . $element . "/" . $styleFile);
+        array_push($this->_styles, "../global/styles/" . $element);
     }
 
     /**
@@ -67,7 +69,7 @@ class SmartyView
      * @param string $headerModule The name of the header module that have to be displayed. Default value is "navigationBar". To disable the header, set the value to NULL.
      * @param string $footerModule The name of the footer module that have to be displayed. Default value is "footer". To disable the footer, set the value to NULL.
      */
-    public function generate($data , $headerModule = "navigationBar", $footerModule = "footer")
+    public function generate($data , $headerModule = "header", $footerModule = "footer")
     {
         extract($data);
 
@@ -75,10 +77,11 @@ class SmartyView
         require_once($this->_file);
         (!is_null($footerModule)) ? require_once('views/modules/' . $footerModule . '/' . $footerModule . 'Module.php') : $footerRender = NULL;
 
+        
         $this->_smarty->assign('title', $this->_title);
         $this->_smarty->assign('styles', $this->_styles);
         $this->_smarty->assign('scripts', $this->_scripts);
-
+        
         $this->_smarty->assign('headerRender', $headerRender);
         $this->_smarty->assign('mainRender', $mainRender);
         $this->_smarty->assign('footerRender', $footerRender);
