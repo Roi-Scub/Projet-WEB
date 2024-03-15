@@ -38,7 +38,7 @@ class SmartyView
         $this->_styles = array("../global/styles/global.css");
         $this->_scripts = array();
 
-        //var_dump($this);
+        //var_dump("hello");
 
     }
 
@@ -77,7 +77,7 @@ class SmartyView
         require_once($this->_file);
         (!is_null($footerModule)) ? require_once('views/modules/' . $footerModule . '/' . $footerModule . 'Module.php') : $footerRender = NULL;
 
-        
+       
         $this->_smarty->assign('title', $this->_title);
         $this->_smarty->assign('styles', $this->_styles);
         $this->_smarty->assign('scripts', $this->_scripts);

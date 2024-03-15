@@ -26,30 +26,35 @@ class AuthController extends Controller
     private function login()
     {
         if (isset($_SESSION['profileId'])) {
-            header('Location: http:/stages-cove.fr');
+            header('Location: http://stages-cove.fr');
         }
         
         $error = null;
         if (isset($_POST['email']) && isset($_POST['password'])) 
         {
+            
             $email = $_POST['email'];
             $password = $_POST['password'];
-        
+            var_dump($email, $password);
             $this->_manager = new ProfileManager();
             $profile = $this->_manager->verifyLogin($email, $password);
+            
             
             if ($profile != null) 
             {
                 $_SESSION['profileId'] = $profile->getId();
                 $_SESSION['profileType'] = $this->_manager->getProfileType($profile->getId());
-
-                header('Location: http:/stages-cove.fr');
+                
+                //var_dump($_SESSION['profileId']);
+                header('Location: http://stages-cove.fr');
+                
             } 
             else 
             {
+
                 $errorMsg = 'Login ou mot de passe incorrect';
               
-
+                
             }
         
         

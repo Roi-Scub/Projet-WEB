@@ -5,7 +5,7 @@
      * 
 */
 
-class Profile extends Manager
+class Profile extends Mapping
 {
 
     /*
@@ -22,15 +22,15 @@ class Profile extends Manager
 
 */
 
-    private = $_id;
-    private = $_firstName;
-    private = $_lastName;
-    private = $_mail;
-    private = $_passwordHash;
-    private = $_birthday;
-    private = $_pictureLink;
-    private = $_bannerLink;
-    private = $_deletedAt;
+    private $_id;
+    private $_firstName;
+    private $_lastName;
+    private $_mail;
+    private $_passwordHash;
+    private $_birthday;
+    private $_pictureLink;
+    private $_bannerLink;
+    private $_deletedAt;
     
     public function __construct(array $data)
     {

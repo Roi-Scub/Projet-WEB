@@ -1,5 +1,5 @@
 <?php
-
+require_once('models/profile/Profile.php');
 class ProfileManager extends Manager
 {
 
@@ -7,18 +7,21 @@ class ProfileManager extends Manager
     {
         $conn = $this->getDataBase();
 
-        $sql = "SELECT * FROM 'profile' WHERE `Profile_Mail` = :email LIMIT 1";
+        $sql = 'SELECT * FROM profile WHERE `Profile_Mail` = :email LIMIT 1';
 
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':email', $email);
 
         $stmt->execute();
-
+        
+        
         if($stmt->rowCount() != 0)
         {
+            var_dump($profile ="test");
             $profile = new Profile($stmt->fetch(PDO::FETCH_ASSOC));
+            
             password_verify($password, $profile->getPasswordHash()) ? $profile : $profile = null;
-
+            var_dump($profile);
         } 
         else 
         {
@@ -26,11 +29,13 @@ class ProfileManager extends Manager
         }
 
         return $profile;
+        
     }
 
     public function getProfileType($profileId)
     {
         $db = $this->getDataBase();
+        
 
         foreach (ProfileType::cases() as $profileType)
         {

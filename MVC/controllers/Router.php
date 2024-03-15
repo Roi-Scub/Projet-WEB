@@ -27,7 +27,7 @@ class Router {
 
 
             $url = '';
-
+            
             // Check if the url is defined
             if (isset($_GET['url'])) {
 
@@ -40,16 +40,17 @@ class Router {
                  * @example Url "www.example.com/foo/..." set in this variable "Foo".
                  */
                 $controller = ucfirst(strtolower($url[0]));
-
+                var_dump($controller);
                 /** 
                  * The controller class is the controller name with the suffix 'Controller' and the extension '.php'.
                  */
                 $controllerClass = $controller . 'Controller';
-
+                var_dump($controllerClass);
                 /**
                  * The controller file is in the controllers folder with the controller class name and the extension '.php'
                  */
                 $controllerFile = 'controllers/' . $controllerClass . '.php';
+                var_dump($controllerFile);
 
                 
 
@@ -68,8 +69,11 @@ class Router {
 
                 // Check if the controller file exists
                 if (file_exists($controllerFile)) {
+                    var_dump("la");
                     require_once($controllerFile);
+                    var_dump($controllerFile);
                     $this->_controller = new $controllerClass($url);
+                    var_dump($this->_controller);
                 } else {
                     throw new Exception('Page introuvable');
                 }
@@ -81,6 +85,7 @@ class Router {
                 // If the url is not defined, the default controller is the IndexController
                 require_once('controllers/IndexController.php');
                 $this->_controller = new IndexController($url);
+               
             }
 
         } catch (Exception $e) {
