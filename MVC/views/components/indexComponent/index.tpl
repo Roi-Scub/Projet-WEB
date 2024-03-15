@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <hr id="barre">
 <div id="rectangle">
@@ -12,7 +13,7 @@
 
     </div>
 
-    <img src="photos/logo_grand.png" alt="Grand logo" id="grand_logo">
+    <img src="../../../global/images/logo_grand.png" alt="Grand logo" id="grand_logo">
 
     
 </div>
@@ -81,13 +82,13 @@
                 <div class="cards">
 
                     <label class="card" for="orange" id="song-1">
-                    <img src="photos/orange.png" alt="song">
+                    <img src="../../../global/images/orange.png" alt="song">
                     </label>
                     <label class="card" for="amadeus" id="song-2">
-                    <img src="photos/amadeus.png" alt="song">
+                    <img src="../../../global/images/amadeus.png" alt="song">
                     </label>
                     <label class="card" for="thales" id="song-3">
-                    <img src="photos/thales.png" alt="song">
+                    <img src="../../../global/images/thales.png" alt="song">
                     </label>
                     
                 </div>
@@ -109,21 +110,21 @@
 
 <h2 id="FAQ"> FAQ</h2>
 
-<div class="select"><img src="photos/plus.png" onmouseup="document.getElementById('div1').style.display='block'" ><h2 id="CV">Comment faire un bon cv ?</h2></div>
+<div class="select"><img src="../../../global/images/plus.png" onmouseup="document.getElementById('div1').style.display='block'" ><h2 id="CV">Comment faire un bon cv ?</h2></div>
 <div id="div1" class="desc">
-<img src="photos/moins.png" onmouseup="document.getElementById('div1').style.display='none'"  >
+<img src="../../../global/images/moins.png" onmouseup="document.getElementById('div1').style.display='none'"  >
 <p id="descriptionCV">Nous disposons, dans l'enceinte de notre école, des étudiants et formateurs qui seraient ravis de pouvoir t'accompagner dans la création d'un bon cv !
     <br><br>Des sites comme Canva ou cv.com t'accompagne dans la création d'un cv personnalisé avec un beau design.</p>
 </div>
-<div class="select"><img src="photos/plus.png" onmouseup="document.getElementById('div2').style.display='block'" ><h2 id="CV">Comment se préparer à un entretien ?</h2></div>
+<div class="select"><img src="../../../global/images/plus.png" onmouseup="document.getElementById('div2').style.display='block'" ><h2 id="CV">Comment se préparer à un entretien ?</h2></div>
 <div id="div2" class="desc">
-<img src="photos/moins.png" onmouseup="document.getElementById('div2').style.display='none'"  >
+<img src="../../../global/images/moins.png" onmouseup="document.getElementById('div2').style.display='none'"  >
 <p id="descriptionCV">Nous disposons, dans l'enceinte de notre école, des étudiants et formateurs qui seraient ravis de pouvoir t'accompagner dans la création d'un bon cv !
     <br><br>Des sites comme Canva ou cv.com t'accompagne dans la création d'un cv personnalisé avec un beau design.</p>
 </div>
-<div class="select"><img src="photos/plus.png" onmouseup="document.getElementById('div3').style.display='block'"  ><h2 id="CV">Les lettres de motivation sont-elles nécessaires ?</h2></div>
+<div class="select"><img src="../../../global/images/plus.png" onmouseup="document.getElementById('div3').style.display='block'"  ><h2 id="CV">Les lettres de motivation sont-elles nécessaires ?</h2></div>
 <div id="div3" class="desc">
-<img src="photos/moins.png" onmouseup="document.getElementById('div3').style.display='none'"  >
+<img src="../../../global/images/moins.png" onmouseup="document.getElementById('div3').style.display='none'"  >
 <p id="descriptionCV">Nous disposons, dans l'enceinte de notre école, des étudiants et formateurs qui seraient ravis de pouvoir t'accompagner dans la création d'un bon cv !
     <br><br>Des sites comme Canva ou cv.com t'accompagne dans la création d'un cv personnalisé avec un beau design.</p>
 </div>

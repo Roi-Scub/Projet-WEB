@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
  /*
   _____   _                _           _   _         
  |  ___| (_)  _ __   ___  | |_      __| | (_) __   __
@@ -339,6 +341,17 @@
 			
 
 		}
+
+		
+#barre_grise {
+	align-self: center;
+    height: 0.2vw;
+	border-color: #EEF1F5;
+	background: #EEF1F5;
+	margin-top: 7.5vw;
+	margin-bottom: 7.5vw;
+	border:none;
+}	
 
 /* 
 

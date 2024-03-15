@@ -16,7 +16,7 @@ class IndexController extends Controller
         //var_dump("ici");
         $this->_view = new SmartyView('Index');
         //var_dump($this->_view);
-        $this->_view->generate(array(), null, null);
+        $this->_view->generate(array());
         
     }
 

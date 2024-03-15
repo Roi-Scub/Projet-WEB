@@ -2,6 +2,6 @@
 
 $componentName = "headerGlobal";
 
-$headerRenderGlobal = $this->_smarty->fetch('component/header/template.tpl');
+$headerRenderGlobale = $this->_smarty->fetch('views/components/header/header.tpl');
 
 ?>

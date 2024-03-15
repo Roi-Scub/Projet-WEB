@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-15 19:17:41
+/* Smarty version 4.4.1, created on 2024-03-15 23:24:35
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\indexComponent\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_65f490c534e2e8_41650676',
+  'unifunc' => 'content_65f4caa3267739_62088169',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8d3e8b1820dfd902646919ef847fd6a398b055b2' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\indexComponent\\index.tpl',
-      1 => 1710526653,
+      1 => 1710541472,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65f490c534e2e8_41650676 (Smarty_Internal_Template $_smarty_tpl) {
-?>
+function content_65f4caa3267739_62088169 (Smarty_Internal_Template $_smarty_tpl) {
+?><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
 <hr id="barre">
 <div id="rectangle">
 
@@ -35,7 +36,7 @@ function content_65f490c534e2e8_41650676 (Smarty_Internal_Template $_smarty_tpl)
 
     </div>
 
-    <img src="photos/logo_grand.png" alt="Grand logo" id="grand_logo">
+    <img src="../../../global/images/logo_grand.png" alt="Grand logo" id="grand_logo">
 
     
 </div>
@@ -104,13 +105,13 @@ function content_65f490c534e2e8_41650676 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="cards">
 
                     <label class="card" for="orange" id="song-1">
-                    <img src="photos/orange.png" alt="song">
+                    <img src="../../../global/images/orange.png" alt="song">
                     </label>
                     <label class="card" for="amadeus" id="song-2">
-                    <img src="photos/amadeus.png" alt="song">
+                    <img src="../../../global/images/amadeus.png" alt="song">
                     </label>
                     <label class="card" for="thales" id="song-3">
-                    <img src="photos/thales.png" alt="song">
+                    <img src="../../../global/images/thales.png" alt="song">
                     </label>
                     
                 </div>
@@ -132,21 +133,21 @@ function content_65f490c534e2e8_41650676 (Smarty_Internal_Template $_smarty_tpl)
 
 <h2 id="FAQ"> FAQ</h2>
 
-<div class="select"><img src="photos/plus.png" onmouseup="document.getElementById('div1').style.display='block'" ><h2 id="CV">Comment faire un bon cv ?</h2></div>
+<div class="select"><img src="../../../global/images/plus.png" onmouseup="document.getElementById('div1').style.display='block'" ><h2 id="CV">Comment faire un bon cv ?</h2></div>
 <div id="div1" class="desc">
-<img src="photos/moins.png" onmouseup="document.getElementById('div1').style.display='none'"  >
+<img src="../../../global/images/moins.png" onmouseup="document.getElementById('div1').style.display='none'"  >
 <p id="descriptionCV">Nous disposons, dans l'enceinte de notre école, des étudiants et formateurs qui seraient ravis de pouvoir t'accompagner dans la création d'un bon cv !
     <br><br>Des sites comme Canva ou cv.com t'accompagne dans la création d'un cv personnalisé avec un beau design.</p>
 </div>
-<div class="select"><img src="photos/plus.png" onmouseup="document.getElementById('div2').style.display='block'" ><h2 id="CV">Comment se préparer à un entretien ?</h2></div>
+<div class="select"><img src="../../../global/images/plus.png" onmouseup="document.getElementById('div2').style.display='block'" ><h2 id="CV">Comment se préparer à un entretien ?</h2></div>
 <div id="div2" class="desc">
-<img src="photos/moins.png" onmouseup="document.getElementById('div2').style.display='none'"  >
+<img src="../../../global/images/moins.png" onmouseup="document.getElementById('div2').style.display='none'"  >
 <p id="descriptionCV">Nous disposons, dans l'enceinte de notre école, des étudiants et formateurs qui seraient ravis de pouvoir t'accompagner dans la création d'un bon cv !
     <br><br>Des sites comme Canva ou cv.com t'accompagne dans la création d'un cv personnalisé avec un beau design.</p>
 </div>
-<div class="select"><img src="photos/plus.png" onmouseup="document.getElementById('div3').style.display='block'"  ><h2 id="CV">Les lettres de motivation sont-elles nécessaires ?</h2></div>
+<div class="select"><img src="../../../global/images/plus.png" onmouseup="document.getElementById('div3').style.display='block'"  ><h2 id="CV">Les lettres de motivation sont-elles nécessaires ?</h2></div>
 <div id="div3" class="desc">
-<img src="photos/moins.png" onmouseup="document.getElementById('div3').style.display='none'"  >
+<img src="../../../global/images/moins.png" onmouseup="document.getElementById('div3').style.display='none'"  >
 <p id="descriptionCV">Nous disposons, dans l'enceinte de notre école, des étudiants et formateurs qui seraient ravis de pouvoir t'accompagner dans la création d'un bon cv !
     <br><br>Des sites comme Canva ou cv.com t'accompagne dans la création d'un cv personnalisé avec un beau design.</p>
 </div>

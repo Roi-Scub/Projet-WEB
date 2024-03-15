@@ -1,10 +1,13 @@
 <?php
 
-$moduleName = "footer";
-$this->_smarty->appendStyle('global/styles/global.css');
+$componentName = "footer";
 
-require_once('views/components/footer/footer.php');
-$this->smarty->assign('componentFooter', $footerRender);
+$this->appendStyle('global.css');
 
-&footerRenderGlobal = $this->_smarty->fetch('modules/footer/template.tpl');
+//require_once('views/components/footer/footer.php');
+
+//$this->_smarty->assign('componentFooter', $footerRenderGlobale);
+
+$footerRenderGlobal = $this->_smarty->fetch('views/modules/' . $componentName . '/template.tpl');
 ?>
+

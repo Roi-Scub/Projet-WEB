@@ -10,8 +10,8 @@ $this->appendStyle('mainPage.css');
 // --- Récupération des données pour le module ---
 
 require_once('views/components/indexComponent/index.php');
-//require_once('views/modules/header/headerModule.php');
-//require_once('views/modules/footer/footerModule.php');
+require_once('views/modules/header/headerModule.php');
+require_once('views/modules/footer/footerModule.php');
 
  //--- assignation des variables pour le rendu final ---
 
@@ -24,8 +24,8 @@ $this->_smarty->assign('profileType', $_SESSION['profileType']->value);
 //var_dump("la");
 
 $mainRender = $this->_smarty->fetch('views/modules/' . $moduleName . '/template.tpl');
-//$headerRender = $headerRenderGlobal;
-//$footerRender = $footerRenderGlobal;
+$headerRender = $headerRenderGlobal;
+$footerRender = $footerRenderGlobal;
 //$mainRender = "hello";
 
 ?>

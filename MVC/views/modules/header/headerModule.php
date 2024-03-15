@@ -1,13 +1,14 @@
 <?php
 
-$moduleName = "header";
-$this->_smarty->appendStyle('global/styles/global.css');
+$componentName = "header";
+$this->appendStyle('global.css');
 
-require_once('view/components/header/header.php');
-$this->smarty->assign('componentHeader', $headerRenderGlobal);
+//require_once('views/components/header/header.php');
+
+//$this->_smarty->assign('componentHeader', $headerRenderGlobale);
 
 //&headerRenderGlobal = $this->_smarty->fetch('modules/header/template.tpl');
 
-$headerRender = $this->_smarty->fetch('modules/header/template.tpl');
+$headerRenderGlobal = $this->_smarty->fetch('views/modules/' . $componentName . '/template.tpl');
 
 ?>
