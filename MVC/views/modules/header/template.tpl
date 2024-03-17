@@ -20,7 +20,7 @@
                 <div id="divaa1">
 
                     <input id="btna1" type="button" value="Thème">
-                    <input id="btna2" type="button" value="Compte" onclick="window.location.href='page_profil.php';">
+                    <input id="btna2" type="button" value="Compte" onclick="window.location.href='profile'">
                     <input id="btna3" type="button" value="Plus">
                     <img id="parametre" src="../../../global/images/parametre.png">
 

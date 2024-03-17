@@ -1,5 +1,5 @@
 <?php
-require_once('models/offers/offers.php');
+require_once('models/offers/Offers.php');
 require_once('views/components/offer/offerPagination.php');
 
 
