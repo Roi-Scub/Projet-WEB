@@ -1,7 +1,7 @@
 
 <div id="header_principal">
 
-    <a href=""><img src="../../../global/images/logo_petit.png" alt="Petit logo" id="logo_petit"></a>
+    <a href="index"><img src="../../../global/images/logo_petit.png" alt="Petit logo" id="logo_petit"></a>
 
         <div id="stroke">
             <nav>

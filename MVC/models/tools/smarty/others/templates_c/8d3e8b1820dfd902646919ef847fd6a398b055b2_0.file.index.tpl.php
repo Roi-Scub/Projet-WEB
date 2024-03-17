@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-15 23:24:35
+/* Smarty version 4.4.1, created on 2024-03-16 10:10:49
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\indexComponent\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_65f4caa3267739_62088169',
+  'unifunc' => 'content_65f56219ae8417_07202952',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8d3e8b1820dfd902646919ef847fd6a398b055b2' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\indexComponent\\index.tpl',
-      1 => 1710541472,
+      1 => 1710580248,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65f4caa3267739_62088169 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65f56219ae8417_07202952 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <hr id="barre">
@@ -32,7 +32,7 @@ function content_65f4caa3267739_62088169 (Smarty_Internal_Template $_smarty_tpl)
 
         <p id="paragraphe1">Pour les étudiants, la recherche de stage n'a jamais été aussi simple !</p>
 
-        <button onclick="window.location.href='www.stages-cove.fr/offres';"  id="button_3">COMMENCER À CHERCHER</button>
+        <button onclick="window.location.href='offres';"  id="button_3">COMMENCER À CHERCHER</button>
 
     </div>
 

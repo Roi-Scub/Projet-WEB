@@ -4,7 +4,8 @@ class IndexController extends Controller
 {
     public function __construct($url)
     {
-        //var_dump("la");
+        echo "<br>";
+        var_dump("la");
         $this->checkURL($url, 0);
         $this->index();
         

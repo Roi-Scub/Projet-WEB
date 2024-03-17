@@ -55,9 +55,9 @@ class SmartyView
     /**
      * Append a script file to the final render.
      */
-    private function appendScript($element, $scriptFile = "script.js")
+    private function appendScript($element)
     {
-        array_push($this->_scripts, "views/" . $element . "/" . $scriptFile);
+        array_push($this->_scripts, "../global/javascript". '/' . $element );
     }
 
     // --- Public methods ---

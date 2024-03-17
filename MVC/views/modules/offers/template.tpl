@@ -1,12 +1,12 @@
 <div class="flex_collumn">
 
     <div class="flex">
-        {$offerFilter}
-        {$offerList}
+        <!--{$offerFilter}-->
+        {$componentOfferList}
         
     <div>
 
-    {$offerPagination}
+    {$componentOfferPagination}
 
 </div>
 

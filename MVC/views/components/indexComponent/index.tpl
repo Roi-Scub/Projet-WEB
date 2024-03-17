@@ -9,7 +9,7 @@
 
         <p id="paragraphe1">Pour les étudiants, la recherche de stage n'a jamais été aussi simple !</p>
 
-        <button onclick="window.location.href='www.stages-cove.fr/offres';"  id="button_3">COMMENCER À CHERCHER</button>
+        <button onclick="window.location.href='offres';"  id="button_3">COMMENCER À CHERCHER</button>
 
     </div>
 

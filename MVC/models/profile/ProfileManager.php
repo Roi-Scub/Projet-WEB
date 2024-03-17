@@ -35,13 +35,14 @@ class ProfileManager extends Manager
     public function getProfileType($profileId)
     {
         $db = $this->getDataBase();
-        
+        echo "<br>";
+        var_dump($profileId);
 
-        foreach (ProfileType::cases() as $profileType)
+        foreach (ProfileType::cases() as $profileType )
         {
-
+            var_dump($profileId);
             $sql = 'SELECT count(*) AS "is'. ucfirst($profileType->value) .'" FROM `'. $profileType->value .'` WHERE `Profile_Id` =:profileId LIMIT 1';
-
+            var_dump($sql);
             $stmt = $db->prepare($sql);
             $stmt->bindParam(':profileId', $profileId);
 
@@ -54,7 +55,7 @@ class ProfileManager extends Manager
 
         }    
         
-        return ProfileType::Student;
+        return ProfileType::eleve;
     }
 
 

@@ -3,18 +3,8 @@
 // Initialiser la session
 session_start();
 
-require('API/check_auth.php');
-
-$profileId = $_SESSION['ID_utilisateur'];
-
-// Connexion à la base de données (assurez-vous que vous avez déjà inclus database.php)
-require('API/database.php');
 
 
-require('API/IsPilote.php');
-
-// Fermez la connexion à la base de données
-mysqli_close($conn);
 ?>
 
 
