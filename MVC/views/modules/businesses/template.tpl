@@ -1,1 +1,5 @@
-<link rel="stylesheet" href="../../global/styles/businesses.css" />
+
+<div class="flex_collumn">
+{$businessRender}
+
+</div>

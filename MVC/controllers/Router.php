@@ -79,7 +79,7 @@ class Router {
                     var_dump($controllerFile);
                     $this->_controller =  new $controllerClass($url);
                     echo "<br>";
-                    var_dump($this->_controller);
+                    //var_dump($this->_controller);
                 } else {
                     echo "hello";
                     throw new Exception('Page introuvable');

@@ -1,5 +1,5 @@
 <?php
-class business {
+class Business {
 
     /*
 	Nom	Type	Interclassement	Attributs	Null	Valeur par défaut	Commentaires	Extra	Action

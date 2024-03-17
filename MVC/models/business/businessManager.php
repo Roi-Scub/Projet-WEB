@@ -1,4 +1,5 @@
 <?php
+require_once('models/business/business.php');
 
 class BusinessManager extends Manager {
 
@@ -6,14 +7,18 @@ class BusinessManager extends Manager {
     {
         $conn = $this->getDataBase();
 
-        $sql = 'SELECT * FROM business';
+        $sql = 'SELECT * FROM business b ';
 
         $stmt = $conn->prepare($sql);
 
         $stmt->execute();
 
-        $business = $stmt->fetch(PDO::FETCH_ASSOC);
+        $business = [];
 
+        while($data = $stmt->fetch(PDO::FETCH_ASSOC)) 
+        {
+            $business[] = new Business($data);
+        }
         return $business;
     }
 

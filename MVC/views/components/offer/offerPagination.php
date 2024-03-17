@@ -7,6 +7,6 @@ $offset = ($page - 1) * $itemsPerPage;
 
 //$this->_smarty->assign('offersPagination', $offersPagination);
 
-$offerPaginationRender=$this->_smarty->fetch('views/components/offer/offerPagination.tpl');
+$offerPaginationRender = $this->_smarty->fetch('views/components/offer/offerPagination.tpl');
 
 ?>
