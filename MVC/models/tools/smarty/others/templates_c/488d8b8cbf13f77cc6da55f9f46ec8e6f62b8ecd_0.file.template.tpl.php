@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-17 18:07:23
+/* Smarty version 4.4.1, created on 2024-03-18 08:40:37
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\modules\header\template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_65f7234bf12855_89020736',
+  'unifunc' => 'content_65f7eff5896001_96784663',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '488d8b8cbf13f77cc6da55f9f46ec8e6f62b8ecd' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\modules\\header\\template.tpl',
-      1 => 1710695237,
+      1 => 1710747635,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65f7234bf12855_89020736 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65f7eff5896001_96784663 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="header_principal">
 
@@ -32,7 +32,7 @@ function content_65f7234bf12855_89020736 (Smarty_Internal_Template $_smarty_tpl)
 
                     <li class="list-item-container"><a href="offers">Offres</a></li>
                     <li class="list-item-container"><a href="businesses">Entreprises</a></li>
-                    <li class="list-item-container"><a href="#FAQ">FAQ</a></li>
+                    <li class="list-item-container"><a href="index#FAQ">FAQ</a></li>
 
                 </ul>
             </nav>

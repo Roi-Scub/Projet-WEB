@@ -12,6 +12,11 @@
         <link rel="stylesheet" type="text/css" href="{$style}">
     {/foreach}
 
+    <meta charset="UTF-8">
+    
+
+
+
 </head>
 
 <body>

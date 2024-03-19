@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-14 19:26:21
+/* Smarty version 4.4.1, created on 2024-03-18 13:29:48
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_65f3414d5fa445_88948146',
+  'unifunc' => 'content_65f833bccb1281_99710604',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d5468c65554460480c39a39f77d16091afcc1a8' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\template.tpl',
-      1 => 1710399254,
+      1 => 1710757461,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65f3414d5fa445_88948146 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65f833bccb1281_99710604 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -43,6 +43,11 @@ $_smarty_tpl->tpl_vars['style']->do_else = false;
     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
+    <meta charset="UTF-8">
+    
+
+
 
 </head>
 

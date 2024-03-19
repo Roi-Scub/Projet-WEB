@@ -1,15 +1,14 @@
 <div class="body">
+ 
+{foreach $profile as $profileinfo}
 
-{foreach $piloteinfo as $p}
+    <h1 class="bonjour"> Bonjour {$profileinfo.firstName} {$profileinfo.lastName} </h1>
 
-    
-    <h1 class="bonjour"> Bonjour {$p.Prenom} {$p.Nom} </h1>
-
-    <img class="banner" src="{$p.banniere}" onerror="this.src='../photos/banner_placeholder.jpg'" alt="Banniere de profil">
+    <img class="banner" src="{$profileinfo.bannerLink}" onerror="this.src='../../../global/images/banner_placeholder.jpg'" alt="Banniere de profil">
 
         <div class="photo_profil_&_banner">
 
-            <img class="photo_profil" src="{$p.photo_profil}" onerror="this.src='../photos/photo_profil.jpg'" alt="Photo de profil">
+            <img class="photo_profil" src="{$profileinfo.pictureLink}" onerror="this.src='../../../global/images/photo_profil.jpg'" alt="Photo de profil">
     
         </div>
         
@@ -18,9 +17,9 @@
             <div class="informations_personnelles">
 
                 <h2> Vos informations personnelles </h2>
-                <p class="box"> Nom : {$p.Nom} </p>
-                <p class="box"> Prénom : {$p.Prenom} </p>
-                <p class="box"> Date de naissance : {$p.date_de_naissance} </p>
+                <p class="box"> Nom : {$profileinfo.lastName} </p>
+                <p class="box"> Prénom : {$profileinfo.firstName} </p>
+                <p class="box"> Date de naissance : {$profileinfo.birthday} </p>
 
             </div>
 
@@ -45,11 +44,11 @@
 
 
 {/foreach}
-
+<!--
 <div class="flex">
 
 <div class="container">
-<!-- Affichage des utilisateurs -->
+
 <h3>Utilisateurs</h3>
 <ul class="liste">
 {foreach $profileinfo as $user}
@@ -59,7 +58,7 @@
 {/foreach}
 </ul>
 
-<!-- Pagination pour les utilisateurs -->
+
 <div class="pagination">
 Pages:
 {foreach range(1, $totalPagesUsers) as $userPageNum}
@@ -69,7 +68,7 @@ Pages:
 </div>
 </div>
 
-<!-- Affichage des offres -->
+
 <div class="container">
 <h3>Offres</h3>
 <ul class="liste">
@@ -79,7 +78,7 @@ Pages:
 {/foreach}
 </ul>
 
-<!-- Pagination pour les offres -->
+
 <div class="pagination">
 Pages:
 {foreach range(1, $totalPagesOffers) as $offerPageNum}
@@ -87,5 +86,5 @@ Pages:
 {/foreach}
 </div>
 </div>
-
+-->
 </div>

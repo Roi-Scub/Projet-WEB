@@ -57,6 +57,32 @@ class ProfileManager extends Manager
         
         return ProfileType::eleve;
     }
+    
+    public function getProfileInfo()
+    {
+        //var_dump($profileId);
+        $db = $this->getDataBase();
 
+        $sql = 'SELECT * FROM profile WHERE `Profile_Id` =:profileId ';
+
+        $stmt = $db->prepare($sql);
+
+        $stmt->bindParam(':profileId', $profileId);
+        
+        $stmt->execute();
+        
+        
+
+        $profile = [];
+
+        while($data = $stmt->fetch(PDO::FETCH_ASSOC)) 
+        {
+            var_dump($data);
+
+            $profile[] = new Profile($data);
+        }
+        return $profile;
+        //var_dump($profileInfo);
+    }
 
 }

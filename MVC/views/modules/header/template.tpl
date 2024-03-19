@@ -9,7 +9,7 @@
 
                     <li class="list-item-container"><a href="offers">Offres</a></li>
                     <li class="list-item-container"><a href="businesses">Entreprises</a></li>
-                    <li class="list-item-container"><a href="#FAQ">FAQ</a></li>
+                    <li class="list-item-container"><a href="index#FAQ">FAQ</a></li>
 
                 </ul>
             </nav>

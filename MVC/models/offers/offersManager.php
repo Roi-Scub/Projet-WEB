@@ -10,13 +10,15 @@ class OfferManager extends Manager
 
         public function getOffersInfo()
         {
-            
+           
 
             $conn = $this->getDataBase();
 
-            $sql = 'SELECT o.Offer_Name, o.Offer_Lenght, o.Offer_Date, o.Offer_Id, o.Offer_Description, o.Offer_Remuneration, o.Offer_Number_Of_Places, o.Offer_Number_Of_Places_Taken, b.Business_Name, b.Business_Profile_Picture FROM offer o JOIN business b ON o.Business_Id = b.Business_Id /*LIMIT $offset, $itemsPerPage*/';
+            $sql = 'SELECT o.Offer_Name, o.Offer_Lenght, o.Offer_Date, o.Offer_Id, o.Offer_Description, o.Offer_Remuneration, o.Offer_Number_Of_Places, o.Offer_Number_Of_Places_Taken, b.Business_Name, b.Business_Profile_Picture FROM offer o JOIN business b ON o.Business_Id = b.Business_Id LIMIT :itemsPerPage OFFSET :offset ';
 
             $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':itemsPerPage', $itemsPerPage);
+            $stmt->bindParam(':offset', $offset);
 
             $stmt->execute();
 

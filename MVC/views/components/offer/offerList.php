@@ -3,18 +3,26 @@ require('models/offers/offersManager.php');
 $offersManager = new OfferManager();
 $offers = $offersManager->getOffersInfo();
 $OffersArr = [];
+
 //var_dump($offers);
 foreach ($offers as $offer) {
-
+    var_dump($offer);   
+    echo "<br>";
+   echo "<hr>";
+    
+    var_dump($offer->getId());
+    echo "<br>";
+    echo "<br>";
+    
     $reflection = new ReflectionClass($offer);
 
     $id = $reflection->getProperty('_id');
     $id->setAccessible(true);
-    $idValue = $id->getValue($offer);
+    $idValue = $offer->getId();
 
-    $name = $reflection->getProperty('_name');
-    $name->setAccessible(true);
-    $nameValue = $name->getValue($offer);
+    //$name = $reflection->getProperty('_name');
+    //$name->setAccessible(true);
+    $nameValue = $offer->getName();//$name->getValue($offer);
 
     $desc = $reflection->getProperty('_description');
     $desc->setAccessible(true);

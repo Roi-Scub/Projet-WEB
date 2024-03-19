@@ -17,6 +17,7 @@ class OffersController extends Controller
         var_dump("offers");
         $this->_view = new SmartyView('Offers');
         //var_dump($this->_view);
+        //getOfferValues
         $this->_view->generate(array());
        
     }
