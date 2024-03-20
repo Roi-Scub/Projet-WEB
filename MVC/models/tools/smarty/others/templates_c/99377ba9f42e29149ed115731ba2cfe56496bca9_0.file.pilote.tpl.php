@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-18 11:17:42
+/* Smarty version 4.4.1, created on 2024-03-20 08:57:52
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\profiles\pilote.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_65f814c6089957_22356617',
+  'unifunc' => 'content_65fa9700bc5cc9_41903778',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99377ba9f42e29149ed115731ba2cfe56496bca9' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\profiles\\pilote.tpl',
-      1 => 1710757060,
+      1 => 1710772269,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65f814c6089957_22356617 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65fa9700bc5cc9_41903778 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="body">
  
 <?php
