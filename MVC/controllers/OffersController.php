@@ -16,15 +16,20 @@ class OffersController extends Controller
 
     private function offers()
     {
-        require_once('models/offers/OfferManager.php');
-        $this->_manager = new OfferManager();
-        $offers = $this->_manager->getOffersInfo();
-        //var_dump($offers);  
-        $itemsPerPage = 10; // Nombre d'éléments par page
-        $page = isset($_GET['page']) ? intval($_GET['page']) : 1; // Récupérez le numéro de page depuis l'URL
+        
 
-        // Calculez l'offset (décalage) en fonction du numéro de page
-        $offset = ($page - 1) * $itemsPerPage;
+        //$this->_manager = new OfferManager();
+        $offerManager = new OfferManager();
+
+        // OfferFilter $offerFilter, int $limit, int $offset
+        //var_dump($offers);  
+       // Récupérez le numéro de page depuis l'URL
+        if (isset($_GET['page']) && is_numeric($_GET['page']))
+        $offers = $offers = $offerManager->getOffersInfo(10, ($_GET['page'] - 1) * 10);
+        else 
+
+        $offers = $offerManager->getOffersInfo(10, 0);
+      
 
         var_dump("offers");
         $this->_view = new SmartyView('Offers');

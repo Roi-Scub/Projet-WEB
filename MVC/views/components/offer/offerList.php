@@ -1,7 +1,7 @@
 <?php
-require('models/offers/offersManager.php');
-$offersManager = new OfferManager();
-$offers = $offersManager->getOffersInfo();
+require('models/offers/OfferManager.php');
+$offerManager = new OfferManager();
+$offers = $offerManager->getOffersInfo();
 $OffersArr = [];
 
 //var_dump($offers);

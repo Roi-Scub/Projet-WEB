@@ -1,5 +1,4 @@
 <?php
-require_once('models/offers/Offers.php');
 
 
 class OfferManager extends Manager
@@ -7,17 +6,17 @@ class OfferManager extends Manager
 
         //Get all offers
 
-        public function getOffersInfo()
+        public function getOffersInfo(int $limit, int $offset)
         {
            
 
             $conn = $this->getDataBase();
 
-            $sql = 'SELECT o.Offer_Name, o.Offer_Lenght, o.Offer_Date, o.Offer_Id, o.Offer_Description, o.Offer_Remuneration, o.Offer_Number_Of_Places, o.Offer_Number_Of_Places_Taken, b.Business_Name, b.Business_Profile_Picture FROM offer o JOIN business b ON o.Business_Id = b.Business_Id LIMIT :itemsPerPage OFFSET :offset ';
+            $sql = 'SELECT o.Offer_Name, o.Offer_Lenght, o.Offer_Date, o.Offer_Id, o.Offer_Description, o.Offer_Remuneration, o.Offer_Number_Of_Places, o.Offer_Number_Of_Places_Taken, b.Business_Name, b.Business_Profile_Picture FROM offer o JOIN business b ON o.Business_Id = b.Business_Id LIMIT :limit OFFSET :offset ';
 
             $stmt = $conn->prepare($sql);
-            $stmt->bindParam(':itemsPerPage', $itemsPerPage);
-            $stmt->bindParam(':offset', $offset);
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
 
             $stmt->execute();
 
