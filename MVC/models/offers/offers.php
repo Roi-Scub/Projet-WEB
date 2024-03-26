@@ -28,6 +28,7 @@ class Offers
     private $_deletedAt;
     private $_businessId;
     private $_profileId;
+    private $_deletedAt;
 
     public function __construct(array $data)
     {

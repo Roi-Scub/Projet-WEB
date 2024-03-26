@@ -23,7 +23,6 @@ $this->_smarty->assign('componentOfferPagination', $offerPaginationRender);
 
 $mainRender = $this->_smarty->fetch('views/modules/offers/template.tpl');
 $headerRender = $headerRenderGlobal;
-
 $footerRender = $footerRenderGlobal;
 
 ?>
