@@ -43,7 +43,7 @@ class Business {
         }
     }
 
-    public function setId($id)
+    public function setBusinessId($id)
     {
         $id = (int) $id;
         if($id > 0)
@@ -52,7 +52,7 @@ class Business {
         }
     }
 
-    public function setName($name)
+    public function setBusinessName($name)
     {
         if(is_string($name))
         {
@@ -84,7 +84,7 @@ class Business {
         }
     }
 
-    public function setProfilePicture($profilePicture)
+    public function setBusinessProfilePicture($profilePicture)
     {
         if(is_string($profilePicture))
         {
@@ -106,12 +106,12 @@ class Business {
         }
     }
 
-    public function getId()
+    public function getBusinessId()
     {
         return $this->_id;
     }
 
-    public function getName()
+    public function getBusinessName()
     {
         return $this->_name;
     }
@@ -131,7 +131,7 @@ class Business {
         return $this->_banner;
     }
 
-    public function getProfilePicture()
+    public function getBusinessProfilePicture()
     {
         return $this->_profilePicture;
     }

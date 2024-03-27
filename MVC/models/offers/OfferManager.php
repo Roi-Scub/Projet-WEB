@@ -1,8 +1,5 @@
 <?php
-
-
-class OfferManager extends Manager
-{
+class OfferManager extends Manager {
 
         //Get all offers
 
@@ -112,3 +109,5 @@ class OfferManager extends Manager
 
 
 }
+
+?>

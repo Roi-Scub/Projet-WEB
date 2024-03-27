@@ -7,9 +7,12 @@ class BusinessManager extends Manager {
     {
         $conn = $this->getDataBase();
 
-        $sql = 'SELECT * FROM business b ';
+        $sql = 'SELECT * FROM business b WHERE b.Business_Id = :Business_Id';
 
+        
         $stmt = $conn->prepare($sql);
+
+        $stmt->bindParam(':Business_Id', $this->_id);
 
         $stmt->execute();
 
