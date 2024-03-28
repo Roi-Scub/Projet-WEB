@@ -79,4 +79,5 @@ Exemptions :
    Droits d'auteur : Autorisé à lire et à visualiser le code source à des fins d'information uniquement. Aucun droit de modification, de distribution ou d'utilisation du logiciel à d'autres fins que la lecture n'est accordé.
 
 
-Traduit avec DeepL.com (version gratuite)
+Traduit avec DeepL.com (version gratuite) 
+

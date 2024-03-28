@@ -54,7 +54,7 @@ class OffersController extends Controller
         
         //var_dump($this->_view);
         //getOfferValues
-        $this->_view->generate(array($offers));
+        $this->_view->generate(array($offers, 'max'=> $max ));
        
     }
 

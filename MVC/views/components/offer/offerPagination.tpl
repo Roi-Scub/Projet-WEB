@@ -1,4 +1,33 @@
 <div class="pagination">
-<a href="?page=' . ($page - 1) . '" class ="pagination_button">Page précédente</a>//print smarty page -1
-<a href="?page=' . ($page + 1) . '" class ="pagination_button">Page suivante</a>
-</div> 
+    {$dotsDisplayed=false}
+
+    {if $currentPage != 1}
+        <a href="?page={$currentPage - 1}">Page précédente</a>
+    {/if}
+
+
+    {for $i=1; $i<$max; $i++}
+        {if $i == $currentPage}
+
+            {if $i eq $currentPage}
+                <a href="?page={$i}" style="font-weight: bold; color: burlywood;">{$i}</a>
+            {else}
+                <a href="?page={$i}" style="font-weight: normal; color: white;">{$i}</a>
+            {/if}
+
+        {elseif $i <= 3 || $i > $max-4 } 
+            <a href="?page={$i}">{$i}</a> 
+        {elseif !$dotsDisplayed} 
+            <span>...</span>
+            {$dotsDisplayed=true}
+        {/if}
+
+    {/for}
+
+    {if $currentPage < $max-1}
+        <a href="?page={$currentPage + 1}">Page suivante</a>
+    {/if}
+
+
+
+</div>
