@@ -1,4 +1,5 @@
 <div class="pagination">
+
     {$dotsDisplayed=false}
 
     {if $currentPage != 1}

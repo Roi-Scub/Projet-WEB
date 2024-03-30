@@ -1,14 +1,14 @@
 <div class="body">
- 
-{foreach $profile as $profileinfo}
+ <div>
+{foreach $profile as $pi}
 
-    <h1 class="bonjour"> Bonjour {$profileinfo.firstName} {$profileinfo.lastName} </h1>
+    <h1 class="bonjour"> Bonjour {$pi->getFirstName()} {$pi->getLastName()} </h1>
 
-    <img class="banner" src="{$profileinfo.bannerLink}" onerror="this.src='../../../global/images/banner_placeholder.jpg'" alt="Banniere de profil">
+    <img class="banner" src="{$pi->getBannerLink()}" onerror="this.src='../../../global/images/banner_placeholder.jpg'" alt="Banniere de profil">
 
         <div class="photo_profil_&_banner">
 
-            <img class="photo_profil" src="{$profileinfo.pictureLink}" onerror="this.src='../../../global/images/photo_profil.jpg'" alt="Photo de profil">
+            <img class="photo_profil" src="{$pi->getPictureLink()}" onerror="this.src='../../../global/images/photo_profil.jpg'" alt="Photo de profil">
     
         </div>
         
@@ -17,24 +17,24 @@
             <div class="informations_personnelles">
 
                 <h2> Vos informations personnelles </h2>
-                <p class="box"> Nom : {$profileinfo.lastName} </p>
-                <p class="box"> Prénom : {$profileinfo.firstName} </p>
-                <p class="box"> Date de naissance : {$profileinfo.birthday} </p>
+                <p class="box"> Nom : {$pi->getLastName()} </p>
+                <p class="box"> Prénom : {$pi->getFirstName()} </p>
+                <p class="box"> Date de naissance : {$pi->getBirthday()} </p>
 
             </div>
 
             <div class="boutons">
               <div style="display: flex; flex-direction:column;justify-content:center; align-items: right;">
-              <a href="../GetCRUD.php?action=createUser" name ="action"  class="buttons">Crée un utilisateur</a>
-              <a href="../GetCRUD.php?action=modifyUser" name ="action"  class="buttons">Modifier un utilisateur</a>
-              <a href="../GetCRUD.php?action=deleteUser" name ="action"  class="buttons">Supprimer un utilisateur</a>
-              <a href="../GetCRUD.php?action=viewUser" name ="action" class="buttons">Voir un utilisateur</a>
+              <a href="" name ="action"  class="buttons">Crée un utilisateur</a>
+              <a href="" name ="action"  class="buttons">Modifier un utilisateur</a>
+              <a href="" name ="action"  class="buttons">Supprimer un utilisateur</a>
+              <a href="" name ="action" class="buttons">Voir un utilisateur</a>
               </div>
               <div style="display: flex; flex-direction:column; justify-content:center; align-items:center">
-              <a href="../GetCRUD.php?action=createOffer" name ="action"  class="buttons">Crée une offre</a>
-              <a href="../GetCRUD.php?action=modifyOffer" name ="action"  class="buttons">Modifier une offre</a>
-              <a href="../GetCRUD.php?action=deleteOffer" name ="action"  class="buttons">Supprimer une offre</a>
-              <a href="../GetCRUD.php?action=viewOffer" name ="action" class="buttons">Voir une offre</a>
+              <a href="" name ="action"  class="buttons">Crée une offre</a>
+              <a href="" name ="action"  class="buttons">Modifier une offre</a>
+              <a href="" name ="action"  class="buttons">Supprimer une offre</a>
+              <a href="" name ="action" class="buttons">Voir une offre</a>
               </div>
             </div>
           </div>
@@ -43,28 +43,28 @@
         <h2 > Tableau de bord </h2>
 
 
-{/foreach}
-<!--
+{/foreach}</div>
+
 <div class="flex">
 
 <div class="container">
 
 <h3>Utilisateurs</h3>
 <ul class="liste">
-{foreach $profileinfo as $user}
+<!--{foreach $profileinfo as $user}
 
 <hr><div class="line">{$user.Prenom} {$user.Nom} - {$user.date_de_naissance}<a href="API/GetStudentInfo.php?id={$user.ID_utilisateur}" class="btn">Voir le profil </a><br></div>  <hr>
 
-{/foreach}
+{/foreach}-->
 </ul>
 
 
 <div class="pagination">
 Pages:
-{foreach range(1, $totalPagesUsers) as $userPageNum}
+<!--{foreach range(1, $totalPagesUsers) as $userPageNum}
 <a href="?userPage={$userPageNum}&offerPage={$currentPageUsers}" class="page_number">{$userPageNum}</a><br> 
 
-{/foreach}
+{/foreach}-->
 </div>
 </div>
 
@@ -73,18 +73,17 @@ Pages:
 <h3>Offres</h3>
 <ul class="liste">
 
-{foreach $offres as $offer}
+<!--{foreach $offres as $offer}
 <hr><div class="line">{$offer.nom_de_l_offre} - {$offer.Entreprise}<br></div><hr>
-{/foreach}
+{/foreach}-->
 </ul>
 
 
 <div class="pagination">
 Pages:
-{foreach range(1, $totalPagesOffers) as $offerPageNum}
+<!--{foreach range(1, $totalPagesOffers) as $offerPageNum}
 <a href="?offerPage={$offerPageNum}&userPage={$currentPageUsers}" class="page_number">{$offerPageNum}</a>
-{/foreach}
+{/foreach}-->
 </div>
 </div>
--->
-</div>
+

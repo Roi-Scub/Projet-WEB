@@ -7,11 +7,11 @@ class OffersController extends Controller
     
     public function __construct($url)
     {
-       var_dump("la");
+       //var_dump("la");
         $this->checkURL($url, 0);
-        var_dump($url);
+        //var_dump($url);
         $this->offers();
-        var_dump("ici");
+        //var_dump("ici");
     }
 
     private function offers()
@@ -31,18 +31,18 @@ class OffersController extends Controller
         $offers = $offerManager->getOffersInfo(10, 0);
         }
 
-        var_dump($offers);
+        //var_dump($offers);
 
-        var_dump("offers");
+        //var_dump("offers");
         foreach ($offers as $offer){
             echo "<br>";
             echo "<br>";
             require_once('models/business/businessManager.php');
             //var_dump($offer);
             $businessManager = new BusinessManager();
-            var_dump($businessManager);    
+            //var_dump($businessManager);    
             $companyInfo = $businessManager->getBusinessInfo($offer->getBusinessId());
-            var_dump($offer->getBusinessId());
+            //var_dump($offer->getBusinessId());
             // Ajouter les informations sur l'entreprise à l'offre
            // $offer->setName($companyInfo->getBusinessName());
             //$offer->setProfilePicture($companyInfo->getBusinessProfilePicture());
@@ -50,7 +50,7 @@ class OffersController extends Controller
         $this->_view = new SmartyView('Offers');
         echo '<br>';
         echo '<br>';
-        var_dump($this->_view);
+        //var_dump($this->_view);
         
         //var_dump($this->_view);
         //getOfferValues

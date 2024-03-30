@@ -11,7 +11,8 @@ $this->_smarty->assign('profileType', $_SESSION['profileType']->value);
 //require_once('views/components/profiles/eleve.php');
 require_once('views/components/profiles/pilote.php');
 require_once('views/components/profiles/admin.php');
-
+require_once('views/modules/header/headerModule.php');
+require_once('views/modules/footer/footerModule.php');
 
 if ($_SESSION['profileType']->value == 'eleve') {
 
@@ -29,5 +30,7 @@ if ($_SESSION['profileType']->value == 'eleve') {
 }
 
 $mainRender = $profileRender;
+$headerRender = $headerRenderGlobal;
+$footerRender = $footerRenderGlobal;
 
 ?>

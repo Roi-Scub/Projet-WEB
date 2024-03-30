@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-20 08:57:52
+/* Smarty version 4.4.1, created on 2024-03-30 13:05:38
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\profiles\pilote.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_65fa9700bc5cc9_41903778',
+  'unifunc' => 'content_660800122c0c39_23848852',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99377ba9f42e29149ed115731ba2cfe56496bca9' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\profiles\\pilote.tpl',
-      1 => 1710772269,
+      1 => 1711800336,
       2 => 'file',
     ),
   ),
@@ -20,26 +20,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65fa9700bc5cc9_41903778 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660800122c0c39_23848852 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="body">
- 
+ <div>
 <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['profile']->value, 'profileinfo');
-$_smarty_tpl->tpl_vars['profileinfo']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['profileinfo']->value) {
-$_smarty_tpl->tpl_vars['profileinfo']->do_else = false;
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['profile']->value, 'pi');
+$_smarty_tpl->tpl_vars['pi']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['pi']->value) {
+$_smarty_tpl->tpl_vars['pi']->do_else = false;
 ?>
 
-    <h1 class="bonjour"> Bonjour <?php echo $_smarty_tpl->tpl_vars['profileinfo']->value['firstName'];?>
- <?php echo $_smarty_tpl->tpl_vars['profileinfo']->value['lastName'];?>
+    <h1 class="bonjour"> Bonjour <?php echo $_smarty_tpl->tpl_vars['pi']->value->getFirstName();?>
+ <?php echo $_smarty_tpl->tpl_vars['pi']->value->getLastName();?>
  </h1>
 
-    <img class="banner" src="<?php echo $_smarty_tpl->tpl_vars['profileinfo']->value['bannerLink'];?>
+    <img class="banner" src="<?php echo $_smarty_tpl->tpl_vars['pi']->value->getBannerLink();?>
 " onerror="this.src='../../../global/images/banner_placeholder.jpg'" alt="Banniere de profil">
 
         <div class="photo_profil_&_banner">
 
-            <img class="photo_profil" src="<?php echo $_smarty_tpl->tpl_vars['profileinfo']->value['pictureLink'];?>
+            <img class="photo_profil" src="<?php echo $_smarty_tpl->tpl_vars['pi']->value->getPictureLink();?>
 " onerror="this.src='../../../global/images/photo_profil.jpg'" alt="Photo de profil">
     
         </div>
@@ -49,27 +49,27 @@ $_smarty_tpl->tpl_vars['profileinfo']->do_else = false;
             <div class="informations_personnelles">
 
                 <h2> Vos informations personnelles </h2>
-                <p class="box"> Nom : <?php echo $_smarty_tpl->tpl_vars['profileinfo']->value['lastName'];?>
+                <p class="box"> Nom : <?php echo $_smarty_tpl->tpl_vars['pi']->value->getLastName();?>
  </p>
-                <p class="box"> Prénom : <?php echo $_smarty_tpl->tpl_vars['profileinfo']->value['firstName'];?>
+                <p class="box"> Prénom : <?php echo $_smarty_tpl->tpl_vars['pi']->value->getFirstName();?>
  </p>
-                <p class="box"> Date de naissance : <?php echo $_smarty_tpl->tpl_vars['profileinfo']->value['birthday'];?>
+                <p class="box"> Date de naissance : <?php echo $_smarty_tpl->tpl_vars['pi']->value->getBirthday();?>
  </p>
 
             </div>
 
             <div class="boutons">
               <div style="display: flex; flex-direction:column;justify-content:center; align-items: right;">
-              <a href="../GetCRUD.php?action=createUser" name ="action"  class="buttons">Crée un utilisateur</a>
-              <a href="../GetCRUD.php?action=modifyUser" name ="action"  class="buttons">Modifier un utilisateur</a>
-              <a href="../GetCRUD.php?action=deleteUser" name ="action"  class="buttons">Supprimer un utilisateur</a>
-              <a href="../GetCRUD.php?action=viewUser" name ="action" class="buttons">Voir un utilisateur</a>
+              <a href="" name ="action"  class="buttons">Crée un utilisateur</a>
+              <a href="" name ="action"  class="buttons">Modifier un utilisateur</a>
+              <a href="" name ="action"  class="buttons">Supprimer un utilisateur</a>
+              <a href="" name ="action" class="buttons">Voir un utilisateur</a>
               </div>
               <div style="display: flex; flex-direction:column; justify-content:center; align-items:center">
-              <a href="../GetCRUD.php?action=createOffer" name ="action"  class="buttons">Crée une offre</a>
-              <a href="../GetCRUD.php?action=modifyOffer" name ="action"  class="buttons">Modifier une offre</a>
-              <a href="../GetCRUD.php?action=deleteOffer" name ="action"  class="buttons">Supprimer une offre</a>
-              <a href="../GetCRUD.php?action=viewOffer" name ="action" class="buttons">Voir une offre</a>
+              <a href="" name ="action"  class="buttons">Crée une offre</a>
+              <a href="" name ="action"  class="buttons">Modifier une offre</a>
+              <a href="" name ="action"  class="buttons">Supprimer une offre</a>
+              <a href="" name ="action" class="buttons">Voir une offre</a>
               </div>
             </div>
           </div>
@@ -80,15 +80,15 @@ $_smarty_tpl->tpl_vars['profileinfo']->do_else = false;
 
 <?php
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-<!--
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?></div>
+
 <div class="flex">
 
 <div class="container">
 
 <h3>Utilisateurs</h3>
 <ul class="liste">
-<?php
+<!--<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['profileinfo']->value, 'user');
 $_smarty_tpl->tpl_vars['user']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['user']->value) {
@@ -103,13 +103,13 @@ $_smarty_tpl->tpl_vars['user']->do_else = false;
 
 <?php
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>-->
 </ul>
 
 
 <div class="pagination">
 Pages:
-<?php
+<!--<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, range(1,$_smarty_tpl->tpl_vars['totalPagesUsers']->value), 'userPageNum');
 $_smarty_tpl->tpl_vars['userPageNum']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['userPageNum']->value) {
@@ -122,7 +122,7 @@ $_smarty_tpl->tpl_vars['userPageNum']->do_else = false;
 
 <?php
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>-->
 </div>
 </div>
 
@@ -131,7 +131,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <h3>Offres</h3>
 <ul class="liste">
 
-<?php
+<!--<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['offres']->value, 'offer');
 $_smarty_tpl->tpl_vars['offer']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['offer']->value) {
@@ -142,13 +142,13 @@ $_smarty_tpl->tpl_vars['offer']->do_else = false;
 <br></div><hr>
 <?php
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>-->
 </ul>
 
 
 <div class="pagination">
 Pages:
-<?php
+<!--<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, range(1,$_smarty_tpl->tpl_vars['totalPagesOffers']->value), 'offerPageNum');
 $_smarty_tpl->tpl_vars['offerPageNum']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['offerPageNum']->value) {
@@ -160,9 +160,9 @@ $_smarty_tpl->tpl_vars['offerPageNum']->do_else = false;
 </a>
 <?php
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>-->
 </div>
 </div>
--->
-</div><?php }
+
+<?php }
 }

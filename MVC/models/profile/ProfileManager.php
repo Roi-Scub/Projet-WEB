@@ -58,13 +58,14 @@ class ProfileManager extends Manager
         return ProfileType::eleve;
     }
     
-    public function getProfileInfo()
+    public function getProfileInfo($profileId)
     {
         //var_dump($profileId);
         $db = $this->getDataBase();
+       
 
-        $sql = 'SELECT * FROM profile WHERE `Profile_Id` =:profileId ';
-
+        $sql = 'SELECT * FROM profile p WHERE p.Profile_Id = :profileId ';
+        
         $stmt = $db->prepare($sql);
 
         $stmt->bindParam(':profileId', $profileId);
@@ -77,7 +78,7 @@ class ProfileManager extends Manager
 
         while($data = $stmt->fetch(PDO::FETCH_ASSOC)) 
         {
-            var_dump($data);
+            //var_dump($data);
 
             $profile[] = new Profile($data);
         }

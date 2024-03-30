@@ -21,7 +21,7 @@
 
                     <input id="btna1" type="button" value="Thème">
                     <input id="btna2" type="button" value="Compte" onclick="window.location.href='profile'">
-                    <input id="btna3" type="button" value="Plus">
+                    <input id="btna3" type="button" value="Plus" onclick="window.location.href='legalTerms'">
                     <img id="parametre" src="../../../global/images/parametre.png">
 
                 </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-28 14:21:38
+/* Smarty version 4.4.1, created on 2024-03-29 22:05:47
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\offer\offerPagination.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_66056ee2511106_88948868',
+  'unifunc' => 'content_66072d2b718325_49040074',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4d77cc0f91d1f3789a7772fe279b12799e367577' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\offer\\offerPagination.tpl',
-      1 => 1711631927,
+      1 => 1711746335,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66056ee2511106_88948868 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66072d2b718325_49040074 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="pagination">
+
     <?php $_smarty_tpl->_assignInScope('dotsDisplayed', false);?>
 
     <?php if ($_smarty_tpl->tpl_vars['currentPage']->value != 1) {?>
