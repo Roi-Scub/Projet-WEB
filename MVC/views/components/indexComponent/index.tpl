@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-<hr id="barre">
+<!--<hr id="barre">-->
 <div id="rectangle">
 
     <div>
@@ -9,7 +9,31 @@
 
         <p id="paragraphe1">Pour les étudiants, la recherche de stage n'a jamais été aussi simple !</p>
 
-        <button onclick="window.location.href='offres';"  id="button_3">COMMENCER À CHERCHER</button>
+        <button class="animated-button" onclick="window.location.href='offers'">
+
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                </path>
+
+            </svg>
+
+                <span class="texte">COMMENCER À CHERCHER</span>
+
+                <span class="circle"></span>
+
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+
+                <path 
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                </path>
+
+            </svg>
+
+        </button>
+
+        <!--<button   id="button_3">COMMENCER À CHERCHER</button>-->
 
     </div>
 
@@ -73,11 +97,12 @@
 
         
         <div class="container">
+
             
-            <input type="radio" name="slider" id="orange" checked>
-            <input type="radio" name="slider" id="amadeus">
-            <input type="radio" name="slider" id="thales">
-         
+                <input type="radio" name="slider" id="orange" checked>
+                <input type="radio" name="slider" id="amadeus">
+                <input type="radio" name="slider" id="thales">
+            
             
                 <div class="cards">
 

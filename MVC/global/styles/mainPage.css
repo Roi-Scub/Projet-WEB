@@ -60,7 +60,7 @@
 				margin-top:0;
 			}
 
-				#button_3{
+				/*#button_3{
 					width: 25vw;
 					height: 5vw;;
 					margin-left:6.5vw;
@@ -80,7 +80,100 @@
 
 				#button_3:hover {
 					box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-				}
+				}*/
+				
+
+				.animated-button {
+					position: relative;
+					display: flex;
+					align-items: center;
+					gap: 0.242vw;
+					padding: 0.969vw 2.18vw;
+					border: 0.242vw solid;
+					border-color: transparent;
+					font-size: 0.969vw;
+					background-color: inherit;
+					border-radius: 6.057vw;
+					font-weight: 600;
+					color: #29323D;
+					box-shadow: 0 0 0 0.121vw #29323D;
+					cursor: pointer;
+					overflow: hidden;
+					transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+					margin-left:6.5vw;
+					margin-top:2.5vw;
+				  }
+				  
+				  .animated-button svg {
+					position: absolute;
+					width: 1.454vw;
+					fill: #29323D;
+					z-index: 9;
+					transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+				  }
+				  
+				  .animated-button .arr-1 {
+					right: 0.969vw;
+				  }
+				  
+				  .animated-button .arr-2 {
+					left: -25%;
+				  }
+				  
+				  .animated-button .circle {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 1.211vw;
+					height: 1.211vw;
+					background-color: #29323D;
+					border-radius: 50%;
+					opacity: 0;
+					transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+				  }
+				  
+				  .animated-button .texte {
+					position: relative;
+					z-index: 1;
+					transform: translateX(-0.727vw);
+					transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+				  }
+				  
+				  .animated-button:hover {
+					box-shadow: 0 0 0 0.3vw transparent;
+					color: white;
+					border-radius: 0.727vw;
+				  }
+				  
+				  .animated-button:hover .arr-1 {
+					right: -25%;
+				  }
+				  
+				  .animated-button:hover .arr-2 {
+					left: 0.969vw;
+				  }
+				  
+				  .animated-button:hover .texte {
+					transform: translateX(0.727vw);
+				  }
+				  
+				  .animated-button:hover svg {
+					fill: white;
+				  }
+				  
+				  .animated-button:active {
+					scale: 0.95;
+					box-shadow: 0 0 0 0.242vw #29323D;
+				  }
+				  
+				  .animated-button:hover .circle {
+					width: 18.171vw;
+					height: 13.325vw;
+					opacity: 1;
+				  }
+				  
+				  
 
 		#grand_logo {
 

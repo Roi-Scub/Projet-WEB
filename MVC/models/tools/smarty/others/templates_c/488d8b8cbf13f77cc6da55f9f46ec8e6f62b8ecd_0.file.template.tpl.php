@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-30 13:10:04
+/* Smarty version 4.4.1, created on 2024-03-30 16:47:21
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\modules\header\template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_6608011c8c30f7_84046047',
+  'unifunc' => 'content_66083409d92328_87324813',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '488d8b8cbf13f77cc6da55f9f46ec8e6f62b8ecd' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\modules\\header\\template.tpl',
-      1 => 1711800600,
+      1 => 1711813582,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6608011c8c30f7_84046047 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66083409d92328_87324813 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="header_principal">
 
@@ -49,9 +49,24 @@ function content_6608011c8c30f7_84046047 (Smarty_Internal_Template $_smarty_tpl)
 
                 </div>
 
-                    <button onclick="window.location.href='disconnection'"  id="button_2">Deconnexion</button>
+                    <!--<button onclick="window.location.href='disconnection'"  id="button_2">Deconnexion</button>-->
+                    
+                    <button class="Btn">
+  
+                        <div class="sign">
+                            <svg viewBox="0 0 512 512">
+                                <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="text">Logout</div>
+                        
+                    </button>
+
 
             </div>
 
-</div><?php }
+</div>
+
+<hr id="barre"><?php }
 }

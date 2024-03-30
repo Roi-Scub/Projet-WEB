@@ -5,7 +5,7 @@ class BusinessesController extends Controller
     
     public function __construct($url)
     {
-       var_dump("la");
+       //var_dump("la");
         $this->checkURL($url, 0);
         //var_dump($url);
         $this->businesses();

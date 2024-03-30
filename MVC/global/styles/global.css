@@ -9,6 +9,18 @@
 */
 
 
+#barre {
+
+	align-self: center;
+    height: 0.05vw;
+	border-color: #3B4754;
+	background: #3B4754;
+	margin-left: 2vw;
+	margin-right: 2vw;
+	margin-top:1vw;
+	margin-bottom:0.6vw;
+}
+
 #header_principal{
 
     display:flex;
@@ -94,7 +106,7 @@ nav ul li a,
 	width:60px;
 	width: 2.8vw;
 	height:2.8vw;
-	margin-left:0.7vw;
+	margin-left:0.9vw;
 
   }
 	
@@ -114,7 +126,7 @@ nav ul li a,
  		 }
 		 
  		 	#divaa1:hover{
-				height:250px;
+				height:230px;
 				background:  rgb(255 255 255 );
 				z-index: 1;
 				border:5px black;
@@ -224,6 +236,79 @@ nav ul li a,
         #button_2:hover {
         	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
           }
+
+
+
+/* Disconnection button */
+
+.Btn {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 2.726vw;
+	height: 2.726vw;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition-duration: .3s;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+	background-color: rgb(255, 65, 65);
+	margin-top: 1.3vw;
+	margin-left: 1vw;
+  }
+  
+  /* plus sign */
+  .sign {
+	width: 100%;
+	transition-duration: .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .sign svg {
+	width: 1.03vw;
+  }
+  
+  .sign svg path {
+	fill: white;
+  }
+  /* text */
+  .text {
+	position: absolute;
+	right: 0%;
+	width: 0%;
+	opacity: 0;
+	color: white;
+	font-size: 1vw;
+	font-weight: 600;
+	transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+	width: 8.571vw;
+	border-radius: 2.423vw;
+	transition-duration: .3s;
+  }
+  
+  .Btn:hover .sign {
+	width: 30%;
+	transition-duration: .3s;
+	padding-left: 1.211vw;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+	opacity: 1;
+	width: 70%;
+	transition-duration: .3s;
+	padding-right: 0.606vw	;
+  }
+  /* button click effect*/
+  .Btn:active {
+	transform: translate(2px ,2px);
+  }
 
 /* div - search bar 
                          ____  _                 ____                      _       ____             

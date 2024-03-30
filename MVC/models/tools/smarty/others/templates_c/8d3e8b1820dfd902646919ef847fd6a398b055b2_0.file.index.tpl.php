@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-16 10:10:49
+/* Smarty version 4.4.1, created on 2024-03-30 17:56:48
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\indexComponent\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_65f56219ae8417_07202952',
+  'unifunc' => 'content_66084450d82750_98506460',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8d3e8b1820dfd902646919ef847fd6a398b055b2' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\indexComponent\\index.tpl',
-      1 => 1710580248,
+      1 => 1711817807,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65f56219ae8417_07202952 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66084450d82750_98506460 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-<hr id="barre">
+<!--<hr id="barre">-->
 <div id="rectangle">
 
     <div>
@@ -32,7 +32,31 @@ function content_65f56219ae8417_07202952 (Smarty_Internal_Template $_smarty_tpl)
 
         <p id="paragraphe1">Pour les étudiants, la recherche de stage n'a jamais été aussi simple !</p>
 
-        <button onclick="window.location.href='offres';"  id="button_3">COMMENCER À CHERCHER</button>
+        <button class="animated-button" onclick="window.location.href='offers'">
+
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                </path>
+
+            </svg>
+
+                <span class="texte">COMMENCER À CHERCHER</span>
+
+                <span class="circle"></span>
+
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+
+                <path 
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                </path>
+
+            </svg>
+
+        </button>
+
+        <!--<button   id="button_3">COMMENCER À CHERCHER</button>-->
 
     </div>
 
@@ -96,11 +120,12 @@ function content_65f56219ae8417_07202952 (Smarty_Internal_Template $_smarty_tpl)
 
         
         <div class="container">
+
             
-            <input type="radio" name="slider" id="orange" checked>
-            <input type="radio" name="slider" id="amadeus">
-            <input type="radio" name="slider" id="thales">
-         
+                <input type="radio" name="slider" id="orange" checked>
+                <input type="radio" name="slider" id="amadeus">
+                <input type="radio" name="slider" id="thales">
+            
             
                 <div class="cards">
 

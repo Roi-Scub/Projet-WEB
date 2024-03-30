@@ -7,8 +7,9 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
+    margin-top: 2vw;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -17,7 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 h1, h2 {
@@ -29,16 +30,21 @@ h2 {
     margin-top: 20px;
 }
 
-p, ul {
-    margin-bottom: 10px;
+p, ul #ul{
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+    width:80%;
+    text-align: center;
+    
+    
 }
 
-ul {
+ul #ul{
     list-style-type: none;
     padding: 0;
 }
 
-ul li:before {
+ul #ul li #li :before {
     content: "•";
     color: #666;
     margin-right: 5px;

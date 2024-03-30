@@ -40,20 +40,20 @@ class Router {
                  * @example Url "www.example.com/foo/..." set in this variable "Foo".
                  */
                 $controller = ucfirst(strtolower($url[0]));
-                echo "<br>";
-                var_dump($controller);
+                //echo "<br>";
+                //var_dump($controller);
                 /** 
                  * The controller class is the controller name with the suffix 'Controller' and the extension '.php'.
                  */
                 $controllerClass = $controller . 'Controller';
-                echo "<br>";
-                var_dump($controllerClass);
+                //echo "<br>";
+                //var_dump($controllerClass);
                 /**
                  * The controller file is in the controllers folder with the controller class name and the extension '.php'
                  */
                 $controllerFile = 'controllers/' . $controllerClass . '.php';
-                echo "<br>";
-                var_dump($controllerFile);
+                //echo "<br>";
+                //var_dump($controllerFile);
 
                 
 
@@ -74,11 +74,11 @@ class Router {
                 if (file_exists($controllerFile)) {
                     //var_dump("la");
                     require_once($controllerFile);
-                    echo "<br>";
-                    echo "test";
-                    var_dump($controllerFile);
+                    //echo "<br>";
+                    //echo "test";
+                    //var_dump($controllerFile);
                     $this->_controller =  new $controllerClass($url);
-                    echo "<br>";
+                    //echo "<br>";
                     //var_dump($this->_controller);
                 } else {
                     echo "hello";
@@ -88,7 +88,7 @@ class Router {
               
                 // Verify if the user is logged in
                 if (!isset($_SESSION['profileId'])) header('Location: http://stages-cove.fr/login');
-                    echo "test";
+                    //echo "test";
                 // If the url is not defined, the default controller is the IndexController
                 require_once('controllers/IndexController.php');
                 $this->_controller = new IndexController($url);
@@ -97,7 +97,7 @@ class Router {
             }
 
         } catch (Exception $e) {
-            echo "hello";
+            //echo "hello";
             $errorMessage = $e->getMessage();
             $this->_view = new SmartyView('Error');
             $this->_view->generate(array('statusCode' => 404, 'debugMode' => true, 'statusMessage' => $errorMessage), NULL, NULL);
