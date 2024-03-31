@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-27 10:14:43
+/* Smarty version 4.4.1, created on 2024-03-30 20:36:16
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\offer\offerList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_6603e383493167_59974718',
+  'unifunc' => 'content_660869b0712dd3_33588563',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aad8dad66e3ae11524cd84d3e9b3370bbc0a6dd7' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\offer\\offerList.tpl',
-      1 => 1711530882,
+      1 => 1711827375,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603e383493167_59974718 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660869b0712dd3_33588563 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!---->
 <div>
 
@@ -30,7 +30,10 @@ $_smarty_tpl->tpl_vars['offer']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['offer']->value) {
 $_smarty_tpl->tpl_vars['offer']->do_else = false;
 ?>
-   
+    <label class="container">
+    <input type="checkbox">
+    <svg id="Layer_1" version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z"></path></svg>
+    </label>
 
 <div class="offre">
     <div class="Enteprise">

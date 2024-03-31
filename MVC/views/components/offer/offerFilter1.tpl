@@ -11,32 +11,74 @@
 
                                 <form id="specialiteSelect">
 
-
-                                    <input type="radio" id="btp" name="speciality" value="BTP"  required>
-                                        <label for="btp" class="radio">BTP</label><br>
+<!--
+                                  <input type="radio" id="btp" name="speciality" value="BTP"  required>
+                                      <label for="btp" class="radio">BTP</label><br>
                             
-                                    <input type="radio" id="informatic" name="speciality" value="Informatique" >
-                                        <label for="informatic" class="radio">Informatique</label><br>
+                                  <input type="radio" id="informatic" name="speciality" value="Informatique" >
+                                      <label for="informatic" class="radio">Informatique</label><br>
                             
-                                    <input type="radio" id="generalist" name="speciality" value="Généraliste" >
-                                        <label for="generalist" class="radio">Généraliste</label><br>
+                                  <input type="radio" id="generalist" name="speciality" value="Généraliste" >
+                                      <label for="generalist" class="radio">Généraliste</label><br>
 
-                                    <input type="radio" id="s3e" name="speciality" value="S3E" >
-                                        <label for="s3e" class="radio">S3E</label><br>
+                                  <input type="radio" id="s3e" name="speciality" value="S3E" >
+                                      <label for="s3e" class="radio">S3E</label><br>
+-->
+                                        <div class="radio-container">
+                                        <div class="radio-wrapper">
+                                          <label class="radio-button">
+                                            <input id="BTP" name="radio-group" type="radio">
+                                            <span class="radio-checkmark"></span>
+                                            <span class="radio-label">BTP</span>
+                                          </label>
+                                        </div>
+                                      
+                                        <div class="radio-wrapper">
+                                          <label class="radio-button">
+                                            <input id="Informatique" name="radio-group" type="radio">
+                                            <span class="radio-checkmark"></span>
+                                            <span class="radio-label">Informatique</span>
+                                          </label>
+                                        </div>
+                                      
+                                        <div class="radio-wrapper">
+                                          <label class="radio-button">
+                                            <input id="Generaliste" name="radio-group" type="radio">
+                                            <span class="radio-checkmark"></span>
+                                            <span class="radio-label">Généraliste</span>
+                                          </label>
+                                        </div>
 
-                                    </form>
-        
+                                        <div class="radio-wrapper">
+                                          <label class="radio-button">
+                                            <input id="S3E" name="radio-group" type="radio">
+                                            <span class="radio-checkmark"></span>
+                                            <span class="radio-label">S3E</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                      
                             <h2 id="filters_name">Dates</h2>
                             <hr id="filters_bar">
                             
                                 <form id="type_select">
 
-                                    <input type="radio" id="stage" name="type" value="Stage" required >
-                                        <label for="stage" class="radio">Stage</label><br>
+                                    <div class="radio-container">
+                                        <div class="radio-wrapper">
+                                          <label class="radio-button">
+                                            <input id="Stage" name="radio-group" type="radio">
+                                            <span class="radio-checkmark"></span>
+                                            <span class="radio-label">Stage</span>
+                                          </label>
+                                        </div>
 
-                                    <input type="radio" id="alternance" name="type" value="Alternance" >
-                                        <label for="alternance" class="radio">Alternance</label><br>
-                                      
+                                        <div class="radio-wrapper">
+                                          <label class="radio-button">
+                                            <input id="Alternance" name="radio-group" type="radio">
+                                            <span class="radio-checkmark"></span>
+                                            <span class="radio-label">Alternance</span>
+                                          </label>
+                                    </div>
 
                                     <h3 id="filter_title">Date du début : </h3>
 

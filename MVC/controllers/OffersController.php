@@ -34,19 +34,19 @@ class OffersController extends Controller
         //var_dump($offers);
 
         //var_dump("offers");
-        foreach ($offers as $offer){
-            echo "<br>";
-            echo "<br>";
-            require_once('models/business/businessManager.php');
-            //var_dump($offer);
-            $businessManager = new BusinessManager();
-            //var_dump($businessManager);    
-            $companyInfo = $businessManager->getBusinessInfo($offer->getBusinessId());
-            //var_dump($offer->getBusinessId());
-            // Ajouter les informations sur l'entreprise à l'offre
-           // $offer->setName($companyInfo->getBusinessName());
-            //$offer->setProfilePicture($companyInfo->getBusinessProfilePicture());
-        }
+        //foreach ($offers as $offer){
+        //    echo "<br>";
+        //    echo "<br>";
+        //    require_once('models/business/businessManager.php');
+        //    //var_dump($offer);
+        //    $businessManager = new BusinessManager();
+        //    //var_dump($businessManager);    
+        //    $companyInfo = $businessManager->getBusinessInfo($offer->getBusinessId());
+        //    //var_dump($offer->getBusinessId());
+        //    // Ajouter les informations sur l'entreprise à l'offre
+        //   // $offer->setName($companyInfo->getBusinessName());
+        //    //$offer->setProfilePicture($companyInfo->getBusinessProfilePicture());
+        //}
         $this->_view = new SmartyView('Offers');
         echo '<br>';
         echo '<br>';

@@ -165,3 +165,27 @@
     text-align: right;
     margin-top:-1vw
 }
+
+.button {
+    padding: 0.909vw 1.211vw;
+    font-size: 0.969vw;
+    font-weight: 600;
+    border: 0.121vw    solid #414141;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 0.606vw;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    margin-left:20vw;
+    margin-top:2vw;
+  }
+  
+  .button:hover {
+    border-color: #0974f1;
+    box-shadow: 0 0 1.211vw rgba(9, 117, 241, 0.8);
+  }
+  
+  .button:active {
+    box-shadow: 0 0 0.606vw rgba(9, 117, 241, 0.4);
+  }

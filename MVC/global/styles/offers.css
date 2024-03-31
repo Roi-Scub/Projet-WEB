@@ -171,6 +171,41 @@ display:flex;
 justify-content: flex-end;
 }
 
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    left:58vw;
+    top:8vw;
+    z-index: 3;
+  }
+  
+  .container svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: all 0.3s;
+    fill: #666;
+  }
+  
+  .container svg:hover {
+    transform: scale(1.1);
+  }
+  
+  .container input:checked ~ svg {
+    fill: #E3474F;
+  }
 /*
    ___     __    __                   _____   _   _   _                 
   / _ \   / _|  / _|   ___   _ __    |  ___| (_) | | | |_    ___   _ __ 
@@ -179,6 +214,66 @@ justify-content: flex-end;
   \___/  |_|   |_|    \___| |_|      |_|     |_| |_|  \__|  \___| |_|   
                                                                         
 */
+
+.radio-container {
+    margin: 0 auto;
+    max-width: 300px;
+    color: #3B4754;
+  }
+  
+  .radio-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .radio-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .radio-button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .radio-button input[type="radio"] {
+    display: none;
+  }
+  
+  .radio-checkmark {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    border: 2px solid #333;
+    border-radius: 50%;
+  }
+  
+  .radio-checkmark:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #333;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .radio-button input[type="radio"]:checked ~ .radio-checkmark:before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .radio-label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  
+
 #filters_fieldset {
 
     border-radius:1vw;

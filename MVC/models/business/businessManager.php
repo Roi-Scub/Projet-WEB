@@ -3,17 +3,19 @@ require_once('models/business/business.php');
 
 class BusinessManager extends Manager {
 
-    public function getBusinessInfo()
+    public function getBusinessInfo(int $limit, int $offset)
     {
+        
         $conn = $this->getDataBase();
 
-        $sql = 'SELECT * FROM business b WHERE b.Business_Id = :Business_Id';
+        $sql = 'SELECT * FROM business b LIMIT :limit OFFSET :offset';
 
         
         $stmt = $conn->prepare($sql);
 
-        $stmt->bindParam(':Business_Id', $this->_id);
-
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+        
         $stmt->execute();
 
         $business = [];
@@ -23,6 +25,7 @@ class BusinessManager extends Manager {
             $business[] = new Business($data);
         }
         return $business;
+        
     }
 
     public function createBusiness()
@@ -77,7 +80,7 @@ class BusinessManager extends Manager {
 
     public function getBusinessById()
     {
-
+        
         $conn = $this->getDataBase();
 
         $sql = 'SELECT * FROM business WHERE Business_Id = :Business_Id';
@@ -85,7 +88,7 @@ class BusinessManager extends Manager {
         $stmt = $conn->prepare($sql);
 
         $stmt->bindParam(':Business_Id', $this->_id);
-
+        
         $stmt->execute();
 
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
