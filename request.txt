@@ -1,0 +1,77 @@
+-- SFx 2
+SELECT b.Business_Name, b.Business_Sector, a.Address, COUNT(o.Offer_Id) AS NumberOfInternsApplied, AVG(s.Student_Evaluation) AS AverageStudentEvaluation
+FROM business b
+LEFT JOIN offer o ON b.Business_Id = o.Compagny_Id
+LEFT JOIN student_evaluation s ON b.Business_Id = s.Business_Id
+LEFT JOIN address a ON b.Business_Id = a.Business_Id
+GROUP BY b.Business_Id;
+
+-- SFx 3
+INSERT INTO business (Business_Name, Business_Sector) VALUES ('Nom de l’entreprise', 'Secteur d’activité');
+
+-- SFx 4
+UPDATE business SET Business_Name = 'Nouveau nom', Business_Sector = 'Nouveau secteur' WHERE Business_Id = ID_de_l’entreprise;
+
+-- SFx 5
+INSERT INTO student_evaluation (Business_Id, Student_Evaluation, Pilot_Evaluation) VALUES (ID_de_l’entreprise, Evaluation_des_stagiaires, Evaluation_du_Pilote);
+
+-- SFx 6
+UPDATE business SET Visible = FALSE WHERE Business_Id = ID_de_l’entreprise;
+
+-- SFx 7
+SELECT Business_Sector, COUNT(*) AS Number_Of_Companies FROM business GROUP BY Business_Sector;
+
+-- SFx 8
+SELECT o.Offer_Name, o.Offer_Description, o.Offer_Date, o.Offer_Duration, o.Offer_Salary, o.Offer_Number_Of_Places, o.Offer_Number_Of_Places_Taken, b.Business_Name
+FROM offer o
+JOIN business b ON o.Compagny_Id = b.Business_Id
+WHERE o.Skill_Id IN (/* Liste des ID de compétences recherchées */) AND o.Location LIKE '%localité%' AND b.Business_Name LIKE '%nom de l’entreprise%';
+
+-- SFx 9
+INSERT INTO offer (Offer_Name, Offer_Description, Offer_Date, Offer_Start_Date, Offer_Duration, Offer_Salary, Offer_Number_Of_Places, Compagny_Id)
+VALUES ('Nom de l’offre', 'Description', 'Date', 'Date de début', 'Durée', 'Salaire', 'Nombre de places', ID_de_l’entreprise);
+
+-- SFx 10
+UPDATE offer SET Offer_Name = 'Nouveau nom', Offer_Description = 'Nouvelle description' WHERE Offer_Id = ID_de_l’offre;
+
+-- SFx 11
+DELETE FROM offer WHERE Offer_Id = ID_de_l’offre;
+
+-- SFx 12
+SELECT Skill_Id, COUNT(*) AS Number_Of_Offers FROM offer GROUP BY Skill_Id;
+
+-- SFx 13
+SELECT p.Profile_Id, p.Pilot_Name FROM pilote p WHERE p.Pilot_Name LIKE '%nom du pilote%';
+
+-- SFx 14
+INSERT INTO pilote (Pilot_Name) VALUES ('Nom du pilote');
+
+-- SFx 15
+UPDATE pilote SET Pilot_Name = 'Nouveau nom' WHERE Profile_Id = ID_du_pilote;
+
+-- SFx 16
+DELETE FROM pilote WHERE Profile_Id = ID_du_pilote;
+
+-- SFx 17
+SELECT s.Profile_Id, s.Student_Name FROM student s WHERE s.Student_Name LIKE '%nom de l’étudiant%';
+
+-- SFx 18
+INSERT INTO student (Student_Name) VALUES ('Nom de l’étudiant');
+
+-- SFx 19
+UPDATE student SET Student_Name = 'Nouveau nom' WHERE Profile_Id = ID_de_l’étudiant;
+
+-- SFx 20
+DELETE FROM student WHERE Profile_Id = ID_de_l’étudiant;
+
+-- SFx 21
+SELECT COUNT(*) AS Number_Of_Applied_Offers FROM appliance WHERE Student_Id = ID_de_l’étudiant;
+
+-- SFx 22
+INSERT INTO wishlist (Offer_Id, Student_Id) VALUES (ID_de_l’offre, ID_de_l’étudiant);
+
+-- SFx 23
+DELETE FROM wishlist WHERE Offer_Id = ID_de_l’offre AND Student_Id = ID_de_l’étudiant;
+
+-- SFx 24
+INSERT INTO appliance (Offer_Id, Student_Id, Motivation_Letter, CV) VALUES (ID_de_l’offre, ID_de_l’étudiant, 'Lettre de motivation', 'CV');
