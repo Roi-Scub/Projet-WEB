@@ -78,16 +78,20 @@ class BusinessManager extends Manager {
 
     }
 
-    public function getBusinessById()
+    public function getBusinessById($Id)
     {
         
+        $Id = $_GET['id'];
+
         $conn = $this->getDataBase();
+
 
         $sql = 'SELECT * FROM business WHERE Business_Id = :Business_Id';
 
         $stmt = $conn->prepare($sql);
 
-        $stmt->bindParam(':Business_Id', $this->_id);
+        
+        $stmt->bindParam(':Business_Id', $Id, PDO::PARAM_INT);
         
         $stmt->execute();
 

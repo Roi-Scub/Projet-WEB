@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-30 16:47:21
+/* Smarty version 4.4.1, created on 2024-04-01 21:53:17
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\modules\header\template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_66083409d92328_87324813',
+  'unifunc' => 'content_660b10ad0580b7_84131176',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '488d8b8cbf13f77cc6da55f9f46ec8e6f62b8ecd' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\modules\\header\\template.tpl',
-      1 => 1711813582,
+      1 => 1712001156,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66083409d92328_87324813 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660b10ad0580b7_84131176 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="header_principal">
 
@@ -51,7 +51,7 @@ function content_66083409d92328_87324813 (Smarty_Internal_Template $_smarty_tpl)
 
                     <!--<button onclick="window.location.href='disconnection'"  id="button_2">Deconnexion</button>-->
                     
-                    <button class="Btn">
+                    <button class="Btn" onclick="window.location.href='disconnection'">
   
                         <div class="sign">
                             <svg viewBox="0 0 512 512">

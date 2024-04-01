@@ -51,11 +51,11 @@
 
 <h3>Utilisateurs</h3>
 <ul class="liste">
-<!--{foreach $profileinfo as $user}
+{foreach $studentInfo as $user}
 
-<hr><div class="line">{$user.Prenom} {$user.Nom} - {$user.date_de_naissance}<a href="API/GetStudentInfo.php?id={$user.ID_utilisateur}" class="btn">Voir le profil </a><br></div>  <hr>
+<hr><div class="line">{$user->getFirstName()} {$user->getLastName()} - {$user->getBirthday()}<a href="profile?id={$user->getId()}" class="btns">Voir le profil </a><br></div>  <hr>
 
-{/foreach}-->
+{/foreach}
 </ul>
 
 
@@ -73,9 +73,9 @@ Pages:
 <h3>Offres</h3>
 <ul class="liste">
 
-<!--{foreach $offres as $offer}
-<hr><div class="line">{$offer.nom_de_l_offre} - {$offer.Entreprise}<br></div><hr>
-{/foreach}-->
+{foreach $offers as $offer}
+  <hr><div class="line">{$offer->getName()} -<a href="profile?id={$user->getId()}" class="btns">Voir le profil </a> <br></div><hr>
+  {/foreach}
 </ul>
 
 

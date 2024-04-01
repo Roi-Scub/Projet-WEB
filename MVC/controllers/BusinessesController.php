@@ -15,6 +15,15 @@ class BusinessesController extends Controller
     private function businesses()
     {
         //var_dump("businesses");
+        $businessManager = new BusinessManager();
+        if (isset($_GET['id']) && is_numeric($_GET['id'])){
+            $business = $businessManager->getBusinessById($_GET['id']);
+             } else {
+     
+             $business = $businessManager->getBusinessInfo(10, 0);
+             }
+
+
         $this->_view = new SmartyView('Businesses');
         //var_dump($this->_view);
         $this->_view->generate(array());

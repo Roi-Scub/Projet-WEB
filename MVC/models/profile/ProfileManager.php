@@ -86,4 +86,27 @@ class ProfileManager extends Manager
         //var_dump($profileInfo);
     }
 
+    public function getStudentInfo(int $limit, int $offset)
+    {
+
+        $db = $this->getDataBase();
+        $sql = 'SELECT * FROM profile JOIN eleve ON profile.Profile_Id = eleve.Profile_Id LIMIT :limit OFFSET :offset';
+        
+        $stmt = $db->prepare($sql);
+        
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+
+        
+        $stmt->execute();
+        
+        $student = [];
+
+        while($data = $stmt->fetch(PDO::FETCH_ASSOC)) 
+        {
+            $student[] = new Profile($data);
+        }
+        return $student;
+    }
+
 }

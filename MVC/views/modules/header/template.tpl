@@ -28,7 +28,7 @@
 
                     <!--<button onclick="window.location.href='disconnection'"  id="button_2">Deconnexion</button>-->
                     
-                    <button class="Btn">
+                    <button class="Btn" onclick="window.location.href='disconnection'">
   
                         <div class="sign">
                             <svg viewBox="0 0 512 512">

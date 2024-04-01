@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 17vw;
+    width: 7vw;
     height: 3vw;
     margin-top: 1vw;
     margin-bottom: 1vw;
@@ -44,8 +44,8 @@
     display: flex;
     justify-content: center;
     margin-left:10vw;
-    width: 43vw;
-    height: 29.5vw;
+    width: 32vw;
+    height: 26vw;
     margin-top: 1vw;
     border: 0.2vw solid #000;
     border-radius: 1vw;
@@ -72,7 +72,7 @@ ul.liste {
     margin-left:1vw;
 }
 
-.btn {
+.btns {
 
     text-decoration: none;
     color: #000;
@@ -82,14 +82,14 @@ ul.liste {
     border-radius: 0.5vw;
     font-family: "Open Sans";
     position: absolute;
-    right:3vw;
+    left:30vw;
     
     height:2vw;
     
 
 }
 
-.btn:hover {
+.btns:hover {
 
     background-color: #d9d9d9;
     box-shadow: 0px 0px 5px 0px #000000;
@@ -156,6 +156,7 @@ main {
     position: relative;
     overflow: hidden;
     border: 1px solid #f2f2f2;
+    padding:0vw;
 
 }
 .container {
@@ -172,7 +173,7 @@ margin-top:1vw;
     height: 11vw;
     width: 11vw;
     margin-top:-10vw;
-    margin-left: -40vw;
+    margin-left: -56vw;
     border: 0.2vw solid #000;
     border-radius: 1vw;
     position:relative;
@@ -216,7 +217,7 @@ margin-top:1vw;
     border-radius: 1vw;
     border: 0.2vw solid #000;
     position:relative;
-    left: 8.5vw;
+    left: 0vw;
     right:8.5vw;
 }
 

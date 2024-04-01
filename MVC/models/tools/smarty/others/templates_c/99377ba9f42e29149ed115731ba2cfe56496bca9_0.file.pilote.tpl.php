@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-30 13:05:38
+/* Smarty version 4.4.1, created on 2024-04-01 21:40:14
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\profiles\pilote.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_660800122c0c39_23848852',
+  'unifunc' => 'content_660b0d9e50bf22_35043787',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99377ba9f42e29149ed115731ba2cfe56496bca9' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\profiles\\pilote.tpl',
-      1 => 1711800336,
+      1 => 1712000412,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660800122c0c39_23848852 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660b0d9e50bf22_35043787 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="body">
  <div>
 <?php
@@ -88,22 +88,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?></div>
 
 <h3>Utilisateurs</h3>
 <ul class="liste">
-<!--<?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['profileinfo']->value, 'user');
+<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['studentInfo']->value, 'user');
 $_smarty_tpl->tpl_vars['user']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['user']->value) {
 $_smarty_tpl->tpl_vars['user']->do_else = false;
 ?>
 
-<hr><div class="line"><?php echo $_smarty_tpl->tpl_vars['user']->value['Prenom'];?>
- <?php echo $_smarty_tpl->tpl_vars['user']->value['Nom'];?>
- - <?php echo $_smarty_tpl->tpl_vars['user']->value['date_de_naissance'];?>
-<a href="API/GetStudentInfo.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['ID_utilisateur'];?>
-" class="btn">Voir le profil </a><br></div>  <hr>
+<hr><div class="line"><?php echo $_smarty_tpl->tpl_vars['user']->value->getFirstName();?>
+ <?php echo $_smarty_tpl->tpl_vars['user']->value->getLastName();?>
+ - <?php echo $_smarty_tpl->tpl_vars['user']->value->getBirthday();?>
+<a href="profile?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+" class="btns">Voir le profil </a><br></div>  <hr>
 
 <?php
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>-->
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </ul>
 
 
@@ -131,18 +131,18 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>-->
 <h3>Offres</h3>
 <ul class="liste">
 
-<!--<?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['offres']->value, 'offer');
+<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['offers']->value, 'offer');
 $_smarty_tpl->tpl_vars['offer']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['offer']->value) {
 $_smarty_tpl->tpl_vars['offer']->do_else = false;
 ?>
-<hr><div class="line"><?php echo $_smarty_tpl->tpl_vars['offer']->value['nom_de_l_offre'];?>
- - <?php echo $_smarty_tpl->tpl_vars['offer']->value['Entreprise'];?>
-<br></div><hr>
-<?php
+  <hr><div class="line"><?php echo $_smarty_tpl->tpl_vars['offer']->value->getName();?>
+ -<a href="profile?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+" class="btns">Voir le profil </a> <br></div><hr>
+  <?php
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>-->
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </ul>
 
 
