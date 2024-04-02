@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
 
@@ -13,6 +13,9 @@
     {/foreach}
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Stage's Cove">
+    <meta name="description" content="Stage's Cove is a platform for students to find internships and companies to find interns.">
     
 
 

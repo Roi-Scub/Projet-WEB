@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-04-01 21:53:17
+/* Smarty version 4.4.1, created on 2024-04-02 10:23:50
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\modules\header\template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_660b10ad0580b7_84131176',
+  'unifunc' => 'content_660bc096644050_73616504',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '488d8b8cbf13f77cc6da55f9f46ec8e6f62b8ecd' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\modules\\header\\template.tpl',
-      1 => 1712001156,
+      1 => 1712046224,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660b10ad0580b7_84131176 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660bc096644050_73616504 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="header_principal">
 
@@ -45,7 +45,7 @@ function content_660b10ad0580b7_84131176 (Smarty_Internal_Template $_smarty_tpl)
                     <input id="btna1" type="button" value="Thème">
                     <input id="btna2" type="button" value="Compte" onclick="window.location.href='profile'">
                     <input id="btna3" type="button" value="Plus" onclick="window.location.href='legalTerms'">
-                    <img id="parametre" src="../../../global/images/parametre.png">
+                    <img id="parametre" src="../../../global/images/parametre.png" alt="Parametres">
 
                 </div>
 

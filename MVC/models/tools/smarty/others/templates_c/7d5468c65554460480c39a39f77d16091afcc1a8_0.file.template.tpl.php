@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-18 13:29:48
+/* Smarty version 4.4.1, created on 2024-04-02 10:28:00
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_65f833bccb1281_99710604',
+  'unifunc' => 'content_660bc19082f691_07703198',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d5468c65554460480c39a39f77d16091afcc1a8' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\template.tpl',
-      1 => 1710757461,
+      1 => 1712046478,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65f833bccb1281_99710604 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660bc19082f691_07703198 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
 
@@ -45,6 +45,9 @@ $_smarty_tpl->tpl_vars['style']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Stage's Cove">
+    <meta name="description" content="Stage's Cove is a platform for students to find internships and companies to find interns.">
     
 
 

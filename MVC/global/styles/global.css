@@ -32,8 +32,8 @@
 
 #logo_petit {
 
-	width: 10vw;
-	height: 5vw;
+	width:  10vw;
+	height:   5vw;
 	margin-left: 0vw;
 
 	background: #00000000;
@@ -350,7 +350,7 @@ nav ul li a,
 		.logo_reseaux {
 
 			width: 3vw;
-			height: 3vw;
+			height:  3vw;
 			margin-left: 1.5vw;
 
 		}
@@ -365,8 +365,8 @@ nav ul li a,
 
 	#logo_petit1 {
 
-		width: 10vw;
-		height: 5vw;
+		width:  15vw;
+		height:  7vw;
 		margin-top: 2.5vw;
 		background: #00000000;
 		border-radius: 12px 12px 12px 12px;
