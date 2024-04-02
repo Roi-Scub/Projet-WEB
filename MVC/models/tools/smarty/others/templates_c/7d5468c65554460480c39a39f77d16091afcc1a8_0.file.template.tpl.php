@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-04-02 10:28:00
+/* Smarty version 4.4.1, created on 2024-04-02 11:40:24
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_660bc19082f691_07703198',
+  'unifunc' => 'content_660bd288d87191_07679322',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d5468c65554460480c39a39f77d16091afcc1a8' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\template.tpl',
-      1 => 1712046478,
+      1 => 1712050782,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660bc19082f691_07703198 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660bd288d87191_07679322 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
-
+    
 
     <!-- Local Configuration -->
     
@@ -49,8 +49,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <meta name="author" content="Stage's Cove">
     <meta name="description" content="Stage's Cove is a platform for students to find internships and companies to find interns.">
     
-
-
+    <link rel="manifest" href="../Manifest.json">
+    <meta name="theme-color" content="#007bff">
+    <?php echo '<script'; ?>
+ src="../script.js" > <?php echo '</script'; ?>
+>
 
 </head>
 
