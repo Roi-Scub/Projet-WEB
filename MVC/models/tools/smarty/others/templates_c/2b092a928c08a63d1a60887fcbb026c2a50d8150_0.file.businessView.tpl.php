@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-04-02 09:16:21
+/* Smarty version 4.4.1, created on 2024-04-02 22:46:04
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\businesses\businessView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_660bb0c53adb57_56281421',
+  'unifunc' => 'content_660c6e8c5fa7f0_44134713',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b092a928c08a63d1a60887fcbb026c2a50d8150' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\businesses\\businessView.tpl',
-      1 => 1712042174,
+      1 => 1712087678,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660bb0c53adb57_56281421 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660c6e8c5fa7f0_44134713 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- This Design page will have the following sections: 
 1. The Business Informations 
 2. The Business offers 
@@ -45,7 +45,7 @@ function content_660bb0c53adb57_56281421 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     
 
-        <!-- The Business offers -->
+       The Business offers 
 
         <div class="row">
             <div class="col-md-12">
@@ -76,7 +76,7 @@ function content_660bb0c53adb57_56281421 (Smarty_Internal_Template $_smarty_tpl)
             </div>
     </div>
     <div class="right">
-            <!-- The possibility to add a review with a rating -->
+            The possibility to add a review with a rating 
             <div class="form-container">
 
                 <form class="form">
@@ -115,7 +115,7 @@ function content_660bb0c53adb57_56281421 (Smarty_Internal_Template $_smarty_tpl)
                 </form>
 
             </div>
-            <!-- The Business Reviews from the users -->
+            The Business Reviews from the users 
 
             <div class="row">
                 <div class="col-md-12">
@@ -147,6 +147,5 @@ function content_660bb0c53adb57_56281421 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </div>
 </div>
-
 <?php }
 }

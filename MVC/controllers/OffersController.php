@@ -7,10 +7,11 @@ class OffersController extends Controller
     
     public function __construct($url)
     {
-       //var_dump("la");
+       var_dump("la");
         $this->checkURL($url, 0);
-        //var_dump($url);
-        $this->offers();
+        var_dump($url);
+
+        //$this->offers();
         //var_dump("ici");
     }
 
@@ -56,6 +57,14 @@ class OffersController extends Controller
         //getOfferValues
         $this->_view->generate(array($offers, 'max'=> $max ));
        
+    }
+
+    private function offersCRUD()
+    {
+        var_dump("offersCRUD");
+        
+        $this->_view = new SmartyView('OffersCRUD');
+        $this->_view->generate(array());
     }
 
 }

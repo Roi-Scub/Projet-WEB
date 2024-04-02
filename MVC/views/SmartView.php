@@ -15,7 +15,7 @@ class SmartyView
 
     public function __construct($module)
     {
-       
+        
         $smartyFolderPath = 'models/tools/smarty/';
         require_once($smartyFolderPath . 'libs/Smarty.class.php');
         $smarty = new Smarty();
@@ -32,9 +32,14 @@ class SmartyView
 
         // Secure Module name
         $module = strtolower($module);
-
+        //var_dump($module);
         $this->_smarty = $smarty;
-        $this->_file = 'views/modules/' . $module . '/' . $module . 'Module.php'; 
+       
+
+            $this->_file = 'views/modules/' . $module . '/' . $module . 'Module.php'; 
+        
+        
+        
         $this->_styles = array("../global/styles/global.css");
         $this->_scripts = array();
 

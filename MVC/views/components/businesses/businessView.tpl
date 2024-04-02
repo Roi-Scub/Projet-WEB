@@ -22,7 +22,7 @@
         </div>
     
 
-        <!-- The Business offers -->
+       The Business offers 
 
         <div class="row">
             <div class="col-md-12">
@@ -53,7 +53,7 @@
             </div>
     </div>
     <div class="right">
-            <!-- The possibility to add a review with a rating -->
+            The possibility to add a review with a rating 
             <div class="form-container">
 
                 <form class="form">
@@ -92,7 +92,7 @@
                 </form>
 
             </div>
-            <!-- The Business Reviews from the users -->
+            The Business Reviews from the users 
 
             <div class="row">
                 <div class="col-md-12">
@@ -124,4 +124,3 @@
         </div>
     </div>
 </div>
-

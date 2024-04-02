@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-04-01 21:40:14
+/* Smarty version 4.4.1, created on 2024-04-02 22:08:34
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\profiles\pilote.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_660b0d9e50bf22_35043787',
+  'unifunc' => 'content_660c65c2d8ec73_01621875',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99377ba9f42e29149ed115731ba2cfe56496bca9' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\profiles\\pilote.tpl',
-      1 => 1712000412,
+      1 => 1712088493,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660b0d9e50bf22_35043787 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660c65c2d8ec73_01621875 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="body">
  <div>
 <?php
@@ -60,7 +60,7 @@ $_smarty_tpl->tpl_vars['pi']->do_else = false;
 
             <div class="boutons">
               <div style="display: flex; flex-direction:column;justify-content:center; align-items: right;">
-              <a href="" name ="action"  class="buttons">Crée un utilisateur</a>
+              <a onclick="window.location.href='offersCRUD'" name ="action"  class="buttons">Crée un utilisateur</a>
               <a href="" name ="action"  class="buttons">Modifier un utilisateur</a>
               <a href="" name ="action"  class="buttons">Supprimer un utilisateur</a>
               <a href="" name ="action" class="buttons">Voir un utilisateur</a>

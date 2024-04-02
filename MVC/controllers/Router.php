@@ -41,10 +41,27 @@ class Router {
                  */
                 $controller = ucfirst(strtolower($url[0]));
                 //echo "<br>";
-                //var_dump($controller);
+                var_dump($controller);
                 /** 
                  * The controller class is the controller name with the suffix 'Controller' and the extension '.php'.
                  */
+                if ($controller == 'Offerscrud'){
+
+                    $controller = 'Offers';
+
+                } else if ($controller == 'Businessescrud'){
+
+                    $controller = 'Businesses';
+
+                } else if ($controller == 'Profilecrud'){
+
+                    $controller = 'Profile';
+                } else {
+                        
+                    $controllerClass = $controller . 'Controller';
+
+                }
+
                 $controllerClass = $controller . 'Controller';
                 //echo "<br>";
                 //var_dump($controllerClass);

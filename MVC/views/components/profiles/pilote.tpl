@@ -25,7 +25,7 @@
 
             <div class="boutons">
               <div style="display: flex; flex-direction:column;justify-content:center; align-items: right;">
-              <a href="" name ="action"  class="buttons">Crée un utilisateur</a>
+              <a onclick="window.location.href='offersCRUD'" name ="action"  class="buttons">Crée un utilisateur</a>
               <a href="" name ="action"  class="buttons">Modifier un utilisateur</a>
               <a href="" name ="action"  class="buttons">Supprimer un utilisateur</a>
               <a href="" name ="action" class="buttons">Voir un utilisateur</a>
