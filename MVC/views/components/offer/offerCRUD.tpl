@@ -1,11 +1,13 @@
 
     <body>
         <main>
-            <button onclick="CreerFormulaire()">Créer</button>
-            <button onclick="ModifierFormulaire()">Modifier</button>
+            <button onclick="CreateForm()">Créer</button>
+            <button onclick="UpdateForm()">Modifier</button>
+            <button onclick="DeleteForm()">Supprimer</button>
+            <button onclick="ViewForm()">Afficher</button>
             <h1>Formulaire Offre</h1>
             <section id="form">
-                <form id="creerForm" class="active">
+                <form id="createForm" class="active">
                     <label for="offer_Name">Nom de l'offre :</label>
                     <input type="text" id="offer_Name" name="offer_Name" required><br><br>
 
@@ -32,7 +34,7 @@
 
                     <input type="submit" value="Envoyer">
                 </form>
-                <form id="modifierForm" >
+                <form id="updateForm" >
                     <label for="offer_Name">Nouveau nom de l'offre :</label>
                     <input type="text" id="offer_Name" name="offer_Name" required><br><br>
 
@@ -58,6 +60,18 @@
                     <input type="text" id="Business" name="Business" required><br><br>
 
                     <input type="submit" value="Envoyer">
+                </form>
+                <form id="deleteForm">
+                    <label for="offer_Name">Nom de l'offre :</label>
+                    <input type="text" id="offer_Name" name="offer_Name" required><br><br>
+                    <input type="submit" value="Envoyer">
+                </form>
+                <form id="viewForm">
+                    <label for="offer_Name">Nom de l'offre :</label>
+                    <input type="text" id="offer_Name" name="offer_Name" required><br><br>
+                    <input type="submit" value="Envoyer">
+                </form>
+                
             </section>
         </main>
     </body>
