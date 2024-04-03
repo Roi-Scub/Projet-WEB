@@ -36,16 +36,16 @@ class SmartyView
         $this->_smarty = $smarty;
        
         if ($module == 'offerscrud') {
-            
+
             $this->_file = 'views/modules/' . 'offers' . '/' . $module . 'Module.php';
 
         } else if ($module == 'businessescrud') {
 
-            $this->_file = 'views/modules/' . businesses . '/' . $module . 'Module.php'; 
+            $this->_file = 'views/modules/' . 'businesses' . '/' . $module . 'Module.php'; 
 
         } else if ($module == 'businessesview') {
 
-            $this->_file = 'views/modules/' . businesses . '/' . $module . 'Module.php'; 
+            $this->_file = 'views/modules/' . 'businesses' . '/' . $module . 'Module.php'; 
 
         } else {
             $this->_file = 'views/modules/' . $module . '/' . $module . 'Module.php'; 
@@ -99,8 +99,8 @@ class SmartyView
         $this->_smarty->assign('styles', $this->_styles);
         $this->_smarty->assign('scripts', $this->_scripts);
         
-        $this->_smarty->assign('headerRender', $headerRender);
         $this->_smarty->assign('mainRender', $mainRender);
+        $this->_smarty->assign('headerRender', $headerRender);
         $this->_smarty->assign('footerRender', $footerRender);
         
         $this->_smarty->display('views/template.tpl');

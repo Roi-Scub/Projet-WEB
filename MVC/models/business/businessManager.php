@@ -81,7 +81,7 @@ class BusinessManager extends Manager {
     public function getBusinessById($Id)
     {
         
-        $Id = $_GET['id'];
+        
 
         $conn = $this->getDataBase();
 
@@ -91,14 +91,34 @@ class BusinessManager extends Manager {
         $stmt = $conn->prepare($sql);
 
         
-        $stmt->bindParam(':Business_Id', $Id, PDO::PARAM_INT);
+        $stmt->bindParam(':Business_Id', $Id);
         
         $stmt->execute();
+        
+        $business = [];
 
-        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        while($data = $stmt->fetch(PDO::FETCH_ASSOC)) 
+        {
+            $business[] = new Business($data);
+        }
+        return $business;
+        
 
-        return new Business($data);
+    }
 
+    public function getMaxPage()
+    {
+        $conn = $this->getDataBase();
+
+        $sql = 'SELECT COUNT(*) FROM business';
+
+        $stmt = $conn->prepare($sql);
+
+        $stmt->execute();
+
+        $maxPage = round($stmt->fetch(PDO::FETCH_ASSOC)['COUNT(*)'] / 10);
+
+        return $maxPage;
     }
 
 }

@@ -17,12 +17,11 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-center">{$b->getBusinessName()}</h2>
+                <h2 class="text-center">{$b->getName()}</h2>
             </div>
         </div>
-    
-
-       The Business offers 
+{/foreach}
+      The Business offers 
 
         <div class="row">
             <div class="col-md-12">

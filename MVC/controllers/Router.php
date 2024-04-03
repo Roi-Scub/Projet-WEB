@@ -53,7 +53,12 @@ class Router {
 
                     $controller = 'Businesses';
 
-                } else if ($controller == 'Profilecrud'){
+                } else if ($controller == 'Businessesview') {
+                        
+                        $controller = 'Businesses';
+    
+                    
+                }else if ($controller == 'Profilecrud'){
 
                     $controller = 'Profile';
                 } else {
@@ -64,13 +69,13 @@ class Router {
 
                 $controllerClass = $controller . 'Controller';
                 //echo "<br>";
-                //var_dump($controllerClass);
+                var_dump($controllerClass);
                 /**
                  * The controller file is in the controllers folder with the controller class name and the extension '.php'
                  */
                 $controllerFile = 'controllers/' . $controllerClass . '.php';
                 //echo "<br>";
-                //var_dump($controllerFile);
+                var_dump($controllerFile);
 
                 
 

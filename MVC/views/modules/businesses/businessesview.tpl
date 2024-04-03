@@ -1,1 +1,1 @@
-{$businessRender}
+{$businessView}

@@ -21,7 +21,7 @@ class OffersController extends Controller
 
     private function offers()
     {
-        var_dump($_GET);
+        //var_dump($_GET);
 
         //$this->_manager = new OfferManager();
         $offerManager = new OfferManager();

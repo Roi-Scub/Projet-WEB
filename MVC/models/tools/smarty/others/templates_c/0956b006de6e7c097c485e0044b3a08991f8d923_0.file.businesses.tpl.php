@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-04-03 19:16:19
+/* Smarty version 4.4.1, created on 2024-04-03 22:12:49
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\businesses\businesses.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_660d8ee3d4a395_06348395',
+  'unifunc' => 'content_660db841116a57_64019445',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0956b006de6e7c097c485e0044b3a08991f8d923' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\businesses\\businesses.tpl',
-      1 => 1712164575,
+      1 => 1712175168,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660d8ee3d4a395_06348395 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660db841116a57_64019445 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div>
 
 <?php
@@ -67,9 +67,9 @@ $_smarty_tpl->tpl_vars['b']->do_else = false;
         <div class="Nombre d'offre">
        
         </div>
-<button class="button" onclick="window.location.href='businessesView?id=<?php echo $_smarty_tpl->tpl_vars['b']->value->getId();?>
+            <button class="button" onclick="window.location.href='businessesView&id=<?php echo $_smarty_tpl->tpl_vars['b']->value->getId();?>
 '">
-              Voir Plus
+                  Voir Plus
             </button>
         </div>
         <br>
@@ -82,5 +82,55 @@ $_smarty_tpl->tpl_vars['b']->do_else = false;
 <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-</div>  <?php }
+</div>  
+
+<div class="pagination">
+
+    <?php $_smarty_tpl->_assignInScope('dotsDisplayed', false);?>
+
+    <?php if ($_smarty_tpl->tpl_vars['currentPage']->value != 1) {?>
+        <a href="offers&page=<?php echo $_smarty_tpl->tpl_vars['currentPage']->value-1;?>
+">Page précédente</a>
+    <?php }?>
+
+
+    <?php
+$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);
+$_smarty_tpl->tpl_vars['i']->value = 1;
+if ($_smarty_tpl->tpl_vars['i']->value < $_smarty_tpl->tpl_vars['max']->value) {
+for ($_foo=true;$_smarty_tpl->tpl_vars['i']->value < $_smarty_tpl->tpl_vars['max']->value; $_smarty_tpl->tpl_vars['i']->value++) {
+?>
+        <?php if ($_smarty_tpl->tpl_vars['i']->value == $_smarty_tpl->tpl_vars['currentPage']->value) {?>
+
+            <?php if ($_smarty_tpl->tpl_vars['i']->value == $_smarty_tpl->tpl_vars['currentPage']->value) {?>
+                <a href="offers&page=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+" style="font-weight: bold; color: burlywood;"><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+</a>
+            <?php } else { ?>
+                <a href="offers&page=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+" style="font-weight: normal; color: white;"><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+</a>
+            <?php }?>
+
+        <?php } elseif ($_smarty_tpl->tpl_vars['i']->value <= 3 || $_smarty_tpl->tpl_vars['i']->value > $_smarty_tpl->tpl_vars['max']->value-4) {?> 
+            <a href="offers&page=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+</a> 
+        <?php } elseif (!$_smarty_tpl->tpl_vars['dotsDisplayed']->value) {?> 
+            <span>...</span>
+            <?php $_smarty_tpl->_assignInScope('dotsDisplayed', true);?>
+        <?php }?>
+
+    <?php }
+}
+?>
+
+    <?php if ($_smarty_tpl->tpl_vars['currentPage']->value < $_smarty_tpl->tpl_vars['max']->value-1) {?>
+        <a href="offers&page=<?php echo $_smarty_tpl->tpl_vars['currentPage']->value+1;?>
+">Page suivante</a>
+    <?php }?>
+
+
+
+</div><?php }
 }

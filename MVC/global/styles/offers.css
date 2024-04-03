@@ -50,7 +50,7 @@
 .offre {
 
 display: flex;
-margin: 5vw 5vw 0vw 0vw;
+margin: 1.5vw 5vw 0vw 0vw;
 padding: 10px;
 height:15vw;
 width: 60vw;
@@ -185,7 +185,7 @@ justify-content: flex-end;
     cursor: pointer;
     user-select: none;
     left:58vw;
-    top:8vw;
+    top:4.5vw;
     z-index: 3;
   }
   
