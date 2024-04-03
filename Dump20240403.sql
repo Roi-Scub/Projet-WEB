@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
 -- Host: localhost    Database: site_web
 -- ------------------------------------------------------
--- Server version	5.5.5-10.4.32-MariaDB
+-- Server version	8.0.28
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -23,8 +23,8 @@ DROP TABLE IF EXISTS `access`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `access` (
-  `Promotion_Id` int(11) NOT NULL,
-  `Offer_Id` int(11) NOT NULL,
+  `Promotion_Id` int NOT NULL,
+  `Offer_Id` int NOT NULL,
   PRIMARY KEY (`Promotion_Id`,`Offer_Id`),
   KEY `Offer_Id` (`Offer_Id`),
   CONSTRAINT `access_ibfk_1` FOREIGN KEY (`Promotion_Id`) REFERENCES `promotion` (`Promotion_Id`),
@@ -38,7 +38,7 @@ CREATE TABLE `access` (
 
 LOCK TABLES `access` WRITE;
 /*!40000 ALTER TABLE `access` DISABLE KEYS */;
-INSERT INTO `access` VALUES (1,1),(1,14),(1,27),(1,40),(2,2),(2,15),(2,28),(2,41),(3,3),(3,16),(3,29),(3,42),(4,4),(4,17),(4,30),(4,43),(5,5),(5,18),(5,31),(5,44),(6,6),(6,19),(6,32),(6,45),(7,7),(7,20),(7,33),(7,46),(8,8),(8,21),(8,34),(8,47),(9,9),(9,22),(9,35),(9,48),(10,10),(10,23),(10,36),(10,49),(11,11),(11,24),(11,37),(11,50),(12,12),(12,25),(12,38),(13,13),(13,26),(13,39);
+INSERT INTO `access` VALUES (1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(10,10),(11,11),(12,12),(13,13),(1,14),(2,15),(3,16),(4,17),(5,18),(6,19),(7,20),(8,21),(9,22),(10,23),(11,24),(12,25),(13,26),(1,27),(2,28),(3,29),(4,30),(5,31),(6,32),(7,33),(8,34),(9,35),(10,36),(11,37),(12,38),(13,39),(1,40),(2,41),(3,42),(4,43),(5,44),(6,45),(7,46),(8,47),(9,48),(10,49),(11,50);
 /*!40000 ALTER TABLE `access` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,12 +50,12 @@ DROP TABLE IF EXISTS `address`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `address` (
-  `Address_Id` int(11) NOT NULL,
-  `Address_Name` varchar(255) DEFAULT NULL,
-  `Address_City` varchar(255) DEFAULT NULL,
-  `Address_Postal_Code` varchar(6) DEFAULT NULL,
+  `Address_Id` int NOT NULL,
+  `Address_Name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Address_City` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Address_Postal_Code` varchar(6) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `Address_Deleted_At` datetime DEFAULT NULL,
-  `Business_Id` int(11) DEFAULT NULL,
+  `Business_Id` int DEFAULT NULL,
   PRIMARY KEY (`Address_Id`),
   KEY `Business_Id` (`Business_Id`),
   CONSTRAINT `address_ibfk_1` FOREIGN KEY (`Business_Id`) REFERENCES `business` (`Business_Id`)
@@ -80,7 +80,7 @@ DROP TABLE IF EXISTS `admin`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `admin` (
-  `Profile_Id` int(11) NOT NULL,
+  `Profile_Id` int NOT NULL,
   PRIMARY KEY (`Profile_Id`),
   CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`Profile_Id`) REFERENCES `profile` (`Profile_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -104,12 +104,12 @@ DROP TABLE IF EXISTS `appliance`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `appliance` (
-  `Appliance_Id` int(11) NOT NULL,
-  `Appliance_Cv` varchar(1500) DEFAULT NULL,
-  `Appliance_Letter` varchar(1500) DEFAULT NULL,
+  `Appliance_Id` int NOT NULL,
+  `Appliance_Cv` varchar(1500) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Appliance_Letter` varchar(1500) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `Appliance_Deleted_At` datetime DEFAULT NULL,
-  `Profile_Id` int(11) NOT NULL,
-  `Offer_Id` int(11) NOT NULL,
+  `Profile_Id` int NOT NULL,
+  `Offer_Id` int NOT NULL,
   PRIMARY KEY (`Appliance_Id`),
   KEY `Profile_Id` (`Profile_Id`),
   KEY `Offer_Id` (`Offer_Id`),
@@ -136,14 +136,14 @@ DROP TABLE IF EXISTS `business`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `business` (
-  `Business_Id` int(11) NOT NULL,
-  `Business_Name` varchar(255) DEFAULT NULL,
-  `Business_Description` varchar(1500) DEFAULT NULL,
-  `Business_Sector` varchar(50) DEFAULT NULL,
-  `Business_Picture_Link` varchar(255) DEFAULT NULL,
-  `Business_Banner_Link` varchar(255) DEFAULT NULL,
+  `Business_Id` int NOT NULL,
+  `Business_Name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Business_Description` varchar(1500) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Business_Sector` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Business_Picture_Link` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Business_Banner_Link` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `Business_Deleted_At` datetime DEFAULT NULL,
-  `Profile_Id` int(11) NOT NULL,
+  `Profile_Id` int NOT NULL,
   PRIMARY KEY (`Business_Id`),
   KEY `Profile_Id` (`Profile_Id`),
   CONSTRAINT `business_ibfk_1` FOREIGN KEY (`Profile_Id`) REFERENCES `pilote` (`Profile_Id`)
@@ -168,9 +168,9 @@ DROP TABLE IF EXISTS `center`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `center` (
-  `Center_Id` int(11) NOT NULL,
-  `Center_Name` varchar(255) DEFAULT NULL,
-  `Address_Id` int(11) NOT NULL,
+  `Center_Id` int NOT NULL,
+  `Center_Name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Address_Id` int NOT NULL,
   PRIMARY KEY (`Center_Id`),
   UNIQUE KEY `Adress_Id` (`Address_Id`),
   CONSTRAINT `center_ibfk_1` FOREIGN KEY (`Address_Id`) REFERENCES `address` (`Address_Id`)
@@ -195,8 +195,8 @@ DROP TABLE IF EXISTS `contains`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `contains` (
-  `Wishlist_Id` int(11) NOT NULL,
-  `Offer_Id` int(11) NOT NULL,
+  `Wishlist_Id` int NOT NULL,
+  `Offer_Id` int NOT NULL,
   PRIMARY KEY (`Wishlist_Id`,`Offer_Id`),
   KEY `Offer_Id` (`Offer_Id`),
   CONSTRAINT `contains_ibfk_1` FOREIGN KEY (`Wishlist_Id`) REFERENCES `wishlist` (`Wishlist_Id`),
@@ -222,8 +222,8 @@ DROP TABLE IF EXISTS `got`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `got` (
-  `Skill_Id` int(11) NOT NULL,
-  `Profile_Id` int(11) NOT NULL,
+  `Skill_Id` int NOT NULL,
+  `Profile_Id` int NOT NULL,
   PRIMARY KEY (`Skill_Id`,`Profile_Id`),
   KEY `Profile_Id` (`Profile_Id`),
   CONSTRAINT `got_ibfk_1` FOREIGN KEY (`Skill_Id`) REFERENCES `skill` (`Skill_Id`),
@@ -249,8 +249,8 @@ DROP TABLE IF EXISTS `live`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `live` (
-  `Profile_Id` int(11) NOT NULL,
-  `Address_Id` int(11) NOT NULL,
+  `Profile_Id` int NOT NULL,
+  `Address_Id` int NOT NULL,
   PRIMARY KEY (`Profile_Id`,`Address_Id`),
   KEY `live_ibfk_2` (`Address_Id`),
   CONSTRAINT `live_ibfk_1` FOREIGN KEY (`Profile_Id`) REFERENCES `profile` (`Profile_Id`),
@@ -276,8 +276,8 @@ DROP TABLE IF EXISTS `need`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `need` (
-  `Offer_Id` int(11) NOT NULL,
-  `Skill_Id` int(11) NOT NULL,
+  `Offer_Id` int NOT NULL,
+  `Skill_Id` int NOT NULL,
   PRIMARY KEY (`Offer_Id`,`Skill_Id`),
   KEY `Skill_Id` (`Skill_Id`),
   CONSTRAINT `need_ibfk_1` FOREIGN KEY (`Offer_Id`) REFERENCES `offer` (`Offer_Id`),
@@ -303,11 +303,11 @@ DROP TABLE IF EXISTS `notice`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notice` (
-  `Notice_Id` int(11) NOT NULL,
+  `Notice_Id` int NOT NULL,
   `Notice_Grade` decimal(15,2) DEFAULT NULL,
-  `Notice_Comment` varchar(255) DEFAULT NULL,
-  `Business_Id` int(11) NOT NULL,
-  `Profile_Id` int(11) NOT NULL,
+  `Notice_Comment` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Business_Id` int NOT NULL,
+  `Profile_Id` int NOT NULL,
   PRIMARY KEY (`Notice_Id`),
   KEY `Business_Id` (`Business_Id`),
   KEY `Profile_Id` (`Profile_Id`),
@@ -334,18 +334,18 @@ DROP TABLE IF EXISTS `offer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `offer` (
-  `Offer_Id` int(11) NOT NULL,
-  `Offer_Name` varchar(100) DEFAULT NULL,
-  `Offer_Description` varchar(1500) DEFAULT NULL,
+  `Offer_Id` int NOT NULL,
+  `Offer_Name` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Offer_Description` varchar(1500) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `Offer_Date` date DEFAULT NULL,
   `Offer_Start_Date` date DEFAULT NULL,
-  `Offer_Duration` int(11) DEFAULT NULL,
+  `Offer_Duration` int DEFAULT NULL,
   `Offer_Salary` decimal(15,2) DEFAULT NULL,
-  `Offer_Number_Of_Places` int(11) DEFAULT NULL,
-  `Offer_Number_Of_Places_Taken` int(11) DEFAULT NULL,
+  `Offer_Number_Of_Places` int DEFAULT NULL,
+  `Offer_Number_Of_Places_Taken` int DEFAULT NULL,
   `Offer_Deleted_At` datetime DEFAULT NULL,
-  `Business_Id` int(11) NOT NULL,
-  `Profile_Id` int(11) NOT NULL,
+  `Business_Id` int NOT NULL,
+  `Profile_Id` int NOT NULL,
   PRIMARY KEY (`Offer_Id`),
   KEY `Business_Id` (`Business_Id`),
   KEY `Profile_Id` (`Profile_Id`),
@@ -372,8 +372,8 @@ DROP TABLE IF EXISTS `offer_grade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `offer_grade` (
-  `Notice_Id` int(11) NOT NULL,
-  `Offer_Id` int(11) NOT NULL,
+  `Notice_Id` int NOT NULL,
+  `Offer_Id` int NOT NULL,
   PRIMARY KEY (`Notice_Id`,`Offer_Id`),
   KEY `Offer_Id` (`Offer_Id`),
   CONSTRAINT `offer_grade_ibfk_1` FOREIGN KEY (`Notice_Id`) REFERENCES `notice` (`Notice_Id`),
@@ -399,7 +399,7 @@ DROP TABLE IF EXISTS `pilote`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pilote` (
-  `Profile_Id` int(11) NOT NULL,
+  `Profile_Id` int NOT NULL,
   PRIMARY KEY (`Profile_Id`),
   CONSTRAINT `pilote_ibfk_1` FOREIGN KEY (`Profile_Id`) REFERENCES `profile` (`Profile_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -423,14 +423,15 @@ DROP TABLE IF EXISTS `profile`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `profile` (
-  `Profile_Id` int(11) NOT NULL,
-  `Profile_First_Name` varchar(30) DEFAULT NULL,
-  `Profile_Last_Name` varchar(30) DEFAULT NULL,
-  `Profile_Login` varchar(20) DEFAULT NULL,
-  `Profile_Password` varchar(250) DEFAULT NULL,
-  `Profile_Banner_Link` varchar(255) DEFAULT NULL,
-  `Proflie_Picture_Link` varchar(255) DEFAULT NULL,
+  `Profile_Id` int NOT NULL,
+  `Profile_First_Name` varchar(30) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Profile_Last_Name` varchar(30) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Profile_Login` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Profile_Password` varchar(250) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Profile_Banner_Link` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Proflie_Picture_Link` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `Profile_Deleted_At` datetime DEFAULT NULL,
+  `Birthdate` date DEFAULT NULL,
   PRIMARY KEY (`Profile_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -441,7 +442,7 @@ CREATE TABLE `profile` (
 
 LOCK TABLES `profile` WRITE;
 /*!40000 ALTER TABLE `profile` DISABLE KEYS */;
-INSERT INTO `profile` VALUES (1,'Alice','Durant','alice.duran@viacesi.','Alice.D','','','0000-00-00 00:00:00'),(2,'Sylvain','Bonturi','sylvain.bouturi@viac','hash_123','','','0000-00-00 00:00:00'),(3,'Vinh','Vho ','vinh.vho@viacesi.fr','Vinh.V','','','0000-00-00 00:00:00'),(4,'Youssef','Abou-Msallem','youssef.abou-msallem','Youssef.A','','','0000-00-00 00:00:00'),(5,'Alban','Renard','alban.renard@viacesi','Alban.M','','','0000-00-00 00:00:00'),(6,'Tim','Vinciguerra','tim.vinciguerra@viac','Tim.V','','','0000-00-00 00:00:00'),(7,'Ethan','Jouvin','ethan.jouvin@viacesi','Ethan.J','','','0000-00-00 00:00:00'),(8,'Gabriel','Ricard','gabriel.ricardon@via','Gabriel.R','','','0000-00-00 00:00:00'),(9,'Joris','Claude','joris.claude@viacesi','Joris.C ','','','0000-00-00 00:00:00'),(10,'Brice','Delachaise','brice.delachaise@via','Brice.D','','','0000-00-00 00:00:00'),(11,'Yohan','Linossier','yohan.linossier@viac','Yohan.L','','','0000-00-00 00:00:00'),(12,'Romuald','Aversenq','romuald.aversenq@via','Romuald.A','','','0000-00-00 00:00:00'),(13,'Elias','OuinOuin','elias.ouinouin@viace','Elias.O','','','0000-00-00 00:00:00'),(14,'Philmiass','Desloques','philmiass.desloques@','Phileas.D','','','0000-00-00 00:00:00'),(15,'Nicolas','Lepetit','nicolas.lepetit@viac','Nicolas.L','','','0000-00-00 00:00:00'),(16,'Logan','Lemmerdeur','logan.lemmerdeur@via','Logan.L','','','0000-00-00 00:00:00'),(17,'Corentin','Perez','corentin.perez@viace','Corentin.P','','','0000-00-00 00:00:00'),(18,'Joao','Brillante','joao.brillante@viace','Joao.B','','','0000-00-00 00:00:00'),(19,'Dorian','Chabreviere','dorian.chabreviere@v','Dorian.C','','','0000-00-00 00:00:00'),(20,'Mathys','Hanbayat','mathys.hanbayat@viac','Mathys.H','','','0000-00-00 00:00:00'),(21,'Kylian','Dupuit','kylian.dupuit@viaces','Kylian.D','','','0000-00-00 00:00:00'),(22,'Thiago','Vincente','thiago.vincente@viac','Thiago.V','','','0000-00-00 00:00:00'),(23,'Axel','Letourneur','axel.letourner@viace','Axel.L','','','0000-00-00 00:00:00'),(24,'Justine','Salort','justine.salort@viace','Justine.S','','','0000-00-00 00:00:00'),(25,'Arnaud','Bouyer','arnaud.bouyer@viaces','Arnaud.B','','','0000-00-00 00:00:00'),(26,'Julien','Roll','julien.roll@viacesi.','Julien.R','','','0000-00-00 00:00:00'),(27,'Hugo','Raze','hugo.raze@viacesi.fr','Hugo.R','','','0000-00-00 00:00:00'),(28,'Alois','Kamber','alois.kamber@viacesi','Alois.K','','','0000-00-00 00:00:00'),(29,'Guillaume','Bedmar','guillaume.bedmar@via','Guillaume.B','','','0000-00-00 00:00:00'),(30,'Mathis','Trimoreau','mathis.trimoreau@via','Mathis.T','','','0000-00-00 00:00:00'),(31,'Alexandra','Auric','alexandra.auric@viac','Alexandra.A','','','0000-00-00 00:00:00'),(32,'Malaury','Brown','malaury.brown@viaces','Malaury.B','','','0000-00-00 00:00:00'),(33,'Jordan','Zebo','jordan.zebo@viacesi.','Jordan.Z','','','0000-00-00 00:00:00'),(34,'Cedric','Doumbe','cedric.doumbe@viaces','Cedric.D','','','0000-00-00 00:00:00'),(35,'Baysangur','Chamsoudinov','baysangur.chamsoudin','Baysangur.C','','','0000-00-00 00:00:00'),(36,'Conor','Mc-Gregor','conor.mc-gregor@viac','Conor.M','','','0000-00-00 00:00:00'),(37,'Benoit','Saint-Denis','benoit.saint-denis@v','Benoit.S','','','0000-00-00 00:00:00'),(38,'Gwen','Garen','gwen.garen@viacesi.f','Gwen.G','','','0000-00-00 00:00:00'),(39,'Dustin','Poirier','dustin.poirier@viace','Dustin.P','','','0000-00-00 00:00:00'),(40,'Jamal','Musiala','jamal.musiala@viaces','Jamal.M','','','0000-00-00 00:00:00'),(41,'Omar','Darmoul','omar.darmoul@viacesi','Omar.D','','','0000-00-00 00:00:00'),(42,'Karim','Rouis','karim.rouis@viacesi.','Karim.R','','','0000-00-00 00:00:00'),(43,'Romain','Filist','romain.filist@viaces','Romain.F','','','0000-00-00 00:00:00'),(44,'Romain','Zazzera','romain.zazzera@viace','Romain.Z','','','0000-00-00 00:00:00'),(45,'Wiktor','Stark','wiktor.stark@viacesi','Wiktor.S','','','0000-00-00 00:00:00'),(46,'Kamaru','Usman','kamaru.usman@viacesi','Kamaru.U','','','0000-00-00 00:00:00'),(47,'Bassem','Bada','bassem.bada@viacesi.','Bassem.B','','','0000-00-00 00:00:00'),(48,'Ryadh','Kibou','ryadh.kibou@viacesi.','Ryadh.K','','','0000-00-00 00:00:00'),(49,'Ines','Bezouza','ines.bezouza@viacesi','Ines.B','','','0000-00-00 00:00:00'),(50,'Miguel','Matioli','miguel.matioli@viace','Miguel.M','','','0000-00-00 00:00:00'),(51,'Kylian','Mbappe','kylian.mbappe@viaces','Kylian.M','','','0000-00-00 00:00:00');
+INSERT INTO `profile` VALUES (1,'Alice','Durant','alice.duran@viacesi.','Alice.D','','',NULL,'1971-07-10'),(2,'Sylvain','Bonturi','sylvain.bouturi@viac','hash_123','','',NULL,'1971-11-24'),(3,'Vinh','Vho ','vinh.vho@viacesi.fr','Vinh.V','','',NULL,'1980-10-29'),(4,'Youssef','Abou-Msallem','youssef.abou-msallem','Youssef.A','','',NULL,'1973-10-22'),(5,'Alban','Renard','alban.renard@viacesi','Alban.M','','',NULL,'1975-06-14'),(6,'Tim','Vinciguerra','tim.vinciguerra@viac','Tim.V','','',NULL,'2002-04-08'),(7,'Ethan','Jouvin','ethan.jouvin@viacesi','Ethan.J','','',NULL,'2003-09-17'),(8,'Gabriel','Ricard','gabriel.ricardon@via','Gabriel.R','','',NULL,'2003-04-04'),(9,'Joris','Claude','joris.claude@viacesi','Joris.C ','','',NULL,'2003-05-24'),(10,'Brice','Delachaise','brice.delachaise@via','Brice.D','','',NULL,'2002-11-19'),(11,'Yohan','Linossier','yohan.linossier@viac','Yohan.L','','',NULL,'2003-06-14'),(12,'Romuald','Aversenq','romuald.aversenq@via','Romuald.A','','',NULL,'2005-03-20'),(13,'Elias','OuinOuin','elias.ouinouin@viace','Elias.O','','',NULL,'2004-10-14'),(14,'Philmiass','Desloques','philmiass.desloques@','Phileas.D','','',NULL,'2003-09-09'),(15,'Nicolas','Lepetit','nicolas.lepetit@viac','Nicolas.L','','',NULL,'2003-07-05'),(16,'Logan','Lemmerdeur','logan.lemmerdeur@via','Logan.L','','',NULL,'2003-12-29'),(17,'Corentin','Perez','corentin.perez@viace','Corentin.P','','',NULL,'2004-01-16'),(18,'Joao','Brillante','joao.brillante@viace','Joao.B','','',NULL,'2004-02-18'),(19,'Dorian','Chabreviere','dorian.chabreviere@v','Dorian.C','','',NULL,'2002-03-22'),(20,'Mathys','Hanbayat','mathys.hanbayat@viac','Mathys.H','','',NULL,'2004-03-18'),(21,'Kylian','Dupuit','kylian.dupuit@viaces','Kylian.D','','',NULL,'2005-09-03'),(22,'Thiago','Vincente','thiago.vincente@viac','Thiago.V','','',NULL,'2002-04-06'),(23,'Axel','Letourneur','axel.letourner@viace','Axel.L','','',NULL,'2002-05-02'),(24,'Justine','Salort','justine.salort@viace','Justine.S','','',NULL,'2005-03-30'),(25,'Arnaud','Bouyer','arnaud.bouyer@viaces','Arnaud.B','','',NULL,'2004-05-09'),(26,'Julien','Roll','julien.roll@viacesi.','Julien.R','','',NULL,'2004-11-28'),(27,'Hugo','Raze','hugo.raze@viacesi.fr','Hugo.R','','',NULL,'2005-08-24'),(28,'Alois','Kamber','alois.kamber@viacesi','Alois.K','','',NULL,'2004-12-19'),(29,'Guillaume','Bedmar','guillaume.bedmar@via','Guillaume.B','','',NULL,'2003-01-26'),(30,'Mathis','Trimoreau','mathis.trimoreau@via','Mathis.T','','',NULL,'2002-02-15'),(31,'Alexandra','Auric','alexandra.auric@viac','Alexandra.A','','',NULL,'2004-02-01'),(32,'Malaury','Brown','malaury.brown@viaces','Malaury.B','','',NULL,'2002-05-10'),(33,'Jordan','Zebo','jordan.zebo@viacesi.','Jordan.Z','','',NULL,'2002-11-15'),(34,'Cedric','Doumbe','cedric.doumbe@viaces','Cedric.D','','',NULL,'2005-06-13'),(35,'Baysangur','Chamsoudinov','baysangur.chamsoudin','Baysangur.C','','',NULL,'2002-12-21'),(36,'Conor','Mc-Gregor','conor.mc-gregor@viac','Conor.M','','',NULL,'2004-07-30'),(37,'Benoit','Saint-Denis','benoit.saint-denis@v','Benoit.S','','',NULL,'2004-11-16'),(38,'Gwen','Garen','gwen.garen@viacesi.f','Gwen.G','','',NULL,'2002-02-01'),(39,'Dustin','Poirier','dustin.poirier@viace','Dustin.P','','',NULL,'2003-10-27'),(40,'Jamal','Musiala','jamal.musiala@viaces','Jamal.M','','',NULL,'2005-03-28'),(41,'Omar','Darmoul','omar.darmoul@viacesi','Omar.D','','',NULL,'2005-07-31'),(42,'Karim','Rouis','karim.rouis@viacesi.','Karim.R','','',NULL,'2003-07-27'),(43,'Romain','Filist','romain.filist@viaces','Romain.F','','',NULL,'2003-02-09'),(44,'Romain','Zazzera','romain.zazzera@viace','Romain.Z','','',NULL,'2005-01-03'),(45,'Wiktor','Stark','wiktor.stark@viacesi','Wiktor.S','','',NULL,'2003-11-07'),(46,'Kamaru','Usman','kamaru.usman@viacesi','Kamaru.U','','',NULL,'2004-04-09'),(47,'Bassem','Bada','bassem.bada@viacesi.','Bassem.B','','',NULL,'2002-11-05'),(48,'Ryadh','Kibou','ryadh.kibou@viacesi.','Ryadh.K','','',NULL,'2005-10-31'),(49,'Ines','Bezouza','ines.bezouza@viacesi','Ines.B','','',NULL,'2002-02-06'),(50,'Miguel','Matioli','miguel.matioli@viace','Miguel.M','','',NULL,'2004-01-28'),(51,'Kylian','Mbappe','kylian.mbappe@viaces','Kylian.M','','',NULL,'2002-08-29');
 /*!40000 ALTER TABLE `profile` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -453,12 +454,12 @@ DROP TABLE IF EXISTS `promotion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `promotion` (
-  `Promotion_Id` int(11) NOT NULL,
-  `Promotion_Name` varchar(255) DEFAULT NULL,
-  `Promotion_Speciality` varchar(50) DEFAULT NULL,
-  `Promotion_Year` int(11) DEFAULT NULL,
-  `Center_Id` int(11) NOT NULL,
-  `Profile_Id` int(11) NOT NULL,
+  `Promotion_Id` int NOT NULL,
+  `Promotion_Name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Promotion_Speciality` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Promotion_Year` int DEFAULT NULL,
+  `Center_Id` int NOT NULL,
+  `Profile_Id` int NOT NULL,
   PRIMARY KEY (`Promotion_Id`),
   KEY `Center_Id` (`Center_Id`),
   KEY `Profile_Id` (`Profile_Id`),
@@ -485,9 +486,9 @@ DROP TABLE IF EXISTS `skill`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `skill` (
-  `Skill_Id` int(11) NOT NULL,
-  `Skill_Name` varchar(255) DEFAULT NULL,
-  `Skill_Level` varchar(255) DEFAULT NULL,
+  `Skill_Id` int NOT NULL,
+  `Skill_Name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Skill_Level` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`Skill_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -510,8 +511,8 @@ DROP TABLE IF EXISTS `student`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `student` (
-  `Profile_Id` int(11) NOT NULL,
-  `Promotion_Id` int(11) NOT NULL,
+  `Profile_Id` int NOT NULL,
+  `Promotion_Id` int NOT NULL,
   PRIMARY KEY (`Profile_Id`),
   KEY `Promotion_Id` (`Promotion_Id`),
   CONSTRAINT `student_ibfk_1` FOREIGN KEY (`Profile_Id`) REFERENCES `profile` (`Profile_Id`),
@@ -537,8 +538,8 @@ DROP TABLE IF EXISTS `wishlist`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `wishlist` (
-  `Wishlist_Id` int(11) NOT NULL,
-  `Profile_Id` int(11) NOT NULL,
+  `Wishlist_Id` int NOT NULL,
+  `Profile_Id` int NOT NULL,
   PRIMARY KEY (`Wishlist_Id`),
   UNIQUE KEY `Profile_Id` (`Profile_Id`),
   CONSTRAINT `wishlist_ibfk_1` FOREIGN KEY (`Profile_Id`) REFERENCES `student` (`Profile_Id`)
@@ -564,4 +565,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-03 16:02:38
+-- Dump completed on 2024-04-03 19:00:11
