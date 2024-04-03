@@ -1,4 +1,27 @@
+<?php
+/* Smarty version 4.4.1, created on 2024-04-03 17:20:35
+  from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\offer\offerCRUD.tpl' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.4.1',
+  'unifunc' => 'content_660d73c3360c55_01865243',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8a59efee1b9e62404f28fafbbfc999e16d11242d' => 
+    array (
+      0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\offer\\offerCRUD.tpl',
+      1 => 1712157632,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_660d73c3360c55_01865243 (Smarty_Internal_Template $_smarty_tpl) {
+?>
     <body>
         <main>
            
@@ -157,3 +180,5 @@
         </main>
     </body>
    
+<?php }
+}

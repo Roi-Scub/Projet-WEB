@@ -18,11 +18,12 @@ class AuthModel
         {
             // Vérification des informations d'identification dans la base de données
             
-            $query = "SELECT * FROM utilisateurs WHERE 'login' = :username AND 'password' = :password";
+            $query = "SELECT * FROM profile WHERE 'login' = :username AND 'password' = :password";
             $stmt = $this->db->prepare($query);
             $stmt->bindParam(':username', $login);
             $stmt->bindParam(':password', $password);
             $stmt->execute();
+            var_dump($stmt);
             // Renvoie vrai si l'utilisateur existe dans la base de données
             return $stmt->rowCount() > 0;
         }

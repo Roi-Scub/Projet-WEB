@@ -10,7 +10,11 @@ class OffersController extends Controller
        var_dump("la");
         $this->checkURL($url, 0);
         var_dump($url);
-
+        if ($url[0] == 'offers') {
+            $this->offers();
+        } else if ($url[0] == 'offersCRUD'){
+            $this->offersCRUD();
+        }
         //$this->offers();
         //var_dump("ici");
     }

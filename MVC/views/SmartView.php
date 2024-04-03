@@ -35,9 +35,12 @@ class SmartyView
         //var_dump($module);
         $this->_smarty = $smarty;
        
+        if ($module == 'offerscrud') {
+            $this->_file = 'views/modules/' . 'offers' . '/' . $module . 'Module.php'; 
+        } else {
 
             $this->_file = 'views/modules/' . $module . '/' . $module . 'Module.php'; 
-        
+        }
         
         
         $this->_styles = array("../global/styles/global.css");
