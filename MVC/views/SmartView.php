@@ -36,9 +36,18 @@ class SmartyView
         $this->_smarty = $smarty;
        
         if ($module == 'offerscrud') {
-            $this->_file = 'views/modules/' . 'offers' . '/' . $module . 'Module.php'; 
-        } else {
+            
+            $this->_file = 'views/modules/' . 'offers' . '/' . $module . 'Module.php';
 
+        } else if ($module == 'businessescrud') {
+
+            $this->_file = 'views/modules/' . businesses . '/' . $module . 'Module.php'; 
+
+        } else if ($module == 'businessesview') {
+
+            $this->_file = 'views/modules/' . businesses . '/' . $module . 'Module.php'; 
+
+        } else {
             $this->_file = 'views/modules/' . $module . '/' . $module . 'Module.php'; 
         }
         

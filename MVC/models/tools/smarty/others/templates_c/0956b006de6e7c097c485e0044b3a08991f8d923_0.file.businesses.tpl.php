@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-31 10:20:17
+/* Smarty version 4.4.1, created on 2024-04-03 19:16:19
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\businesses\businesses.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_66091cc1b7a4c3_41047214',
+  'unifunc' => 'content_660d8ee3d4a395_06348395',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0956b006de6e7c097c485e0044b3a08991f8d923' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\businesses\\businesses.tpl',
-      1 => 1711873209,
+      1 => 1712164575,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66091cc1b7a4c3_41047214 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660d8ee3d4a395_06348395 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div>
 
 <?php
@@ -42,7 +42,7 @@ $_smarty_tpl->tpl_vars['b']->do_else = false;
                 <div class="nom_entreprise_">   
     
                 
-                    <span class="nom_entreprise"><?php echo $_smarty_tpl->tpl_vars['b']->value->getBusinessName();?>
+                    <span class="nom_entreprise"><?php echo $_smarty_tpl->tpl_vars['b']->value->getName();?>
 </span><br><br>
                     <span class="temps_offre"><?php echo $_smarty_tpl->tpl_vars['b']->value->getSector();?>
 </span>
@@ -67,7 +67,8 @@ $_smarty_tpl->tpl_vars['b']->do_else = false;
         <div class="Nombre d'offre">
        
         </div>
-<button class="button">
+<button class="button" onclick="window.location.href='businessesView?id=<?php echo $_smarty_tpl->tpl_vars['b']->value->getId();?>
+'">
               Voir Plus
             </button>
         </div>

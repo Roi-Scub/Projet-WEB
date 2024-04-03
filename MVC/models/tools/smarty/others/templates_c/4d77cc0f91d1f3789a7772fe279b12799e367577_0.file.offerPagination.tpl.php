@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-29 22:05:47
+/* Smarty version 4.4.1, created on 2024-04-03 19:49:15
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\offer\offerPagination.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_66072d2b718325_49040074',
+  'unifunc' => 'content_660d969bcc80f3_56365823',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4d77cc0f91d1f3789a7772fe279b12799e367577' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\offer\\offerPagination.tpl',
-      1 => 1711746335,
+      1 => 1712166554,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66072d2b718325_49040074 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660d969bcc80f3_56365823 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="pagination">
 
     <?php $_smarty_tpl->_assignInScope('dotsDisplayed', false);?>
 
     <?php if ($_smarty_tpl->tpl_vars['currentPage']->value != 1) {?>
-        <a href="?page=<?php echo $_smarty_tpl->tpl_vars['currentPage']->value-1;?>
+        <a href="offers&page=<?php echo $_smarty_tpl->tpl_vars['currentPage']->value-1;?>
 ">Page précédente</a>
     <?php }?>
 
@@ -40,17 +40,17 @@ for ($_foo=true;$_smarty_tpl->tpl_vars['i']->value < $_smarty_tpl->tpl_vars['max
         <?php if ($_smarty_tpl->tpl_vars['i']->value == $_smarty_tpl->tpl_vars['currentPage']->value) {?>
 
             <?php if ($_smarty_tpl->tpl_vars['i']->value == $_smarty_tpl->tpl_vars['currentPage']->value) {?>
-                <a href="?page=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+                <a href="offers&page=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 " style="font-weight: bold; color: burlywood;"><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 </a>
             <?php } else { ?>
-                <a href="?page=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+                <a href="offers&page=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 " style="font-weight: normal; color: white;"><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 </a>
             <?php }?>
 
         <?php } elseif ($_smarty_tpl->tpl_vars['i']->value <= 3 || $_smarty_tpl->tpl_vars['i']->value > $_smarty_tpl->tpl_vars['max']->value-4) {?> 
-            <a href="?page=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+            <a href="offers&page=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 </a> 
         <?php } elseif (!$_smarty_tpl->tpl_vars['dotsDisplayed']->value) {?> 
@@ -63,7 +63,7 @@ for ($_foo=true;$_smarty_tpl->tpl_vars['i']->value < $_smarty_tpl->tpl_vars['max
 ?>
 
     <?php if ($_smarty_tpl->tpl_vars['currentPage']->value < $_smarty_tpl->tpl_vars['max']->value-1) {?>
-        <a href="?page=<?php echo $_smarty_tpl->tpl_vars['currentPage']->value+1;?>
+        <a href="offers&page=<?php echo $_smarty_tpl->tpl_vars['currentPage']->value+1;?>
 ">Page suivante</a>
     <?php }?>
 

@@ -12,7 +12,7 @@
                 <div class="nom_entreprise_">   
     
                 
-                    <span class="nom_entreprise">{$b->getBusinessName()}</span><br><br>
+                    <span class="nom_entreprise">{$b->getName()}</span><br><br>
                     <span class="temps_offre">{$b->getSector()}</span>
 
                 </div>
@@ -34,7 +34,7 @@
         <div class="Nombre d'offre">
        
         </div>
-<button class="button">
+<button class="button" onclick="window.location.href='businessesView?id={$b->getId()}'">
               Voir Plus
             </button>
         </div>

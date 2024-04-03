@@ -9,6 +9,13 @@ class BusinessesController extends Controller
         $this->checkURL($url, 0);
         //var_dump($url);
         $this->businesses();
+        if ($url[0] == 'businesses') {
+            $this->businesses();
+        } else if ($url[0] == 'businessesCRUD'){
+            $this->businessesCRUD();
+        } else if ($url[0] == 'businessesView'){
+            $this->businessesView();
+        }
         //("businesses");
     }
 
@@ -28,6 +35,18 @@ class BusinessesController extends Controller
         //var_dump($this->_view);
         $this->_view->generate(array());
        
+    }
+
+    private function businessesCRUD()
+    {
+        $this->_view = new SmartyView('BusinessesCRUD');
+        $this->_view->generate(array());
+    }
+
+    private function businessesView()
+    {
+        $this->_view = new SmartyView('BusinessesView');
+        $this->_view->generate(array());
     }
 
 }

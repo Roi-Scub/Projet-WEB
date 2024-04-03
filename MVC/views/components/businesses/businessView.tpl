@@ -7,7 +7,7 @@
 
 
 <!-- The Business Informations -->
-
+{foreach $business as $b}
 <div class="container">
     <div class="left">
         <div class="row">
@@ -17,7 +17,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-center">Business Name</h2>
+                <h2 class="text-center">{$b->getBusinessName()}</h2>
             </div>
         </div>
     
