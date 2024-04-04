@@ -18,7 +18,7 @@ require_once('views/modules/header/headerModule.php');
 $this->_smarty->assign('componentOfferList', $offerListRender);
 $this->_smarty->assign('componentOfferFilter', $offerFilterRender);
 $this->_smarty->assign('componentOfferPagination', $offerPaginationRender);
-
+//var_dump($offers);
 // --- assignation des variables pour le rendu final ---
 
 $mainRender = $this->_smarty->fetch('views/modules/offers/template.tpl');

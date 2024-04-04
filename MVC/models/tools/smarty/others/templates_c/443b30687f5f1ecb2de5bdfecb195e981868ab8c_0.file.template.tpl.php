@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-03-15 23:35:20
+/* Smarty version 4.4.1, created on 2024-04-02 19:05:36
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\modules\footer\template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_65f4cd28f046f0_90842837',
+  'unifunc' => 'content_660c3ae0490352_86075280',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '443b30687f5f1ecb2de5bdfecb195e981868ab8c' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\modules\\footer\\template.tpl',
-      1 => 1710542119,
+      1 => 1712077533,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65f4cd28f046f0_90842837 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660c3ae0490352_86075280 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="footer">
 
 
@@ -40,7 +40,7 @@ function content_65f4cd28f046f0_90842837 (Smarty_Internal_Template $_smarty_tpl)
 
         <div id="right_div">
         
-            <h5 id="rights">© Stage's cove 2024</h5>
+            <h3 id="rights">© Stage's cove 2024</h5>
         
         </div>
 

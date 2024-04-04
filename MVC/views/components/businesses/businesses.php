@@ -1,12 +1,14 @@
 <?php
+//
+//$businessManager = new businessManager();
+//$businesses = $businessManager->getBusinessInfo(10, 0);
+//var_dump($businesses);
 
-$businessManager = new businessManager();
-$businesses = $businessManager->getBusinessInfo(10, 0);
 
+$this->_smarty->assign('business', $business);
+$this->_smarty->assign("currentPage", $page);
+$this->_smarty->assign("max", $max);
 
-
-$this->_smarty->assign('business', $businesses);
-
-$businessRender = $this->_smarty->fetch('views/components/businesses/businessView.tpl');
+$businessRender = $this->_smarty->fetch('views/components/businesses/businesses.tpl');
 
 ?>

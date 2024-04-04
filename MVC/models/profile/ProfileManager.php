@@ -13,13 +13,13 @@ class ProfileManager extends Manager
         $stmt->bindParam(':email', $email);
 
         $stmt->execute();
-        
+        //var_dump($stmt->rowCount());
         
         if($stmt->rowCount() != 0)
         {
-            var_dump($profile ="test");
+            //var_dump($profile ="test");
             $profile = new Profile($stmt->fetch(PDO::FETCH_ASSOC));
-            
+            var_dump($profile);
             password_verify($password, $profile->getPasswordHash()) ? $profile : $profile = null;
             var_dump($profile);
         } 
@@ -90,7 +90,7 @@ class ProfileManager extends Manager
     {
 
         $db = $this->getDataBase();
-        $sql = 'SELECT * FROM profile JOIN eleve ON profile.Profile_Id = eleve.Profile_Id LIMIT :limit OFFSET :offset';
+        $sql = 'SELECT * FROM profile JOIN student ON profile.Profile_Id = student.Profile_Id LIMIT :limit OFFSET :offset';
         
         $stmt = $db->prepare($sql);
         

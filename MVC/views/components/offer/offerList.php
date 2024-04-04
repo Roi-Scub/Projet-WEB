@@ -2,11 +2,11 @@
 
 
 
-$offerManager = new OfferManager();
-$offers = $offerManager->getOffersInfo(10, 0);
+//$offerManager = new OfferManager();
+//$offers = $offerManager->getOffersInfo(10, 0);
 echo "<br>";
 echo "<br>";
-var_dump($offers);
+//var_dump($offers);
 // Assigner les données au modèle Smarty
 $this->_smarty->assign('offers', $offers);
 

@@ -8,7 +8,7 @@ abstract class Manager
     private static function setDataBase()
     {
         //création de la connexion à la base de données
-        self::$_db = new PDO('mysql:host=localhost;dbname=siteweb;charset=utf8', 'root', 'Shampoo06');
+        self::$_db = new PDO('mysql:host=localhost;dbname=website;charset=utf8', 'root', 'Shampoo06');
         //Affichage des erreurs
         self::$_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     }

@@ -17,7 +17,7 @@
 
         <div id="right_div">
         
-            <h5 id="rights">© Stage's cove 2024</h5>
+            <h3 id="rights">© Stage's cove 2024</h5>
         
         </div>
 

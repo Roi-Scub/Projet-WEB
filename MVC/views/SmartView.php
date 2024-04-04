@@ -15,7 +15,7 @@ class SmartyView
 
     public function __construct($module)
     {
-       
+        
         $smartyFolderPath = 'models/tools/smarty/';
         require_once($smartyFolderPath . 'libs/Smarty.class.php');
         $smarty = new Smarty();
@@ -32,9 +32,26 @@ class SmartyView
 
         // Secure Module name
         $module = strtolower($module);
-
+        //var_dump($module);
         $this->_smarty = $smarty;
-        $this->_file = 'views/modules/' . $module . '/' . $module . 'Module.php'; 
+       
+        if ($module == 'offerscrud') {
+
+            $this->_file = 'views/modules/' . 'offers' . '/' . $module . 'Module.php';
+
+        } else if ($module == 'businessescrud') {
+
+            $this->_file = 'views/modules/' . 'businesses' . '/' . $module . 'Module.php'; 
+
+        } else if ($module == 'businessesview') {
+
+            $this->_file = 'views/modules/' . 'businesses' . '/' . $module . 'Module.php'; 
+
+        } else {
+            $this->_file = 'views/modules/' . $module . '/' . $module . 'Module.php'; 
+        }
+        
+        
         $this->_styles = array("../global/styles/global.css");
         $this->_scripts = array();
 
@@ -82,8 +99,8 @@ class SmartyView
         $this->_smarty->assign('styles', $this->_styles);
         $this->_smarty->assign('scripts', $this->_scripts);
         
-        $this->_smarty->assign('headerRender', $headerRender);
         $this->_smarty->assign('mainRender', $mainRender);
+        $this->_smarty->assign('headerRender', $headerRender);
         $this->_smarty->assign('footerRender', $footerRender);
         
         $this->_smarty->display('views/template.tpl');

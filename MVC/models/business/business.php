@@ -43,7 +43,7 @@ class Business {
         }
     }
 
-    public function setBusinessId($id)
+    public function setId($id)
     {
         $id = (int) $id;
         if($id > 0)
@@ -52,7 +52,7 @@ class Business {
         }
     }
 
-    public function setBusinessName($name)
+    public function setName($name)
     {
         if(is_string($name))
         {
@@ -106,12 +106,12 @@ class Business {
         }
     }
 
-    public function getBusinessId()
+    public function getId()
     {
         return $this->_id;
     }
 
-    public function getBusinessName()
+    public function getName()
     {
         return $this->_name;
     }

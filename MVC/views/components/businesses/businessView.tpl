@@ -7,7 +7,7 @@
 
 
 <!-- The Business Informations -->
-
+{foreach $business as $b}
 <div class="container">
     <div class="left">
         <div class="row">
@@ -17,12 +17,11 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-center">Business Name</h2>
+                <h2 class="text-center">{$b->getName()}</h2>
             </div>
         </div>
-    
-
-        <!-- The Business offers -->
+{/foreach}
+      The Business offers 
 
         <div class="row">
             <div class="col-md-12">
@@ -53,7 +52,7 @@
             </div>
     </div>
     <div class="right">
-            <!-- The possibility to add a review with a rating -->
+            The possibility to add a review with a rating 
             <div class="form-container">
 
                 <form class="form">
@@ -92,7 +91,7 @@
                 </form>
 
             </div>
-            <!-- The Business Reviews from the users -->
+            The Business Reviews from the users 
 
             <div class="row">
                 <div class="col-md-12">
@@ -124,4 +123,3 @@
         </div>
     </div>
 </div>
-

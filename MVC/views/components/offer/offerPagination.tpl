@@ -3,7 +3,7 @@
     {$dotsDisplayed=false}
 
     {if $currentPage != 1}
-        <a href="?page={$currentPage - 1}">Page précédente</a>
+        <a href="offers&page={$currentPage - 1}">Page précédente</a>
     {/if}
 
 
@@ -11,13 +11,13 @@
         {if $i == $currentPage}
 
             {if $i eq $currentPage}
-                <a href="?page={$i}" style="font-weight: bold; color: burlywood;">{$i}</a>
+                <a href="offers&page={$i}" style="font-weight: bold; color: burlywood;">{$i}</a>
             {else}
-                <a href="?page={$i}" style="font-weight: normal; color: white;">{$i}</a>
+                <a href="offers&page={$i}" style="font-weight: normal; color: white;">{$i}</a>
             {/if}
 
         {elseif $i <= 3 || $i > $max-4 } 
-            <a href="?page={$i}">{$i}</a> 
+            <a href="offers&page={$i}">{$i}</a> 
         {elseif !$dotsDisplayed} 
             <span>...</span>
             {$dotsDisplayed=true}
@@ -26,7 +26,7 @@
     {/for}
 
     {if $currentPage < $max-1}
-        <a href="?page={$currentPage + 1}">Page suivante</a>
+        <a href="offers&page={$currentPage + 1}">Page suivante</a>
     {/if}
 
 

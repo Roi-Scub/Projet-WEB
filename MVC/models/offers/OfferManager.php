@@ -107,6 +107,21 @@ class OfferManager extends Manager {
             return new Offers($data);
         }
 
+        public function getMaxPage()
+        {
+            $conn = $this->getDataBase();
+
+            $sql = 'SELECT COUNT(*) FROM offer';
+
+            $stmt = $conn->prepare($sql);
+
+            $stmt->execute();
+
+            $maxPage = round($stmt->fetch(PDO::FETCH_ASSOC)['COUNT(*)'] / 10);
+
+            return $maxPage;
+        }
+
 
 }
 

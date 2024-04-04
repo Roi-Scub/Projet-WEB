@@ -7,16 +7,21 @@ class OffersController extends Controller
     
     public function __construct($url)
     {
-       //var_dump("la");
+       var_dump("la");
         $this->checkURL($url, 0);
-        //var_dump($url);
-        $this->offers();
+        var_dump($url);
+        if ($url[0] == 'offers') {
+            $this->offers();
+        } else if ($url[0] == 'offersCRUD'){
+            $this->offersCRUD();
+        }
+        //$this->offers();
         //var_dump("ici");
     }
 
     private function offers()
     {
-        
+        //var_dump($_GET);
 
         //$this->_manager = new OfferManager();
         $offerManager = new OfferManager();
@@ -26,11 +31,13 @@ class OffersController extends Controller
        // Récupérez le numéro de page depuis l'URL
         if (isset($_GET['page']) && is_numeric($_GET['page'])){
        $offers = $offerManager->getOffersInfo(10, ($_GET['page'] - 1) * 10);
+       $page = $_GET['page'];
         } else {
-
+        $page = 1;
         $offers = $offerManager->getOffersInfo(10, 0);
         }
 
+        $max = $offerManager->getMaxPage();
         //var_dump($offers);
 
         //var_dump("offers");
@@ -47,6 +54,8 @@ class OffersController extends Controller
         //   // $offer->setName($companyInfo->getBusinessName());
         //    //$offer->setProfilePicture($companyInfo->getBusinessProfilePicture());
         //}
+        
+        var_dump($page);
         $this->_view = new SmartyView('Offers');
         echo '<br>';
         echo '<br>';
@@ -54,8 +63,17 @@ class OffersController extends Controller
         
         //var_dump($this->_view);
         //getOfferValues
-        $this->_view->generate(array($offers, 'max'=> $max ));
+        //var_dump($offers);
+        $this->_view->generate(array('offers'=> $offers, 'max'=> $max, 'page'=> $page ));
        
+    }
+
+    private function offersCRUD()
+    {
+        var_dump("offersCRUD");
+        
+        $this->_view = new SmartyView('OffersCRUD');
+        $this->_view->generate(array());
     }
 
 }
