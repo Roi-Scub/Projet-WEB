@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<style>
+    main {
+        width: 300px;
+        margin: 50px ;
+        padding:10px;        
+    }
+    #form {
+        border: 1px solid;
+        padding: 20px;
+
+    }
+    .active {
+        display: block;
+    }
+    form {
+        display: none;
+    }
+    button {
+        width: 145px;
+        display: fixed;
+        padding: 5px;
+    }
+</style>
+<html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Formulaire Offre</title>
+        </head>
+    <body>
+        <main>
+            <button onclick="CreerFormulaire()">Créer</button>
+            <button onclick="ModifierFormulaire()">Modifier</button>
+            <h1>Formulaire Offre</h1>
+            <section id="form">
+                <form id="creerForm" class="active">
+                    <label for="nom_offre">Nom de l'offre :</label>
+                    <input type="text" id="nom_offre" name="nom_offre" required><br><br>
+                        
+                    <label for="description_offre">Description de l'offre</label>
+                    <input type="text" id="description_offre" name="description_offre"  required></textarea><br><br>
+                    
+                    <label for="date_offre">Date de l'offre :</label>
+                    <input type="date" id="date_offre" name="date_offre"  required></textarea><br><br>
+
+                    <label for="date_debut_offre">Date de début de l'offre :</label>
+                    <input type="date" id="date_debut_offre" name="date_debut_offre" required><br><br>
+
+                    <label for="durée_offre">Durée du stage :</label>
+                    <input type="number" id="durée_offre" name="durée_offre" required><br><br>
+
+                    <label for="place_prises">Nombre de place pris :</label>
+                    <input type="number" id="place_prises" name="place_prises" required><br><br>
+
+                    <label for="nombre_place_dispo">Nombre de places disponible :</label>
+                    <input type="number" id="nombre_place_dispo" name="nombre_place_dispo" required><br><br>
+
+                    <label for="entreprise">Entreprise :</label>
+                    <input type="text" id="entreprise" name="entreprise" required><br><br>
+
+                    <input type="submit" value="Envoyer">
+                </form>
+                <form id="modifierForm" >
+                    <label for="nom_offre">Nouveau nom de l'offre :</label>
+                    <input type="text" id="nom_offre" name="nom_offre" required><br><br>
+                        
+                    <label for="description_offre">Nouvelle description de l'offre</label>
+                    <input type="text" id="description_offre" name="description_offre"  required></textarea><br><br>
+                    
+                    <label for="date_offre">Nouvelle date de l'offre :</label>
+                    <input type="date" id="date_offre" name="date_offre"  required></textarea><br><br>
+
+                    <label for="date_debut_offre">Nouvelle date de début de l'offre :</label>
+                    <input type="date" id="date_debut_offre" name="date_debut_offre" required><br><br>
+
+                    <label for="durée_offre">Nouvelle durée du stage :</label>
+                    <input type="number" id="durée_offre" name="durée_offre" required><br><br>
+
+                    <label for="place_prises">Nombre de place pris :</label>
+                    <input type="number" id="place_prises" name="place_prises" required><br><br>
+
+                    <label for="nombre_place_dispo">Nombre de places disponible :</label>
+                    <input type="number" id="nombre_place_dispo" name="nombre_place_dispo" required><br><br>
+
+                    <label for="entreprise">Nouvelle Entreprise :</label>
+                    <input type="text" id="entreprise" name="entreprise" required><br><br>
+
+                    <input type="submit" value="Envoyer">
+            </section>
+        </main>
+    </body>
+    <script>
+        function CreerFormulaire() {
+            document.getElementById('creerForm').classList.add('active');
+            document.getElementById('modifierForm').classList.remove('active');
+        }
+    
+        function ModifierFormulaire () {
+            document.getElementById('modifierForm').classList.add('active');
+            document.getElementById('creerForm').classList.remove('active');
+        }
+    </script>
+</html>
