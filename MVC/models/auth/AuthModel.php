@@ -30,18 +30,6 @@ class AuthModel
         
   
 
-       // public function registerUser($username, $password, $email)
-       // {
-       //     // Enregistrement d'un nouvel utilisateur dans la base de données
-       //     
-       //     $query = "INSERT INTO users (username, password, email) VALUES (:username, :password, :email)";
-       //     $stmt = $this->db->prepare($query);
-       //     $stmt->bindParam(':username', $username);
-       //     $stmt->bindParam(':password', $password);
-       //     $stmt->bindParam(':email', $email);
-       //     $stmt->execute();
-       // }
-
 }
 
 

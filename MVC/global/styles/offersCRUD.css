@@ -32,7 +32,7 @@ button {
 .active {
     display: block;
 }
-form {
+section {
     display: none;
 }
 .form {

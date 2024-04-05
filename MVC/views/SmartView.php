@@ -28,9 +28,9 @@ class SmartyView
         $smarty->setCacheDir($smartyFolderPath . 'others/cache');
 
         
-        // --- Assign attributes of the class ---
+        // ---  Assigne les atributs de la classe ---
 
-        // Secure Module name
+       
         $module = strtolower($module);
         //var_dump($module);
         $this->_smarty = $smarty;
@@ -59,10 +59,10 @@ class SmartyView
 
     }
 
-    // --- Private methods ---
+    // --- Méthodes privées ---
 
     /**
-     * Append a style file to the final render.
+     * Attribue un style à la vue.
      */
     private function appendStyle($element)
     {
@@ -70,21 +70,21 @@ class SmartyView
     }
 
     /**
-     * Append a script file to the final render.
+     * Attribue un script à la vue.
      */
     private function appendScript($element)
     {
         array_push($this->_scripts, "../global/javascript". '/' . $element );
     }
 
-    // --- Public methods ---
+    // --- Méthodes publiques ---
 
     /**
      * Generate the view of the application.
      * 
-     * @param array $data The data that have to be displayed in the module.
-     * @param string $headerModule The name of the header module that have to be displayed. Default value is "navigationBar". To disable the header, set the value to NULL.
-     * @param string $footerModule The name of the footer module that have to be displayed. Default value is "footer". To disable the footer, set the value to NULL.
+     * @param array $data les données qui doivent être affichées dans le module.
+     * @param string  $headerRender Le nom du module d'en-tête qui doit être affiché. La valeur par défaut est "navigationBar". Pour désactiver l'en-tête, définissez la valeur sur NULL.
+     * @param string $footerRender le nom du module de pied de page qui doit être affiché. La valeur par défaut est "footer". Pour désactiver le pied de page, définissez la valeur sur NULL.
      */
     public function generate($data , $headerModule = "header", $footerModule = "footer")
     {

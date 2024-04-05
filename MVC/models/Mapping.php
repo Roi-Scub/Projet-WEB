@@ -3,11 +3,11 @@
 abstract class Mapping
 {
     /**
-     * This method is used to hydrate the object with the data from the database.
-     * Use the prefix to remove it from the keys of the data.
-     * Replace the underscore by nothing in the keys of the data. To respect the camelCase convention.
+     * Cette méthode est utilisée pour hydrater l'objet avec les données de la base de données.
+     *  Utilisez le préfixe pour le retirer des clés des données.
+     * Remplacez le tiret bas par rien dans les clés des données. Pour respecter la convention camelCase.
      * 
-     * @param array $data The data from the database.
+     * @param array $data ls données de la base de données.
      */
     public function hydrate(array $data, $prefix = '')
     {

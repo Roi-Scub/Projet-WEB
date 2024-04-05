@@ -4,7 +4,7 @@
 <head>
     
 
-    <!-- Local Configuration -->
+    <!-- Configuration locale -->
     
     <title>Stage's cove{if $title neq ''} - {$title}{/if}</title>
     
@@ -22,6 +22,7 @@
     <meta name="theme-color" content="#007bff">
     <script src="../script.js" ></script>
     <link rel="manifest" href="../Manifest.json">
+    <link rel="icon" href="../global/images/logo_grand.png" type="image/x-icon">
 </head>
 
 <body>

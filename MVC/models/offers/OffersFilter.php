@@ -1,9 +1,8 @@
 <?php
 
 /**
- * This class is used like a filter for the offers.
- * Possible filters are:
- * - Keywords
+ * Cette classe est utilisée comme un filtre pour les offres.
+ * Les filtres possibles sont :
  * - Speciality
  * - Level
  * - Start date
@@ -14,7 +13,7 @@
 
 class OfferFilter 
 {
-    private $_keywords;
+   
     private $_speciality;
     private $_level;
     private $_startDate;
@@ -43,13 +42,12 @@ class OfferFilter
     }
 
     /**
-     * This function is used to get the SQL filter for the offers.
+     *Cette fonction est utilisée pour obtenir le filtre SQL pour les offres.
      */
     public function getSQLFilter()
     {
         $sqlFilter = '';
 
-        if ($this->_keywords != '') $sqlFilter .= ' AND (title LIKE :keywords OR description LIKE :keywords)';
         if ($this->_speciality != '') $sqlFilter .= ' AND Offer_Speciality = :speciality';
         if ($this->_level != '') $sqlFilter .= ' AND level = :level';
         if ($this->_startDate != '') $sqlFilter .= ' AND start_date >= :startDate';
@@ -57,18 +55,17 @@ class OfferFilter
         if ($this->_city != '') $sqlFilter .= ' AND city = :city';
         if ($this->_renumeration != '') $sqlFilter .= ' AND renumeration = :renumeration';
 
-        // Remove the first ' AND ' from the string
+        
         $sqlFilter = substr($sqlFilter, 5);
 
         return $sqlFilter;
     }
 
     /**
-     * This function is used to bind the parameters to the SQL prepare statement.
+     * Cette fonction est utilisée pour lier les paramètres à la requête SQL préparée.
      */
     public function bindParams($statement)
     {
-        if ($this->_keywords != '') $statement->bindParam(':keywords', $this->_keywords);
         if ($this->_speciality != '') $statement->bindParam(':speciality', $this->_speciality);
         if ($this->_level != '') $statement->bindParam(':level', $this->_level);
         if ($this->_startDate != '') $statement->bindParam(':startDate', $this->_startDate);
@@ -79,10 +76,6 @@ class OfferFilter
 
     // --- SETTERS ---
 
-    public function setKeywords($keywords)
-    {
-        if (is_string($keywords)) $this->_keywords = $keywords;
-    }
 
     public function setSpeciality($speciality)
     {
@@ -116,10 +109,7 @@ class OfferFilter
 
     // --- GETTERS ---
 
-    public function getKeywords()
-    {
-        return $this->_keywords;
-    }
+
 
     public function getSpeciality()
     {

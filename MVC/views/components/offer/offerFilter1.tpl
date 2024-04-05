@@ -11,19 +11,8 @@
 
                                 <form id="specialiteSelect">
 
-<!--
-                                  <input type="radio" id="btp" name="speciality" value="BTP"  required>
-                                      <label for="btp" class="radio">BTP</label><br>
-                            
-                                  <input type="radio" id="informatic" name="speciality" value="Informatique" >
-                                      <label for="informatic" class="radio">Informatique</label><br>
-                            
-                                  <input type="radio" id="generalist" name="speciality" value="Généraliste" >
-                                      <label for="generalist" class="radio">Généraliste</label><br>
 
-                                  <input type="radio" id="s3e" name="speciality" value="S3E" >
-                                      <label for="s3e" class="radio">S3E</label><br>
--->
+
                                         <div class="radio-container">
                                         <div class="radio-wrapper">
                                           <label class="radio-button">

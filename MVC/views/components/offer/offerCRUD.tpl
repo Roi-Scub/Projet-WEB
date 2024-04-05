@@ -9,7 +9,8 @@
             <button onclick="UpdateForm()" class="button">Modifier</button>
             <button onclick="DeleteForm()" class="button">Supprimer</button>
             <button onclick="ViewForm()" class="button">Afficher</button>
-        <section class="form">
+
+        <form class="form">
             <form id="createForm" class="active">
             <p class="title">Crée Offre </p>
             <p class="message">Veuillez renseigner les informations. </p>
@@ -150,7 +151,7 @@
 
         </form>
 
-        </section>
+        </form>
 
 
         

@@ -12,17 +12,17 @@ class Router {
     public function routeReq() {
         try {
 
-            // Autoload for loading the classes of the models folder
+            //Charge les classes du dossier models.
             spl_autoload_register(function ($class) {
                 if (file_exists('models/' . $class .'.php')) require_once('models/' . $class .'.php');
 
-                // Load the classes of the subfolders of the models folder
+                //  Charge les classes des sous-dossiers du dossier models.
                 foreach (glob('models/*', GLOB_ONLYDIR) as $folder) {
                     if (file_exists($folder . '/' . $class . '.php')) require_once($folder . '/' . $class . '.php');
                 }
             });
 
-            // Auto launch the session if it is not already started
+            //  Lance automatiquement la session si elle n'est pas déjà démarrée.
             if (session_status() == PHP_SESSION_NONE) session_start();
 
 
@@ -31,19 +31,19 @@ class Router {
             // Check if the url is defined
             if (isset($_GET['url'])) {
 
-                // Get all parameters from the url with a url filter https://www.php.net/manual/en/filter.filters.sanitize.php
+                //  récupere les parametres de l'url avec un filtre url
                 $url = explode('/', filter_var($_GET['url'], FILTER_SANITIZE_URL));
 
                 
                 /** 
-                 * The controller name is the first parameter of the url with the first letter in uppercase and the rest in lowercase.
+                 *  Le controller est le premier paramètre de l'url avec la première lettre en majuscule et le reste en minuscule.
                  * @example Url "www.example.com/foo/..." set in this variable "Foo".
                  */
                 $controller = ucfirst(strtolower($url[0]));
                 //echo "<br>";
                 //var_dump($controller);
                 /** 
-                 * The controller class is the controller name with the suffix 'Controller' and the extension '.php'.
+                 * la classe controller est le nom du controller avec le suffixe 'Controller' et l'extension '.php'.
                  */
                 if ($controller == 'Offerscrud'){
 
@@ -71,7 +71,7 @@ class Router {
                 //echo "<br>";
                 //var_dump($controllerClass);
                 /**
-                 * The controller file is in the controllers folder with the controller class name and the extension '.php'
+                 * Le fichier du controller et dans le dossier controllers sous le nom de classeController.php
                  */
                 $controllerFile = 'controllers/' . $controllerClass . '.php';
                 //echo "<br>";
@@ -79,7 +79,7 @@ class Router {
 
                 
 
-                // Particular cases
+                // Cas particuliers
                 switch ($url[0]) {
                     case 'login' :
                     case 'logout' :
@@ -87,16 +87,16 @@ class Router {
                         $controllerFile = 'controllers/AuthController.php';
                         break;
                     default:
-                        // Verify if the user is logged in
+                        // Verifier si l'utilisateur est connecté
                         if (!isset($_SESSION['profileId'])) header('Location: http://stages-cove.fr/login');
                         break;
                 }
 
-                // Check if the controller file exists
+                // Verifier si le dossier existe
                 if (file_exists($controllerFile)) {
                     //var_dump("la");
                     require_once($controllerFile);
-                    //echo "<br>";
+                   
                     //echo "test";
                     //var_dump($controllerFile);
                     $this->_controller =  new $controllerClass($url);
@@ -108,10 +108,10 @@ class Router {
                 }
             } else {
               
-                // Verify if the user is logged in
+                // Verifier si l'utilisateur est connecté
                 if (!isset($_SESSION['profileId'])) header('Location: http://stages-cove.fr/login');
                     //echo "test";
-                // If the url is not defined, the default controller is the IndexController
+                // Si l'url n'est pas définit, le controller de défaut est l'index
                 require_once('controllers/IndexController.php');
                 $this->_controller = new IndexController($url);
                 //var_dump($this->_controller);
@@ -119,7 +119,7 @@ class Router {
             }
 
         } catch (Exception $e) {
-            //echo "hello";
+            //echo "exception";
             $errorMessage = $e->getMessage();
             $this->_view = new SmartyView('Error');
             $this->_view->generate(array('statusCode' => 404, 'debugMode' => true, 'statusMessage' => $errorMessage), NULL, NULL);

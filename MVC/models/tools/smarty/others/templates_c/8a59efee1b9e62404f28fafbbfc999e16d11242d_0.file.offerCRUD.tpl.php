@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-04-04 22:12:18
+/* Smarty version 4.4.1, created on 2024-04-05 13:37:02
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\offer\offerCRUD.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_660f09a2f1c750_34237235',
+  'unifunc' => 'content_660fe25e210344_79713034',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a59efee1b9e62404f28fafbbfc999e16d11242d' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\offer\\offerCRUD.tpl',
-      1 => 1712261528,
+      1 => 1712317018,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660f09a2f1c750_34237235 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660fe25e210344_79713034 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <body>
         <main>
@@ -32,7 +32,8 @@ function content_660f09a2f1c750_34237235 (Smarty_Internal_Template $_smarty_tpl)
             <button onclick="UpdateForm()" class="button">Modifier</button>
             <button onclick="DeleteForm()" class="button">Supprimer</button>
             <button onclick="ViewForm()" class="button">Afficher</button>
-        <section class="form">
+
+        <form class="form">
             <form id="createForm" class="active">
             <p class="title">Crée Offre </p>
             <p class="message">Veuillez renseigner les informations. </p>
@@ -173,7 +174,7 @@ function content_660f09a2f1c750_34237235 (Smarty_Internal_Template $_smarty_tpl)
 
         </form>
 
-        </section>
+        </form>
 
 
         

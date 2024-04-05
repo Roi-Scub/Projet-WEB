@@ -27,23 +27,4 @@ abstract class Manager
         return self::$_db;
     }
 
-
-   // //Méthode de récupération de tous les éléments d'une table
-   // protected function getALL($offre, $obj)
-   // {
-   //     //création d'un tableau vide
-   //     $var = [];
-   //     //Requête SQL pour récupérer tous les éléments de la table 
-   //     $req = $this->getBdd()->prepare('SELECT ID_offre, nom_de_l_offre FROM  offre ');
-   //     $req->execute();
-   //     //Parcours des résultats
-   //     while($data = $req->fetch(PDO::FETCH_ASSOC))
-   //     {
-   //         //Création d'un nouvel objet
-   //         $var[] = new $obj($data);
-   //     }
-//
-   //     return $var;
-   //     $req->closeCursor();
-   // }
 }
