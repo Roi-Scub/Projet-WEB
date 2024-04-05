@@ -11,7 +11,8 @@
     {foreach $styles as $style}
         <link rel="stylesheet" type="text/css" href="{$style}">
     {/foreach}
-    <link rel="manifest" href="../Manifest.json">
+    
+   
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,7 @@
     
     <meta name="theme-color" content="#007bff">
     <script src="../script.js" ></script>
-
+    <link rel="manifest" href="../Manifest.json">
 </head>
 
 <body>

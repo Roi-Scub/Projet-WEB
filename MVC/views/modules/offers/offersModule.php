@@ -3,7 +3,8 @@
 $moduleName = "offers";
 // --- Configuration du style de la vue ---
 $this->appendStyle('offers.css');
-
+$this->appendScript('wishlist.js');
+$this->appendScript('offers.js');
 
 // --- Récupération des données pour le module ---
 require_once('views/components/offer/offerList.php');

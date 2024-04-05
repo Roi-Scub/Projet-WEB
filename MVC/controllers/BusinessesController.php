@@ -7,7 +7,7 @@ class BusinessesController extends Controller
     {
        //var_dump("la");
         $this->checkURL($url, 0);
-        var_dump($url);
+        //var_dump($url);
         //$this->businesses();
         if ($url[0] == 'businesses') {
             $this->businesses();
@@ -24,7 +24,7 @@ class BusinessesController extends Controller
 
     private function businesses()
     {
-        var_dump("businesses");
+        //var_dump("businesses");
         $businessManager = new BusinessManager();
         
         if (isset($_GET['page']) && is_numeric($_GET['page'])){

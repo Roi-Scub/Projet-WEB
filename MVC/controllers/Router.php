@@ -41,7 +41,7 @@ class Router {
                  */
                 $controller = ucfirst(strtolower($url[0]));
                 //echo "<br>";
-                var_dump($controller);
+                //var_dump($controller);
                 /** 
                  * The controller class is the controller name with the suffix 'Controller' and the extension '.php'.
                  */
@@ -69,13 +69,13 @@ class Router {
 
                 $controllerClass = $controller . 'Controller';
                 //echo "<br>";
-                var_dump($controllerClass);
+                //var_dump($controllerClass);
                 /**
                  * The controller file is in the controllers folder with the controller class name and the extension '.php'
                  */
                 $controllerFile = 'controllers/' . $controllerClass . '.php';
                 //echo "<br>";
-                var_dump($controllerFile);
+                //var_dump($controllerFile);
 
                 
 
@@ -103,7 +103,7 @@ class Router {
                     //echo "<br>";
                     //var_dump($this->_controller);
                 } else {
-                    echo "hello";
+                    //echo "hello";
                     throw new Exception('Page introuvable');
                 }
             } else {

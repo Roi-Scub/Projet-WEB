@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-04-03 19:09:54
+/* Smarty version 4.4.1, created on 2024-04-05 09:36:48
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_660d8d62a4ac79_46082458',
+  'unifunc' => 'content_660faa102d8bd4_68858159',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d5468c65554460480c39a39f77d16091afcc1a8' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\template.tpl',
-      1 => 1712164192,
+      1 => 1712302604,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660d8d62a4ac79_46082458 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660faa102d8bd4_68858159 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -43,7 +43,8 @@ $_smarty_tpl->tpl_vars['style']->do_else = false;
     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-    <link rel="manifest" href="../Manifest.json">
+    
+   
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +55,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php echo '<script'; ?>
  src="../script.js" ><?php echo '</script'; ?>
 >
-
+    <link rel="manifest" href="../Manifest.json">
 </head>
 
 <body>

@@ -7,9 +7,9 @@ class OffersController extends Controller
     
     public function __construct($url)
     {
-       var_dump("la");
+       //var_dump("la");
         $this->checkURL($url, 0);
-        var_dump($url);
+        //var_dump($url);
         if ($url[0] == 'offers') {
             $this->offers();
         } else if ($url[0] == 'offersCRUD'){
@@ -55,22 +55,22 @@ class OffersController extends Controller
         //    //$offer->setProfilePicture($companyInfo->getBusinessProfilePicture());
         //}
         
-        var_dump($page);
+        //var_dump($page);
         $this->_view = new SmartyView('Offers');
-        echo '<br>';
-        echo '<br>';
+        //echo '<br>';
+        //echo '<br>';
         //var_dump($this->_view);
-        
+          $this->_view->generate(array('offers'=> $offers, 'max'=> $max, 'page'=> $page ));
+       
         //var_dump($this->_view);
         //getOfferValues
         //var_dump($offers);
-        $this->_view->generate(array('offers'=> $offers, 'max'=> $max, 'page'=> $page ));
-       
+      
     }
 
     private function offersCRUD()
     {
-        var_dump("offersCRUD");
+        //var_dump("offersCRUD");
         
         $this->_view = new SmartyView('OffersCRUD');
         $this->_view->generate(array());

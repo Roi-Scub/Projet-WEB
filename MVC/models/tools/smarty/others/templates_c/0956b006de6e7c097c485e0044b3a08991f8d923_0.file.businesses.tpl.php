@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.4.1, created on 2024-04-03 22:12:49
+/* Smarty version 4.4.1, created on 2024-04-04 12:52:36
   from 'C:\xampp\apache\project\cesi\Projet WEB\MVC\views\components\businesses\businesses.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.4.1',
-  'unifunc' => 'content_660db841116a57_64019445',
+  'unifunc' => 'content_660e8674a5f216_94188558',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0956b006de6e7c097c485e0044b3a08991f8d923' => 
     array (
       0 => 'C:\\xampp\\apache\\project\\cesi\\Projet WEB\\MVC\\views\\components\\businesses\\businesses.tpl',
-      1 => 1712175168,
+      1 => 1712213997,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660db841116a57_64019445 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660e8674a5f216_94188558 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div>
 
 <?php
