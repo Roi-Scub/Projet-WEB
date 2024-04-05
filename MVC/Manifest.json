@@ -1,0 +1,56 @@
+{
+
+"name": "Stage's Cove", 
+"short_name": "SC", 
+"start_url": "index.php", 
+"display": "standalone", 
+"background_color": "#03a9f4", 
+"theme_color" : "#03a9f4", 
+"orientation": "portrait-primary", 
+
+  
+
+"icons": [ 
+{ 
+"src": "global/images/logo_grand.png", 
+"type": "image/png", 
+"sizes": "500x500" ,
+"purpose": "maskable"
+},{ 
+  "src": "global/images/logo_grand.png", 
+  "type": "image/png", 
+  "sizes": "500x500" ,
+  "purpose": "maskable"
+  }
+
+],
+
+"screenshots": [
+  {
+   "src": "global/images/logo_grand.png",
+    "sizes": "500x500",
+    "type": "image/png",
+    "form_factor": "wide",
+   
+    "label": "Stage's Cove"
+  },
+  {
+     "src": "global/images/logo_grand.png",
+      "sizes": "500x500",
+      "type": "image/png",
+      "form_factor": "narrow",
+     
+      "label": "Stage's Cove"
+    }
+],
+
+"prefer_related_applications": true,
+"related_applications": [
+    {
+    "platform": "play",
+    "id": "com.google.samples.apps.iosched"
+    }
+]
+
+}
+

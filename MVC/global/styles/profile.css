@@ -1,0 +1,365 @@
+/*
+ ____    _   _           _          
+|  _ \  (_) | |   ___   | |_    ___ 
+| |_) | | | | |  / _ \  | __|  / _ \
+|  __/  | | | | | (_) | | |_  |  __/
+|_|     |_| |_|  \___/   \__|  \___|
+                                
+*/
+
+.buttons {
+    
+    text-decoration: none;
+    color: #000;
+    background-color: #f2f2f2;
+    margin-right:1vw;
+    border: 0.1vw solid #000;
+    border-radius: 0.5vw;
+    font-family: "Open Sans";
+    position: absolute;
+    right:2vw;
+    height:5vw;
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7vw;
+    height: 3vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 5vw;
+    margin-right: 1vw;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f2f2f2;
+    
+
+
+}
+.boutons {
+    display: flex;
+    justify-content: center;
+    margin-left:10vw;
+    width: 32vw;
+    height: 26vw;
+    margin-top: 1vw;
+    border: 0.2vw solid #000;
+    border-radius: 1vw;
+
+}
+ul.liste {
+    list-style-type: none;
+    padding: 0vw 0vw 0vw 0vw ;
+    border: 0.1vw solid #000;
+    border-radius: 1vw;
+    width: 40vw;
+    font-family: 'Open Sans';
+    font-size: 1.2vw;
+    font-weight: 400;
+    
+}
+
+.line {
+    display:flex;
+   
+    align-items: center;
+    height:2vw;
+    text-align: left;
+    margin-left:1vw;
+}
+
+.btns {
+
+    text-decoration: none;
+    color: #000;
+    background-color: #f2f2f2;
+    margin-right:1vw;
+    border: 0.1vw solid #000;
+    border-radius: 0.5vw;
+    font-family: "Open Sans";
+    position: absolute;
+    left:30vw;
+    
+    height:2vw;
+    
+
+}
+
+.btns:hover {
+
+    background-color: #d9d9d9;
+    box-shadow: 0px 0px 5px 0px #000000;
+}
+.page_number {
+ 
+  border: 0.1vw solid #000;
+  border-radius: 0.5vw;
+  text-decoration: none;
+  color: #000;
+  margin: 0vw 0.2vw 0vw 0.2vw;
+  background-color: #f2f2f2;
+}
+.page_number:hover {
+  background-color: #d9d9d9;
+  box-shadow: 0px 0px 5px 0px #000000;
+}
+.pagination {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;
+   
+    
+}
+main {
+    margin-top:-0.26vw;
+    font-family: 'Open Sans', sans-serif;
+    display:flex;
+    justify-content: center;
+    
+    height: 250vh;
+    background-color: #f2f2f2;
+}
+.flex {
+
+  display:flex;
+  justify-content: center;
+}
+.body {
+
+    display: flex;
+    flex-direction: column;
+    
+    
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    width: 120Vw;
+    height: 90%;
+    margin-top: 5%;
+    margin-bottom:5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-size: 20px;
+    color: #4d4d4d;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f2f2f2;
+    padding:0vw;
+
+}
+.container {
+
+ max-height: 50vw;
+
+}
+.bonjour {
+
+margin-top:1vw;
+}
+
+.photo_profil {
+    height: 11vw;
+    width: 11vw;
+    margin-top:-10vw;
+    margin-left: -56vw;
+    border: 0.2vw solid #000;
+    border-radius: 1vw;
+    position:relative;
+}
+
+.informations_personnelles {
+
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    border: 0.2vw solid #000;
+    border-radius: 1vw;
+    padding: 1vw;
+    width: 32.5vw;
+    position:relative;
+    left: 8.5vw;
+    
+  
+
+}
+
+.box {
+
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    border: 0.2vw solid #000;
+    border-radius: 1vw;
+    padding: 1vw;
+    width: 30vw;
+   
+
+
+}
+
+        
+.banner {
+
+    height:15vw;
+    width: 77vw;
+    margin-bottom: 1.2vw;
+   
+    border-radius: 1vw;
+    border: 0.2vw solid #000;
+    position:relative;
+    left: 0vw;
+    right:8.5vw;
+}
+
+/*
+
+  ____    _                 _                  _   
+ / ___|  | |_   _   _    __| |   ___   _ __   | |_ 
+ \___ \  | __| | | | |  / _` |  / _ \ | '_ \  | __|
+  ___) | | |_  | |_| | | (_| | |  __/ | | | | | |_ 
+ |____/   \__|  \__,_|  \__,_|  \___| |_| |_|  \__|
+                                                   
+ */
+ .right_box {
+
+    width: 100%;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    }
+    span.titre {
+    
+        font-size: 1.3vw;
+        font-weight: 600;
+        color: #4d4d4d;
+        margin-top:1vw;
+    
+    }
+    
+    span.composant {
+        
+            font-size: 1.1vw;
+            font-weight: 400;
+            color: #4d4d4d;
+            margin-top:0.5vw;
+           
+        
+        
+    }
+    .CV {
+    
+            font-size: 1.1vw;
+            font-weight: 400;
+            color: #4d4d4d;
+            margin-top:0.5vw;
+            width:80%;
+    
+    
+    }
+    .photo {
+        margin-top: 1vw;
+        width: 15vw;
+        height: 15vw;
+        border-radius: 1vw;
+        border: 1px solid #f2f2f2;
+        box-shadow: 0px 0px 10px 0px #000000;
+    }
+    
+    
+    .name {
+        font-size: 1.5vw;
+        font-weight: 600;
+        color: #4d4d4d;
+        margin-top:1vw;}
+    .body {
+    
+    display: flex;
+    
+    
+    
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    width: 100vw;
+    height: 85%;
+    margin-top: 5%;
+    margin-bottom:10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    font-size: 20px;
+    color: #4d4d4d;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f2f2f2;
+    
+    }
+    
+    
+    .left_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: center;
+        width: 30vw;
+        height: 55%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px #000000;
+        width: 30vw;
+       
+        margin-top: 1%;
+        margin-bottom:1%;
+        margin-left: 1%;
+        margin-right: 1%;
+        text-align: center;
+        font-size: 20px;
+        color: #4d4d4d;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 0.5s;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #f2f2f2;
+    }
+    
+    
+    
+    
+    
+    main {
+        margin-top:-0.26vw;
+        font-family: 'Open Sans', sans-serif;
+        display:flex;
+        justify-content: center;
+        
+        height: 150vw;
+        background-color: #f2f2f2;
+    }
+ /*
+     _          _               _         
+    / \      __| |  _ __ ___   (_)  _ __  
+   / _ \    / _` | | '_ ` _ \  | | | '_ \ 
+  / ___ \  | (_| | | | | | | | | | | | | |
+ /_/   \_\  \__,_| |_| |_| |_| |_| |_| |_|
+                                          
+ */

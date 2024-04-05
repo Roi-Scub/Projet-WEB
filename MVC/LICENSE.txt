@@ -1,0 +1,83 @@
+  _____                   _   _         _       
+ | ____|  _ __     __ _  | | (_)  ___  | |__    
+ |  _|   | '_ \   / _` | | | | | / __| | '_ \   
+ | |___  | | | | | (_| | | | | | \__ \ | | | |  
+ |_____| |_| |_|  \__, | |_| |_| |___/ |_| |_|  
+                  |___/                         
+
+All Rights Reserved
+
+Copyright (c) 2024 Gabriel Ricardon
+
+THE CONTENTS OF THIS PROJECT ARE PROPRIETARY AND CONFIDENTIAL.
+UNAUTHORIZED COPYING, TRANSFERRING OR REPRODUCTION OF THE CONTENTS OF THIS PROJECT, VIA ANY MEDIUM IS STRICTLY PROHIBITED.
+
+The receipt or possession of the source code and/or any parts thereof does not convey or imply any right to use them
+for any purpose other than the purpose for which they were provided to you.
+
+The software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to
+the warranties of merchantability, fitness for a particular purpose and non infringement.
+In no event shall the authors or copyright holders be liable for any claim, damages or other liability,
+whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software
+or the use or other dealings in the software.
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the software.
+
+Exemptions :
+
+- Individual, Logan Leguennec
+   Rights: Authorized to use and modify the software for educational purposes only, provided that any modifications are shared back with the copyright holder.
+
+- Individual, Tim Vinciguerra
+   Rights: Authorized to read and view the source code for informational purposes only. No rights to modify, distribute, or use the software for any purpose other than reading are granted.
+
+- Individual, Ethan Jouvin
+   Rights: Authorized to read and view the source code for informational purposes only. No rights to modify, distribute, or use the software for any purpose other than reading are granted.
+
+- Individual, Joris Claude
+   Rights: Authorized to read and view the source code for informational purposes only. No rights to modify, distribute, or use the software for any purpose other than reading are granted.
+
+
+
+
+  _____                                _     
+ |  ___|  _ __    ___   _ __     ___  | |__  
+ | |_    | '__|  / _ \ | '_ \   / __| | '_ \ 
+ |  _|   | |    |  __/ | | | | | (__  | | | |
+ |_|     |_|     \___| |_| |_|  \___| |_| |_|
+                                             
+Tous droits réservés
+
+Copyright (c) 2024 Gabriel Ricardon
+
+LE CONTENU DE CE PROJET EST PROPRIÉTAIRE ET CONFIDENTIEL.
+LA COPIE, LE TRANSFERT OU LA REPRODUCTION NON AUTORISÉS DU CONTENU DE CE PROJET, VIA TOUT SUPPORT, EST STRICTEMENT INTERDIT.
+
+La réception ou la possession du code source et/ou de toute partie de celui-ci ne confère ni n'implique aucun droit de les utiliser.
+à des fins autres que celles pour lesquelles ils vous ont été fournis.
+
+Le logiciel est fourni « EN L'ÉTAT », sans garantie d'aucune sorte, expresse ou implicite, y compris, mais sans s'y limiter,
+les garanties de qualité marchande, d'adéquation à un usage particulier et de non contrefaçon.
+En aucun cas les auteurs ou détenteurs de droits d'auteur ne pourront être tenus responsables de toute réclamation, dommage ou autre responsabilité,
+que ce soit dans le cadre d'une action contractuelle, délictuelle ou autre, découlant de, hors ou en relation avec le logiciel
+ou l'utilisation ou d'autres transactions dans le logiciel.
+
+L'avis de droit d'auteur ci-dessus et cet avis d'autorisation doivent être inclus dans toutes les copies ou parties substantielles du logiciel.
+
+Exemptions :
+
+- Particulier, Logan Leguennec
+   Droits d'auteur : Autorisé à utiliser et à modifier le logiciel à des fins éducatives uniquement, à condition que toute modification soit communiquée au détenteur des droits d'auteur.
+
+- Particulier, Tim Vinciguerra
+   Droits : Autorisé à lire et à visualiser le code source à des fins d'information uniquement. Aucun droit de modification, de distribution ou d'utilisation du logiciel à d'autres fins que la lecture n'est accordé.
+
+- Particulier, Ethan Jouvin
+   Droits d'auteur : Autorisé à lire et à visualiser le code source à des fins d'information uniquement. Aucun droit de modification, de distribution ou d'utilisation du logiciel à d'autres fins que la lecture n'est accordé.
+
+- Particulier, Joris Claude
+   Droits d'auteur : Autorisé à lire et à visualiser le code source à des fins d'information uniquement. Aucun droit de modification, de distribution ou d'utilisation du logiciel à d'autres fins que la lecture n'est accordé.
+
+
+Traduit avec DeepL.com (version gratuite) 
+

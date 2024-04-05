@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
+
+/*
+							     _      _   _   _____   _   _   	  _____    ___    ____    __  __ 
+							    / \    | | | | |_   _| | | | |  	 |  ___|  / _ \  |  _ \  |  \/  |
+							   / _ \   | | | |   | |   | |_| |  	 | |_    | | | | | |_) | | |\/| |
+							  / ___ \  | |_| |   | |   |  _  |  	 |  _|   | |_| | |  _ <  | |  | |
+							 /_/   \_\  \___/    |_|   |_| |_|  	 |_|      \___/  |_| \_\ |_|  |_|
+*/
+
+body{
+	overflow: hidden;
+}
+#login_rectangle 
+{
+	height:relative;
+
+}
+#login_body {
+	
+	display:flex;
+	width:100%;
+	height:100vh;
+	background-color: rgba(0, 0, 0, 1);
+	
+
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	z-index: -1;
+	position: absolute;
+
+
+
+}
+
+#myVideo{
+	justify-content: center;
+	align-items: center;
+	display:flex;
+	width:200vh;
+	height:500vw;
+	opacity:0.5;
+	position:relative;
+
+}
+
+#logo_stage_s_cove{
+	
+	position:absolute;
+	
+	margin-top:0;
+	left:32vw;
+	top:3vw;
+	
+	z-index: -1;
+
+
+
+}
+	#login_main {
+
+		display:flex;
+		flex-grow:1;
+		align-items: center;
+		justify-content: center;
+		width:100%;
+		height:100vh;
+		background-color: #EDF0F4;
+		margin: -1vw;
+		position:absolute;
+
+	}
+
+	
+
+		#login_fieldset {
+			position:absolute;
+			display:flex;
+			flex-direction: column;
+			justify-content:center;
+			align-items: center;
+			width: 50%;
+			height: 30vw;
+			background-color: rgba(0, 12, 14, 0.7); ;
+			
+			border-radius:1vw;
+			border-color:white;
+
+			z-index: 4;
+			top:25%;
+			left:25%;
+			padding:0%;
+			
+					
+		}
+
+			#grand_logo_login {
+			
+				width: 10vw;
+				height: 10vw;
+				padding:-5vw;
+				z-index: 1;
+				position: absolute;
+				margin-left:auto;
+				margin-right:auto;
+				
+
+			}
+			#login_title {
+
+				width: 100%;
+				height: 1.2vw;
+				color: #FFFFFF;
+				font-family: "Open Sans";
+				font-weight: 700;
+				font-size: 2vw;
+				line-height: 1.2;
+				text-align: center;
+				padding-top:2vw;
+			}
+
+				#login_form {
+					position: absolute;
+					width: relative;
+					height: relative;
+					color: #FFFFFF;
+					font-family: "Open Sans";
+					font-weight: 700;
+					font-size: 2vw;
+					line-height: 1.2;
+					text-align: center;
+					
+				}
+
+					#login_input {
+
+						width: 20vw;
+						height: 2.5vw;
+						border-radius: 0.5vw;
+						margin-top: 2vw;
+						text-align: center;
+						font-family: "Open Sans";
+						font-weight: 700;
+						font-size: 1vw;
+						border-color: #FFFFFF;
+						border-style: solid;
+						margin-left: 15vw;
+					}
+
+
+
+						#login_button {
+
+							width: 20vw;
+							height: 3.7vw;
+							background: #29323D;
+							color: #FFFFFF;
+							border-color: #29323D;
+							border-width: 1px;
+							border-radius: 0.5vw;
+							border-style: solid;
+							font-family: "Open Sans";
+							font-weight: bolder;
+							font-size: 1vw;
+							text-align: center;
+							
+							margin-top: 3vw;
+						}
+
+						#login_button:hover {
+							box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+						}
+
+                        
+							#email {
+
+								width: 20vw;
+								height: 2.5vw;
+								border-radius: 0.5vw;
+								margin-top: 2vw;
+								text-align: center;
+								font-family: "Open Sans";
+								font-weight: 700;
+								font-size: 1vw;
+								border-color: #FFFFFF;
+								border-style: solid;
+								margin-left: 0vw;
+								margin-top:1vw;
+								margin-bottom:1vw;
+							}
+
+								#password {
+
+									width: 20vw;
+									height: 2.5vw;
+									border-radius: 0.5vw;
+									margin-top: 2vw;
+									text-align: center;
+									font-family: "Open Sans";
+									font-weight: 700;
+									font-size: 1vw;
+									border-color: #FFFFFF;
+									border-style: solid;
+									margin-left: 0vw;
+									margin-top:1vw;
+								}
+
+								#login_paragraph {
+
+									width: 100%;
+									height: 1.2vw;
+									color: #FFFFFF;
+									font-family: "Open Sans";
+									font-weight: 700;
+									font-size: 1vw;
+									line-height: 1.2;
+									text-align: center;
+									margin-top:2vw;
+									
+									
+								
+									
+								}
+						
+								.errorBox {
+
+									display: none;
+									flex-direction: column;
+									align-items: center;
+									justify-content: center;
+									width: 75%;
+									background-color: rgb(214, 0, 0);
+									border-color: red;
+									border-radius: 10px;
+									color: white;
+									font-size: 1.2rem;
+									font-weight: bold;
+									text-align: center;
+									
+									
+								}

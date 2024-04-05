@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "MVC/LICENSE.txt": true,
+        ".vscode": true
+        }
+}

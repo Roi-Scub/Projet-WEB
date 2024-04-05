@@ -95,10 +95,11 @@ border-radius: 50%;
 
 </style>
 
-<script>var delayInMilliseconds = 2000; //1 second
+<script>
+var delayInMilliseconds = 2000; //1 second
 
 setTimeout(function() {
-    document.location.href = "logout.php";
+    document.location.href = "logout.php"
 }, delayInMilliseconds);
 
 </script>

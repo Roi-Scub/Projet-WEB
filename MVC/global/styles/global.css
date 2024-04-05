@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
+/* header
+                         _   _                _           
+                        | | | | ___  __ _  __| | ___ _ __ 
+                        | |_| |/ _ \/ _` |/ _` |/ _ \ '__|
+                        |  _  |  __/ (_| | (_| |  __/ |   
+                        |_| |_|\___|\__,_|\__,_|\___|_|                                         
+*/
+
+
+#barre {
+
+	align-self: center;
+    height: 0.05vw;
+	border-color: #3B4754;
+	background: #3B4754;
+	margin-left: 2vw;
+	margin-right: 2vw;
+	margin-top:1vw;
+	margin-bottom:0.6vw;
+}
+
+#header_principal{
+
+    display:flex;
+	width: 100%;
+	justify-content: space-evenly;
+	height:5vw;
+
+}
+
+#logo_petit {
+
+	width:  10vw;
+	height:   5vw;
+	margin-left: 0vw;
+
+	background: #00000000;
+	border-radius: 12px 12px 12px 12px;
+}
+
+#stroke {
+
+	width:30vw;
+}
+
+#myaccount {
+
+	width:17vw;
+	display:flex;
+}
+
+nav {
+	text-decoration: none;
+	width: 42vw;
+	height: 5vw;
+	color: #fee;
+	font-family: "Open Sans";
+	font-weight: 700;
+	font-size: 1.6vw;
+	text-align: center;
+
+  }
+  
+nav ul {
+
+	display: flex;
+	margin-left:0;
+	width:30.65vw;
+	padding:0;
+	color: #3B4754;
+	list-style-type: none;
+	
+}
+
+a{
+	text-decoration:none;
+	margin-left: 0;
+	color:#C9D3DD;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+
+nav li {
+
+	margin-left: 1em;
+	color: #C9D3DD;
+
+}
+
+nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+  nav ul li a:hover {
+    color: #3B4754;
+  }
+
+                                                   /* BOUTON PARAMETRE */
+
+#parametre{
+	position:absolute;
+	margin-top:1.3vw;
+	width:60px;
+	width: 2.8vw;
+	height:2.8vw;
+	margin-left:0.9vw;
+
+  }
+	
+
+	 
+
+ 		 #divaa1{
+
+
+			width:80px;
+			height:5vw;
+			border:5px transparent black;
+			border-radius:100px;
+			background: transparent;
+
+			transition:1.2s;
+ 		 }
+		 
+ 		 	#divaa1:hover{
+				height:230px;
+				background:  rgb(255 255 255 );
+				z-index: 1;
+				border:5px black;
+				border-radius:1vw;
+
+				#parametre{
+					transition: transform 2s ease;
+					transform: rotate(360deg);
+				}
+ 		 	}
+  
+  
+  #btna1{
+	position:absolute;
+	top:0px;
+	background:transparent;
+	width:75px;
+	color:transparent;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-family:"Open Sans";
+	font-size:15px;
+	border:2.5px solid transparent;
+	border-radius:100px;
+	cursor:pointer;
+	transition:1.2s;
+  }
+  #divaa1:hover > #btna1{
+	top:90px;
+	color:white;
+	background:#29323D;
+	padding-bottom:5px;
+	margin-left:0.2vw;
+  }
+  #btna2{
+	position:absolute;
+	top:0px;
+	background:transparent;
+	width:75px;
+	color:transparent;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-family:"Open Sans";
+	font-size:15px;
+	border:2.5px solid transparent;
+	border-radius:100px;
+	cursor:pointer;
+	transition:1.2s;
+  }
+  #divaa1:hover > #btna2{
+	top:140px;
+	color:white;
+	background:#29323D;
+	padding-bottom:5px;
+	margin-left:0.2vw;
+  }
+
+                                                   /*BOUTON DEROULANT PLUS*/
+    #btna3{
+    	position:absolute;
+    	top:0px;
+    	background:transparent;
+    	width:75px;
+    	color:transparent;
+    	padding-top:5px;
+    	padding-bottom:5px;
+    	font-family:"Open Sans";
+    	font-size:15px;
+    	border:2.5px solid transparent;
+    	border-radius:100px;
+    	cursor:pointer;
+    	transition:1.2s;
+    }
+    #divaa1:hover > #btna3{
+    	top:190px;
+    	color:white;
+    	background:#29323D;
+    	padding-bottom:5px;
+    	margin-left:0.2vw;
+    }
+
+                                                   /* BOUTON DECONNEXION */
+
+
+    #button_2 {
+
+    	width: 10vw;
+    	height: 3.2vw;
+
+    	background: #29323D;
+    	color: #FFFFFF;
+    	border-color: #29323D;
+    	border-width: 1px;
+    	border-radius: 0.5vw;
+    	border-style: solid;
+
+    	font-family: "Open Sans";
+    	font-weight: bolder;
+    	font-size: 1vw;
+
+    	text-align: center;
+    	margin-top: 1.1vw;
+    	margin-left: 0vw;
+    
+
+    }
+        #button_2:hover {
+        	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+          }
+
+
+
+/* Disconnection button */
+
+.Btn {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 2.726vw;
+	height: 2.726vw;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition-duration: .3s;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+	background-color: rgb(255, 65, 65);
+	margin-top: 1.3vw;
+	margin-left: 1vw;
+  }
+  
+  /* plus sign */
+  .sign {
+	width: 100%;
+	transition-duration: .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .sign svg {
+	width: 1.03vw;
+  }
+  
+  .sign svg path {
+	fill: white;
+  }
+  /* text */
+  .text {
+	position: absolute;
+	right: 0%;
+	width: 0%;
+	opacity: 0;
+	color: white;
+	font-size: 1vw;
+	font-weight: 600;
+	transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+	width: 8.571vw;
+	border-radius: 2.423vw;
+	transition-duration: .3s;
+  }
+  
+  .Btn:hover .sign {
+	width: 30%;
+	transition-duration: .3s;
+	padding-left: 1.211vw;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+	opacity: 1;
+	width: 70%;
+	transition-duration: .3s;
+	padding-right: 0.606vw	;
+  }
+  /* button click effect*/
+  .Btn:active {
+	transform: translate(2px ,2px);
+  }
+
+/* div - search bar 
+                         ____  _                 ____                      _       ____             
+                        |  _ \(_)_   __         / ___|  ___  __ _ _ __ ___| |__   | __ )  __ _ _ __ 
+                        | | | | \ \ / /  _____  \___ \ / _ \/ _` | '__/ __| '_ \  |  _ \ / _` | '__|
+                        | |_| | |\ V /  |_____|  ___) |  __/ (_| | | | (__| | | | | |_) | (_| | |   
+                        |____/|_| \_/           |____/ \___|\__,_|_|  \___|_| |_| |____/ \__,_|_|   
+
+*/
+
+
+
+
+/* footer
+                         _____           _            
+                        |  ___|__   ___ | |_ ___ _ __ 
+                        | |_ / _ \ / _ \| __/ _ \ '__|
+                        |  _| (_) | (_) | ||  __/ |   
+                        |_|  \___/ \___/ \__\___|_|   
+
+*/
+#footer {
+
+	display:flex;
+	width:100%;
+	justify-content: space-evenly;
+	height:10vw;
+}
+
+	#réseaux {
+
+		display: flex;
+		height:auto;
+		width:auto;
+		margin-top:4vw;
+		
+	}
+	
+		.logo_reseaux {
+
+			width: 3vw;
+			height:  3vw;
+			margin-left: 1.5vw;
+
+		}
+
+	#logo_bottom{
+
+		height:auto;
+		width:auto;
+		
+		
+	}
+
+	#logo_petit1 {
+
+		width:  15vw;
+		height:  7vw;
+		margin-top: 2.5vw;
+		background: #00000000;
+		border-radius: 12px 12px 12px 12px;
+	}
+	#rights_div{
+
+		height:auto;
+		width:auto;
+		justify-content: center;
+		
+	}	
+	#rights {
+		margin-top:4vw;
+		width: 100%;
+		height: 2vw;
+		color: #798DA3;
+		font-family: "Open Sans";
+		font-weight:400;
+		font-size: 1.5vw;
+		line-height: 1.5;
+	}
+
+
+/*
+ 						 ____    _                                                      _     _                 
+ 						|  _ \  (_)  ___    ___    ___    _ __    _ __     ___    ___  | |_  (_)   ___    _ __  
+ 						| | | | | | / __|  / __|  / _ \  | '_ \  | '_ \   / _ \  / __| | __| | |  / _ \  | '_ \ 
+ 						| |_| | | | \__ \ | (__  | (_) | | | | | | | | | |  __/ | (__  | |_  | | | (_) | | | | |
+ 						|____/  |_| |___/  \___|  \___/  |_| |_| |_| |_|  \___|  \___|  \__| |_|  \___/  |_| |_|
+                                                                                         
+*/
+
+
+
+
+
+
+
+	
+.spinner {
+	width: 11vw;
+	height: 11vw;
+	border-radius: 50%;
+	border: 1vw solid #29323D;
+	 margin: 19% auto;
+	animation: spinner-bulqg1 0.8s infinite linear alternate,
+		 spinner-oaa3wk 1.6s infinite linear;
+	 position: absolute;   
+	 top: 0%;
+	 left: 44%;
+	 z-index: 2;
+		 
+ }
+ 
+ #boat_anim {
+ 
+ position:absolute;
+ margin: 13% auto;
+ width: 25vw;
+ height: 25vw;
+ overflow: hidden;
+ z-index: 1;
+ position: absolute;
+ top: 0%;
+ left: 38%;
+ border: 0px;
+ 
+ border-radius: 50%;
+ 
+ 
+ }
+	 
+ @keyframes spinner-bulqg1 {
+	0% {
+	   clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+	}
+ 
+	12.5% {
+	   clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+	}
+ 
+	25% {
+	   clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+	}
+ 
+	50% {
+	   clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+	}
+ 
+	62.5% {
+	   clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+	}
+ 
+	75% {
+	   clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+	}
+ 
+	100% {
+	   clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+	}
+ }
+ 
+ @keyframes spinner-oaa3wk {
+	0% {
+	   transform: scaleY(1) rotate(0deg);
+	}
+ 
+	49.99% {
+	   transform: scaleY(1) rotate(135deg);
+	}
+ 
+	50% {
+	   transform: scaleY(-1) rotate(0deg);
+	}
+ 
+	100% {
+	   transform: scaleY(-1) rotate(-135deg);
+	}
+ }
+/*
+                         _____   ____    ____     ___    ____  
+                        | ____| |  _ \  |  _ \   / _ \  |  _ \ 
+                        |  _|   | |_) | | |_) | | | | | | |_) |
+                        | |___  |  _ <  |  _ <  | |_| | |  _ < 
+                        |_____| |_| \_\ |_| \_\  \___/  |_| \_\
+
+
+*/
+
+body {
+  background-color: white;
+  color: gray;
+}
