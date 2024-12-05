@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<style>
+    main {
+        width: 300px;
+        margin: 50px ;
+        padding:10px;        
+    }
+    #form {
+        border: 1px solid;
+        padding: 20px;
+
+    }
+    .active {
+        display: block;
+    }
+    form {
+        display: none;
+    }
+    button {
+        width: 145px;
+        display: fixed;
+        padding: 5px;
+    }
+</style>
+<html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Formulaire Etudiant</title>
+        </head>
+    <body>
+        <main>
+            <button onclick="CreerFormulaire()">Créer</button>
+            <button onclick="ModifierFormulaire()">Modifier</button>
+            <h1>Formulaire Etudiant</h1>
+            <section id="form">
+                <form id="creerForm" class="active">
+                    <label for="nom_etudiant">Nom de l'étudiant :</label>
+                    <input type="text" id="nom_etudiant" name="nom_etudiant" required><br><br>
+                        
+                    <label for="prenom_etudiant">Prénom de l'étudiant :</label>
+                    <input type="text" id="prenom_etudiant" name="prenom_etudiant"  required></textarea><br><br>
+                    
+                    <label for="date_naissance">Date de naissance de l'étudiant :</label>
+                    <input type="date" id="date_naissance" name="date_naissance"  required></textarea><br><br>
+
+                    <label for="login">Login :</label>
+                    <input type="text" id="login" name="login" required><br><br>
+
+                    <label for="password"> Password :</label>
+                    <input type="text" id="password" name="password" required><br><br>
+
+                    <label for="profile_picture">Photo de profil :</label>
+                    <input type="file" id="profile_picture" name="profile_picture" required><br><br>
+
+                    <label for="profile_banner">Photo de bannière :</label>
+                    <input type="file" id="profile_banner" name="profile_banner"  required><br><br>
+
+                    <input type="submit" value="Envoyer">
+                </form>
+                <form id="modifierForm" >
+                    <label for="nom_etudiant">Nouveau nom de l'étudiant :</label>
+                    <input type="text" id="nom_etudiant" name="nom_etudiant" required><br><br>
+                        
+                    <label for="prenom_etudiant">Nouveau prénom de l'étudiant :</label>
+                    <input type="text"  id="prenom_etudiant" name="prenom_etudiant"  required></textarea><br><br>
+
+                    <label for="date_naissance">Nouvelle date de naissance de l'étudiant :</label>
+                    <input type="date" id="date_naissance" name="date_naissance"  required></textarea><br><br>
+
+                    <label for="login">Nouveau login :</label>
+                    <input type="text" id="login" name="login" required><br><br>
+
+                    <label for="password">Nouveau password :</label>
+                    <input type="text" id="password" name="password" required><br><br>
+
+                    <label for="profile_picture">Nouvelle photo de profil :</label>
+                    <input type="file" id="profile_picture" name="profile_picture" required><br><br>
+
+                    <label for="profile_banner">Nouvelle photo de bannière :</label>
+                    <input type="file" id="profile_banner" name="profile_banner"  required><br><br>
+
+                    <input type="submit" value="Envoyer">
+            </section>
+        </main>
+    </body>
+    <script>
+        function CreerFormulaire() {
+            document.getElementById('creerForm').classList.add('active');
+            document.getElementById('modifierForm').classList.remove('active');
+        }
+    
+        function ModifierFormulaire () {
+            document.getElementById('modifierForm').classList.add('active');
+            document.getElementById('creerForm').classList.remove('active');
+        }
+    </script>
+</html>
